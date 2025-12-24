@@ -1,3 +1,4 @@
+#push ke infinityFree
 on: push
 
 name: 🚀 Deploy website on push
@@ -16,4 +17,3 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /online-tools/ # For addon domains
-

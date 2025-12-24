@@ -16,4 +16,4 @@ jobs:
           server: ftpupload.net
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /online-tools/ # For addon domains
+          server-dir: /htdocs/online-tools/ # For addon domains

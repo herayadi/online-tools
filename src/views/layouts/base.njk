@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}{% if id != 'index' %} - {{ site.siteName }}{% endif %}</title>
-    <base href="{{ site.basePath }}/" />
+
     
     <meta name="keywords" content="{{ keywords | default(site.keywords) | join(',') }}" />
     <meta name="author" content="{{ site.author }}" />
@@ -18,10 +18,10 @@
     <meta property="og:site_name" content="{{ site.siteName }}" />
     <meta property="og:description" content="{{ description | default(site.description) }}" />
     <meta property="og:locale" content="en" />
-    <meta property="og:image" content="{{ site.domain }}{{ asset('images/logo.svg') }}" />
+    <meta property="og:image" content="{{ site.domain }}{% if site.basePath %}{{ site.basePath }}{% endif %}/images/logo.svg" />
     
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:image" content="{{ site.domain }}{{ asset('images/logo.svg') }}" />
+    <meta property="twitter:image" content="{{ site.domain }}{% if site.basePath %}{{ site.basePath }}{% endif %}/images/logo.svg" />
     
     <link rel="canonical" href="{{ site.domain }}{% if path %}/{{ path }}{% else %}/{% endif %}" />
     <link rel="icon" href="{{ asset('images/logo.svg') }}" />
@@ -30,7 +30,7 @@
       var delayScripts = [];
       var waitLoadCount = 0;
       window.dataLayer = window.dataLayer || [];
-      window.OT_ASSET_BASE = "{{ site.basePath if site.basePath else '' }}/";
+      window.OT_ASSET_BASE = "{{ OT_ASSET_BASE }}";
       function gtag() {
         dataLayer.push(arguments);
       }

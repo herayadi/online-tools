@@ -116,31 +116,53 @@ tools.forEach(tool => {
 
 fs.outputFileSync(path.join(DIST_DIR, 'data', 'search-index.json'), JSON.stringify(searchIndex));
 
+// Helper to render pages with depth-aware asset paths
+function renderPage(templatePath, context, outPathRelative) {
+  let relativeToRoot = '.';
+  const depth = outPathRelative.split('/').length - 1;
+  if (depth > 0) {
+    relativeToRoot = new Array(depth).fill('..').join('/');
+  }
+
+  // Determine base path for assets
+  const isLocal = process.argv.includes('--local');
+  const resolvedBasePath = isLocal ? relativeToRoot : siteConfig.basePath;
+
+  const pageContext = {
+    ...globalContext,
+    ...context,
+    asset: function(assetPath) {
+      if (!assetPath) return '';
+      if (assetPath.startsWith('http')) return assetPath;
+      if (assetPath.startsWith('/')) assetPath = assetPath.substring(1);
+      return `${resolvedBasePath ? resolvedBasePath + '/' : ''}${assetPath}`;
+    },
+    OT_ASSET_BASE: `${resolvedBasePath ? resolvedBasePath + '/' : ''}`
+  };
+
+  const html = env.render(templatePath, pageContext);
+  fs.outputFileSync(path.join(DIST_DIR, outPathRelative), html);
+}
+
 // Home
-const indexHtml = env.render('pages/index.njk', {
-  ...globalContext,
+renderPage('pages/index.njk', {
   title: 'Home',
   id: 'index'
-});
-fs.outputFileSync(path.join(DIST_DIR, 'index.html'), indexHtml);
+}, 'index.html');
 
 // Explore
-const exploreHtml = env.render('pages/explore.njk', {
-  ...globalContext,
+renderPage('pages/explore.njk', {
   title: 'Explore Tools',
   description: 'Search and filter all available online tools.',
   id: 'explore'
-});
-fs.outputFileSync(path.join(DIST_DIR, 'explore', 'index.html'), exploreHtml);
+}, 'explore/index.html');
 
 // Compare
-const compareHtml = env.render('pages/compare.njk', {
-  ...globalContext,
+renderPage('pages/compare.njk', {
   title: 'Compare Tools',
   description: 'Compare multiple tools side-by-side.',
   id: 'compare'
-});
-fs.outputFileSync(path.join(DIST_DIR, 'compare', 'index.html'), compareHtml);
+}, 'compare/index.html');
 
 // 6. Generate Tools
 console.log(`Generating ${tools.length} tools...`);
@@ -148,20 +170,15 @@ tools.forEach(tool => {
   const templatePath = `tools/${tool.template}.njk`;
   
   try {
-    const html = env.render(templatePath, {
-      ...globalContext,
-      ...tool
-    });
-    
     // Determine output path (handle flat files vs directories)
-    let outPath;
+    let outPathRelative;
     if (tool.path.endsWith('.html')) {
-      outPath = path.join(DIST_DIR, tool.path);
+      outPathRelative = tool.path;
     } else {
-      outPath = path.join(DIST_DIR, tool.path, 'index.html');
+      outPathRelative = path.posix.join(tool.path, 'index.html');
     }
     
-    fs.outputFileSync(outPath, html);
+    renderPage(templatePath, { ...tool }, outPathRelative);
   } catch (err) {
     console.error(`Failed to render tool ${tool.id} with template ${templatePath}:`, err.message);
     throw err; // Fail build
@@ -171,11 +188,9 @@ tools.forEach(tool => {
 // 7. Generate Redirects
 console.log(`Generating ${redirects.length} redirects...`);
 redirects.forEach(r => {
-  const html = env.render('redirect.njk', {
-    site: siteConfig,
+  renderPage('redirect.njk', {
     target: r.target.replace('/online-tools/', '/') // Adjust to base relative
-  });
-  fs.outputFileSync(path.join(DIST_DIR, r.relPath), html);
+  }, path.posix.join(r.relPath, 'index.html'));
 });
 
 // 8. Generate Sitemap & Robots

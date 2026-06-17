@@ -1,0 +1,763 @@
+{% extends "layouts/base.njk" %}
+
+{% block page_styles %}
+  <link rel="stylesheet" href="{{ asset('css/qrcode.css?v=6') }}" />
+  <link rel="stylesheet" href="https://artf.github.io/grapick/dist/grapick.min.css" />
+{% endblock %}
+
+{% block main %}
+
+          <div class="layout">
+            <div class="layout-block">
+              <div class="input">
+                <div class="block block-fill">
+                  <div class="block-title">
+                    Input
+                    <div class="toolbar">
+                      <button class="icon" data-toggle="fullscreen">
+                        <img
+                          class="fullscreen-icon"
+                          src="{{ asset('images/fullscreen.svg') }}"
+                          alt="Full Screen"
+                          title="Full Screen"
+                        /><img
+                          class="fullscreen-icon-exit"
+                          src="{{ asset('images/fullscreen-exit.svg') }}"
+                          alt="Full Screen"
+                          title="Full Screen"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <textarea
+                    class="container"
+                    id="input"
+                    spellcheck="false"
+                    placeholder="Enter here..."
+                    data-remember="input"
+                    data-share="input"
+                    data-encoding-from="#input-type"
+                    data-auto-update
+                    data-toggle="monacoEditor"
+                  ></textarea>
+                </div>
+                <details class="block">
+                  <summary class="block-title">
+                    Examples
+                    <div class="toolbar"></div>
+                  </summary>
+                  <div class="examples">
+                    <a
+                      href="/online-tools/qr-code/generator/?input=https%3A%2F%2Fwww.facebook.com%2F&amp;type=png&amp;size=150&amp;padding=8&amp;ec=H&amp;dot_option_type=dots&amp;dot_option_color=%230866FF&amp;corners_square_option_type=dot&amp;corners_square_option_color=%230866FF&amp;corners_dot_option_type=dot&amp;corners_dot_option_color=%230866FF&amp;background_option_color=rgb(255%2C%20255%2C%20255)&amp;image_type=url&amp;image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fb9%2F2023_Facebook_icon.svg&amp;image_size=0.3&amp;image_margin=0&amp;image_show_background=0"
+                      target="_blank"
+                      ><iframe
+                        src="/online-tools/qr-code/?input=https%3A%2F%2Fwww.facebook.com%2F&amp;type=png&amp;size=150&amp;padding=8&amp;ec=H&amp;dot_option_type=dots&amp;dot_option_color=%230866FF&amp;corners_square_option_type=dot&amp;corners_square_option_color=%230866FF&amp;corners_dot_option_type=dot&amp;corners_dot_option_color=%230866FF&amp;background_option_color=rgb(255%2C%20255%2C%20255)&amp;image_type=url&amp;image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fb9%2F2023_Facebook_icon.svg&amp;image_size=0.3&amp;image_margin=0&amp;image_show_background=0"
+                        frameborder="0"
+                        scrolling="no"
+                        width="150"
+                        height="150"
+                        loading="lazy"
+                      ></iframe></a
+                    ><a
+                      href="/online-tools/qr-code/generator/?input=https%3A%2F%2Fwww.youtube.com%2F&amp;type=png&amp;size=150&amp;padding=8&amp;ec=H&amp;dot_option_type=dots&amp;dot_option_color=%230f0f0f&amp;corners_square_option_type=square&amp;corners_square_option_color=red&amp;corners_dot_option_type=square&amp;corners_dot_option_color=red&amp;background_option_color=rgb(255%2C%20255%2C%20255)&amp;image_type=url&amp;image=https%3A%2F%2Fwww.youtube.com%2Fs%2Fdesktop%2Ff8d5cd66%2Fimg%2Ffavicon_48x48.png&amp;image_size=0.3&amp;image_margin=2&amp;image_show_background=0"
+                      target="_blank"
+                      ><iframe
+                        src="/online-tools/qr-code/?input=https%3A%2F%2Fwww.youtube.com%2F&amp;type=png&amp;size=150&amp;padding=8&amp;ec=H&amp;dot_option_type=dots&amp;dot_option_color=%230f0f0f&amp;corners_square_option_type=square&amp;corners_square_option_color=red&amp;corners_dot_option_type=square&amp;corners_dot_option_color=red&amp;background_option_color=rgb(255%2C%20255%2C%20255)&amp;image_type=url&amp;image=https%3A%2F%2Fwww.youtube.com%2Fs%2Fdesktop%2Ff8d5cd66%2Fimg%2Ffavicon_48x48.png&amp;image_size=0.3&amp;image_margin=2&amp;image_show_background=0"
+                        frameborder="0"
+                        scrolling="no"
+                        width="150"
+                        height="150"
+                        loading="lazy"
+                      ></iframe></a
+                    ><a
+                      href="/online-tools/qr-code/generator/?input=https%3A%2F%2Finstagram.com%2F&amp;type=png&amp;size=150&amp;padding=8&amp;ec=H&amp;dot_option_type=extra-rounded&amp;dot_option_color_type=linear&amp;dot_option_gradient_color=%5B%5B9.401197604790418%2C%22%23ffca00%22%5D%2C%5B92.21556886227545%2C%22%23fc03d5%22%5D%5D&amp;dot_option_rotation=-45&amp;corners_square_option_type=extra-rounded&amp;corners_square_option_color=%23fc03d5&amp;corners_dot_option_color=%23fc03d5&amp;background_option_color=rgb(255%2C%20255%2C%20255)&amp;image_type=url&amp;image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F95%2FInstagram_logo_2022.svg&amp;image_size=0.3&amp;image_margin=2&amp;image_show_background=0"
+                      target="_blank"
+                      ><iframe
+                        src="/online-tools/qr-code/?input=https%3A%2F%2Finstagram.com%2F&amp;type=png&amp;size=150&amp;padding=8&amp;ec=H&amp;dot_option_type=extra-rounded&amp;dot_option_color_type=linear&amp;dot_option_gradient_color=%5B%5B9.401197604790418%2C%22%23ffca00%22%5D%2C%5B92.21556886227545%2C%22%23fc03d5%22%5D%5D&amp;dot_option_rotation=-45&amp;corners_square_option_type=extra-rounded&amp;corners_square_option_color=%23fc03d5&amp;corners_dot_option_color=%23fc03d5&amp;background_option_color=rgb(255%2C%20255%2C%20255)&amp;image_type=url&amp;image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F95%2FInstagram_logo_2022.svg&amp;image_size=0.3&amp;image_margin=2&amp;image_show_background=0"
+                        frameborder="0"
+                        scrolling="no"
+                        width="150"
+                        height="150"
+                        loading="lazy"
+                      ></iframe></a
+                    ><a
+                      href="/online-tools/qr-code/generator/?input=https%3A%2F%2Fx.com%2F&amp;type=png&amp;size=150&amp;padding=8&amp;ec=H&amp;dot_option_type=square&amp;dot_option_color=%23000&amp;corners_square_option_type=extra-rounded&amp;corners_square_option_color=%23000&amp;corners_dot_option_type=dot&amp;corners_dot_option_color=rgb(29%2C%20155%2C%20240)&amp;background_option_color=rgb(255%2C%20255%2C%20255)&amp;image_type=url&amp;image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FX_logo_2023.svg&amp;image_size=0.3&amp;image_margin=2&amp;image_show_background=0"
+                      target="_blank"
+                      ><iframe
+                        src="/online-tools/qr-code/?input=https%3A%2F%2Fx.com%2F&amp;type=png&amp;size=150&amp;padding=8&amp;ec=H&amp;dot_option_type=square&amp;dot_option_color=%23000&amp;corners_square_option_type=extra-rounded&amp;corners_square_option_color=%23000&amp;corners_dot_option_type=dot&amp;corners_dot_option_color=rgb(29%2C%20155%2C%20240)&amp;background_option_color=rgb(255%2C%20255%2C%20255)&amp;image_type=url&amp;image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FX_logo_2023.svg&amp;image_size=0.3&amp;image_margin=2&amp;image_show_background=0"
+                        frameborder="0"
+                        scrolling="no"
+                        width="150"
+                        height="150"
+                        loading="lazy"
+                      ></iframe
+                    ></a>
+                  </div>
+                </details>
+              </div>
+              <div class="output">
+                <div class="block block-fill">
+                  <div class="block-title">
+                    Output
+                    <div class="toolbar">
+                      <a
+                        class="icon"
+                        id="download-image"
+                        download="download"
+                        style="display: none"
+                        onclick="gtag('event', 'download');"
+                        ><img
+                          src="{{ asset('images/download.svg') }}"
+                          alt="Download"
+                          title="Download" /></a
+                      ><button class="icon" data-toggle="fullscreen">
+                        <img
+                          class="fullscreen-icon"
+                          src="{{ asset('images/fullscreen.svg') }}"
+                          alt="Full Screen"
+                          title="Full Screen"
+                        /><img
+                          class="fullscreen-icon-exit"
+                          src="{{ asset('images/fullscreen-exit.svg') }}"
+                          alt="Full Screen"
+                          title="Full Screen"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="container" id="qrcode"></div>
+                </div>
+                <details class="block" data-toggle="copyblock">
+                  <summary class="block-title">
+                    Embedded Code
+                    <div class="toolbar">
+                      <button
+                        class="icon"
+                        data-toggle="copy"
+                        data-clipboard-target="#output"
+                        data-message="Embedded code copied"
+                      >
+                        <img src="{{ asset('images/copy.svg') }}" alt="Copy" title="Copy" />
+                      </button>
+                    </div>
+                  </summary>
+                  <textarea
+                    id="output"
+                    placeholder="Embedded Code"
+                    readonly="readonly"
+                  ></textarea>
+                </details>
+                <details class="block" data-toggle="copyblock">
+                  <summary class="block-title">
+                    QR Code Link
+                    <div class="toolbar">
+                      <button
+                        class="icon"
+                        data-toggle="copy"
+                        data-clipboard-target="#qrcode-link"
+                        data-message="QR code link copied"
+                      >
+                        <img src="{{ asset('images/copy.svg') }}" alt="Copy" title="Copy" />
+                      </button>
+                    </div>
+                  </summary>
+                  <input
+                    id="qrcode-link"
+                    type="text"
+                    placeholder="QR Code Link"
+                    readonly="readonly"
+                  />
+                </details>
+                <details class="block text-only" data-toggle="copyblock">
+                  <summary class="block-title">
+                    Share Link
+                    <div class="toolbar">
+                      <button
+                        class="icon"
+                        data-toggle="copy"
+                        data-clipboard-target="#share-link"
+                        data-message="Share link copied"
+                      >
+                        <img src="{{ asset('images/copy.svg') }}" alt="Copy" title="Copy" />
+                      </button>
+                    </div>
+                  </summary>
+                  <input
+                    id="share-link"
+                    type="text"
+                    placeholder="Share Link"
+                    readonly="readonly"
+                  />
+                </details>
+              </div>
+            </div>
+            <div class="settings">
+              <div class="block block-fill">
+                <div class="block-title">Settings</div>
+                <div class="container">
+                  <div class="setting">
+                    <a class="btn" id="execute">Generate</a>
+                  </div>
+                  <div class="setting">
+                    <label class="switcher"
+                      ><input
+                        type="checkbox"
+                        value="1"
+                        id="auto-update"
+                        checked
+                      />
+                      <div class="toggle"></div>
+                      <span>Auto Update</span></label
+                    >
+                  </div>
+                  <div class="setting">
+                    <label class="switcher"
+                      ><input type="checkbox" value="1" id="remember-input" />
+                      <div class="toggle"></div>
+                      <span>Remember Input</span></label
+                    >
+                  </div>
+                  <details class="setting-group" open>
+                    <summary>Main</summary>
+                    <div class="setting">
+                      <label for="type">Type</label
+                      ><select
+                        id="type"
+                        data-remember="type"
+                        data-share="type"
+                        data-auto-update
+                      >
+                        <option value="png">PNG</option>
+                        <option value="jpeg">JPG</option>
+                        <option value="svg">SVG</option>
+                        <option value="webp">WEBP</option>
+                      </select>
+                    </div>
+                    <div class="setting">
+                      <label for="size">Size</label
+                      ><input
+                        type="number"
+                        id="size"
+                        data-option="size"
+                        data-remember="size"
+                        data-share="size"
+                        value="256"
+                        step="1"
+                        min="64"
+                        max="2000"
+                      />
+                    </div>
+                    <div class="setting">
+                      <label for="padding">Padding</label
+                      ><input
+                        type="number"
+                        id="padding"
+                        data-option="padding"
+                        data-remember="padding"
+                        data-share="padding"
+                        value="16"
+                        step="1"
+                        min="0"
+                        max="2000"
+                      />
+                    </div>
+                    <div class="setting">
+                      <label for="ec">Error Correction</label
+                      ><select
+                        id="ec"
+                        data-remember="ec"
+                        data-share="ec"
+                        data-auto-update
+                      >
+                        <option value="L">L</option>
+                        <option value="M">M</option>
+                        <option value="Q" selected>Q</option>
+                        <option value="H">H</option>
+                      </select>
+                    </div>
+                  </details>
+                  <details class="setting-group" open>
+                    <summary>Dot</summary>
+                    <div class="setting">
+                      <label for="dot-option-type">Type</label
+                      ><select
+                        id="dot-option-type"
+                        data-option="dotoption-type"
+                        data-remember="dotoption-type"
+                        data-share="dot_option_type"
+                      >
+                        <option value="rounded">Rounded</option>
+                        <option value="dots">Dots</option>
+                        <option value="classy">Classy</option>
+                        <option value="classy-rounded">Classy Rounded</option>
+                        <option value="square" selected>Square</option>
+                        <option value="extra-rounded">Extra Rounded</option>
+                      </select>
+                    </div>
+                    <div class="setting">
+                      <label for="dot-option-color-type">Color Type</label
+                      ><select
+                        id="dot-option-color-type"
+                        data-option="dotoption-color-type"
+                        data-remember="dotoption-color-type"
+                        data-share="dot_option_color_type"
+                        data-toggle="color-type"
+                      >
+                        <option value="">Single Color</option>
+                        <option value="linear">Linear Gradient</option>
+                        <option value="radial">Radial Gradient</option>
+                      </select>
+                    </div>
+                    <div class="setting color-block">
+                      <label for="dot-option-color">Color</label>
+                      <div class="color-input">
+                        <div class="color-wrapper">
+                          <div class="color"></div>
+                        </div>
+                        <input
+                          spellcheck="false"
+                          value="#000"
+                          id="dot-option-color"
+                          data-option="dot-option-color"
+                          data-remember="dot-option-color"
+                          data-share="dot_option_color"
+                        />
+                      </div>
+                    </div>
+                    <div class="setting grapick-block">
+                      <label for="dot-option-gradient-color">Color</label
+                      ><input
+                        value='[[10,"#000"],[90,"#49b1f5"]]'
+                        data-toggle="grapick"
+                        id="dot-option-gradient-color"
+                        data-option="dot-option-gradient-color"
+                        data-remember="dot-option-gradient-color"
+                        data-share="dot_option_gradient_color"
+                      />
+                      <div class="color-input">
+                        <div class="color-wrapper">
+                          <div class="color"></div>
+                        </div>
+                        <input spellcheck="false" />
+                      </div>
+                    </div>
+                    <div class="setting rotation-block">
+                      <label for="dot-option-rotation">Rotation</label
+                      ><input
+                        type="number"
+                        id="dot-option-rotation"
+                        data-option="dot-option-rotation"
+                        data-remember="dot-option-rotation"
+                        data-share="dot_option_rotation"
+                        value="0"
+                        step="1"
+                        min="-180"
+                        max="180"
+                      />
+                    </div>
+                  </details>
+                  <details class="setting-group" open>
+                    <summary>Corners Square</summary>
+                    <div class="setting">
+                      <label for="corners-square-option-type">Type</label
+                      ><select
+                        id="corners-square-option-type"
+                        data-option="corners-squareoption-type"
+                        data-remember="corners-squareoption-type"
+                        data-share="corners_square_option_type"
+                      >
+                        <option value="">None</option>
+                        <option value="dot">Dot</option>
+                        <option value="square">Square</option>
+                        <option value="extra-rounded">Extra Rounded</option>
+                      </select>
+                    </div>
+                    <div class="setting">
+                      <label for="corners-square-option-color-type"
+                        >Color Type</label
+                      ><select
+                        id="corners-square-option-color-type"
+                        data-option="corners-squareoption-color-type"
+                        data-remember="corners-squareoption-color-type"
+                        data-share="corners_square_option_color_type"
+                        data-toggle="color-type"
+                      >
+                        <option value="">Single Color</option>
+                        <option value="linear">Linear Gradient</option>
+                        <option value="radial">Radial Gradient</option>
+                      </select>
+                    </div>
+                    <div class="setting color-block">
+                      <label for="corners-square-option-color">Color</label>
+                      <div class="color-input">
+                        <div class="color-wrapper">
+                          <div class="color"></div>
+                        </div>
+                        <input
+                          spellcheck="false"
+                          value="#000"
+                          id="corners-square-option-color"
+                          data-option="corners-square-option-color"
+                          data-remember="corners-square-option-color"
+                          data-share="corners_square_option_color"
+                        />
+                      </div>
+                    </div>
+                    <div class="setting grapick-block">
+                      <label for="corners-square-option-gradient-color"
+                        >Color</label
+                      ><input
+                        value='[[10,"#000"],[90,"#49b1f5"]]'
+                        data-toggle="grapick"
+                        id="corners-square-option-gradient-color"
+                        data-option="corners-square-option-gradient-color"
+                        data-remember="corners-square-option-gradient-color"
+                        data-share="corners_square_option_gradient_color"
+                      />
+                      <div class="color-input">
+                        <div class="color-wrapper">
+                          <div class="color"></div>
+                        </div>
+                        <input spellcheck="false" />
+                      </div>
+                    </div>
+                    <div class="setting rotation-block">
+                      <label for="corners-square-option-rotation"
+                        >Rotation</label
+                      ><input
+                        type="number"
+                        id="corners-square-option-rotation"
+                        data-option="corners-square-option-rotation"
+                        data-remember="corners-square-option-rotation"
+                        data-share="corners_square_option_rotation"
+                        value="0"
+                        step="1"
+                        min="-180"
+                        max="180"
+                      />
+                    </div>
+                  </details>
+                  <details class="setting-group" open>
+                    <summary>Corners Dot</summary>
+                    <div class="setting">
+                      <label for="corners-dot-option-type">Type</label
+                      ><select
+                        id="corners-dot-option-type"
+                        data-option="corners-dotoption-type"
+                        data-remember="corners-dotoption-type"
+                        data-share="corners_dot_option_type"
+                      >
+                        <option value="">None</option>
+                        <option value="dot">Dot</option>
+                        <option value="square">Square</option>
+                      </select>
+                    </div>
+                    <div class="setting">
+                      <label for="corners-dot-option-color-type"
+                        >Color Type</label
+                      ><select
+                        id="corners-dot-option-color-type"
+                        data-option="corners-dotoption-color-type"
+                        data-remember="corners-dotoption-color-type"
+                        data-share="corners_dot_option_color_type"
+                        data-toggle="color-type"
+                      >
+                        <option value="">Single Color</option>
+                        <option value="linear">Linear Gradient</option>
+                        <option value="radial">Radial Gradient</option>
+                      </select>
+                    </div>
+                    <div class="setting color-block">
+                      <label for="corners-dot-option-color">Color</label>
+                      <div class="color-input">
+                        <div class="color-wrapper">
+                          <div class="color"></div>
+                        </div>
+                        <input
+                          spellcheck="false"
+                          value="#000"
+                          id="corners-dot-option-color"
+                          data-option="corners-dot-option-color"
+                          data-remember="corners-dot-option-color"
+                          data-share="corners_dot_option_color"
+                        />
+                      </div>
+                    </div>
+                    <div class="setting grapick-block">
+                      <label for="corners-dot-option-gradient-color"
+                        >Color</label
+                      ><input
+                        value='[[10,"#000"],[90,"#49b1f5"]]'
+                        data-toggle="grapick"
+                        id="corners-dot-option-gradient-color"
+                        data-option="corners-dot-option-gradient-color"
+                        data-remember="corners-dot-option-gradient-color"
+                        data-share="corners_dot_option_gradient_color"
+                      />
+                      <div class="color-input">
+                        <div class="color-wrapper">
+                          <div class="color"></div>
+                        </div>
+                        <input spellcheck="false" />
+                      </div>
+                    </div>
+                    <div class="setting rotation-block">
+                      <label for="corners-dot-option-rotation">Rotation</label
+                      ><input
+                        type="number"
+                        id="corners-dot-option-rotation"
+                        data-option="corners-dot-option-rotation"
+                        data-remember="corners-dot-option-rotation"
+                        data-share="corners_dot_option_rotation"
+                        value="0"
+                        step="1"
+                        min="-180"
+                        max="180"
+                      />
+                    </div>
+                  </details>
+                  <details class="setting-group" open>
+                    <summary>Background</summary>
+                    <div class="setting">
+                      <label for="background-option-color-type"
+                        >Color Type</label
+                      ><select
+                        id="background-option-color-type"
+                        data-option="backgroundoption-color-type"
+                        data-remember="backgroundoption-color-type"
+                        data-share="background_option_color_type"
+                        data-toggle="color-type"
+                      >
+                        <option value="">Single Color</option>
+                        <option value="linear">Linear Gradient</option>
+                        <option value="radial">Radial Gradient</option>
+                      </select>
+                    </div>
+                    <div class="setting color-block">
+                      <label for="background-option-color">Color</label>
+                      <div class="color-input">
+                        <div class="color-wrapper">
+                          <div class="color"></div>
+                        </div>
+                        <input
+                          spellcheck="false"
+                          value="#fff"
+                          id="background-option-color"
+                          data-option="background-option-color"
+                          data-remember="background-option-color"
+                          data-share="background_option_color"
+                        />
+                      </div>
+                    </div>
+                    <div class="setting grapick-block">
+                      <label for="background-option-gradient-color">Color</label
+                      ><input
+                        value='[[10,"#49b1f5"],[90,"#fff"]]'
+                        data-toggle="grapick"
+                        id="background-option-gradient-color"
+                        data-option="background-option-gradient-color"
+                        data-remember="background-option-gradient-color"
+                        data-share="background_option_gradient_color"
+                      />
+                      <div class="color-input">
+                        <div class="color-wrapper">
+                          <div class="color"></div>
+                        </div>
+                        <input spellcheck="false" />
+                      </div>
+                    </div>
+                    <div class="setting rotation-block">
+                      <label for="background-option-rotation">Rotation</label
+                      ><input
+                        type="number"
+                        id="background-option-rotation"
+                        data-option="background-option-rotation"
+                        data-remember="background-option-rotation"
+                        data-share="background_option_rotation"
+                        value="0"
+                        step="1"
+                        min="-180"
+                        max="180"
+                      />
+                    </div>
+                  </details>
+                  <details class="setting-group" open>
+                    <summary>Image</summary>
+                    <div class="setting">
+                      <label for="image-type">Type</label
+                      ><select
+                        id="image-type"
+                        data-option="image-type"
+                        data-remember="image-type"
+                        data-share="image_type"
+                      >
+                        <option value="url">URL</option>
+                        <option value="file">File</option>
+                      </select>
+                    </div>
+                    <div class="setting" id="url-block">
+                      <label for="image">URL</label
+                      ><input
+                        type="text"
+                        id="image"
+                        data-option="image"
+                        data-remember="image"
+                        data-share="image"
+                        placeholder="URL"
+                      />
+                    </div>
+                    <div class="setting" id="file-block" style="display: none">
+                      <label for="image-file">File</label>
+                      <div class="droppable-zone">
+                        <input
+                          class="droppable-file"
+                          type="file"
+                          id="image-file"
+                          data-option="image-file"
+                          accept="image/*"
+                        />
+                        <div class="droppable-zone-wrapper">
+                          <img
+                            class="droppable-zone-icon"
+                            src="{{ asset('images/file.svg') }}"
+                            alt="File"
+                          />
+                          <div class="droppable-zone-text">
+                            Drag and drop the file here or click to select a
+                            file. It will process locally and won't be uploaded.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="setting">
+                      <label for="image-size">Size</label
+                      ><input
+                        id="image-size"
+                        type="range"
+                        value="0.4"
+                        step="0.1"
+                        min="0.1"
+                        max="0.5"
+                        data-option="image-size"
+                        data-remember="image-size"
+                        data-share="image_size"
+                      />
+                    </div>
+                    <div class="setting">
+                      <label for="image-margin">Margin</label
+                      ><input
+                        type="number"
+                        id="image-margin"
+                        data-option="image-margin"
+                        data-remember="image-margin"
+                        data-share="image_margin"
+                        value="0"
+                        step="1"
+                        min="0"
+                        max="20"
+                      />
+                    </div>
+                    <div class="setting">
+                      <label class="switcher"
+                        ><input
+                          type="checkbox"
+                          value="1"
+                          id="image-show-background"
+                          data-option="image-show-background"
+                          data-remember="image-show-background"
+                          data-share="image_show_background"
+                        />
+                        <div class="toggle"></div>
+                        <span>Show Background Dots</span></label
+                      >
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            ++waitLoadCount;
+            delayScripts.push({
+              src: "{{ asset('js/qrcode.js?v=8') }}",
+              onload: function () {
+                window.method = withOptions(generate, []);
+                methodLoad();
+              },
+            });
+          </script>
+          <script>
+            ++waitLoadCount;
+            delayScripts.push({
+              src: "{{ asset('js/url-blob.js?v=1') }}",
+              onload: function () {
+                methodLoad();
+              },
+            });
+          </script>
+          <script>
+            ++waitLoadCount;
+            delayScripts.push({
+              src: "{{ asset('js/droppable-file.js?v=10') }}",
+              onload: function () {
+                methodLoad();
+              },
+            });
+          </script>
+          <script>
+            ++waitLoadCount;
+            delayScripts.push({
+              src: "{{ asset('js/qr-code-styling.js') }}",
+              onload: function () {
+                methodLoad();
+              },
+            });
+          </script>
+          <script>
+            ++waitLoadCount;
+            delayScripts.push({
+              src: "https://cdnjs.cloudflare.com/ajax/libs/tinyColorPicker/1.1.1/jqColorPicker.min.js",
+              onload: function () {
+                methodLoad();
+              },
+            });
+          </script>
+          <script>
+            ++waitLoadCount;
+            delayScripts.push({
+              src: "https://cdnjs.cloudflare.com/ajax/libs/tinyColorPicker/1.1.1/colors.min.js",
+              onload: function () {
+                methodLoad();
+              },
+            });
+          </script>
+          <script>
+            ++waitLoadCount;
+            delayScripts.push({
+              src: "https://artf.github.io/grapick/dist/grapick.min.js",
+              onload: function () {
+                methodLoad();
+              },
+            });
+          </script>
+          <script>
+            delayScripts.push({
+              src: "{{ asset('js/clipboard.min.js') }}",
+              onload: function () {
+                new ClipboardJS('[data-toggle="copy"]').on(
+                  "success",
+                  function (e) {
+                    showMessage(e.trigger.getAttribute("data-message"));
+                    gtag("event", "copy");
+                  }
+                );
+              },
+              delay: 100,
+            });
+          </script>
+        
+{% endblock %}
+
+{% block page_scripts %}
+  
+{% endblock %}

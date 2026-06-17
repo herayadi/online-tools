@@ -238,3 +238,53 @@
   padding-top: var(--ot-spacing-lg);
   border-top: 1px solid var(--ot-border);
 }
+
+/* Tool Panel (Unified Archetype Component) */
+.tool-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tool-panel .block-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tool-panel .toolbar {
+  display: flex;
+  gap: var(--ot-spacing-xs);
+}
+
+.tool-panel .toolbar button.icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--ot-spacing-xs);
+  border-radius: var(--ot-radius);
+  transition: background-color 0.2s;
+}
+
+.tool-panel .toolbar button.icon:hover,
+.tool-panel .toolbar button.icon:focus-visible {
+  background-color: var(--ot-bg);
+  outline: 2px solid var(--ot-primary);
+}
+
+.tool-textarea {
+  resize: vertical;
+  min-height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--ot-font-mono);
+}
+
+.validation-result {
+  min-height: 150px;
+  padding: var(--ot-spacing-md);
+  background: var(--ot-bg-surface);
+  border: 1px solid var(--ot-border);
+  border-radius: var(--ot-radius);
+  overflow-y: auto;
+}

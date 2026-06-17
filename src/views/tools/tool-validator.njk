@@ -1,33 +1,28 @@
 {% extends "layouts/tool.njk" %}
+{% import "macros/tool-components.njk" as components %}
 
 {% block tool_input %}
-<div class="input">
-  <div class="block block-fill">
-    <div class="block-title">
-      Input
-      <div class="toolbar">
-        <button class="icon" data-toggle="fullscreen">
-          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
-          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
-        </button>
-      </div>
-    </div>
-    <textarea class="container" id="input" spellcheck="false" placeholder="Enter here..." data-remember="input" data-share="input" data-auto-update data-toggle="monacoEditor" data-language="json"></textarea>
-  </div>
-</div>
+  {{ components.panel({
+    title: 'Input',
+    id: 'input',
+    type: 'input',
+    placeholder: 'Enter here...',
+    copy: false,
+    fullscreen: true,
+    editor: true,
+    editorLang: 'json'
+  }) }}
 {% endblock %}
 
 {% block tool_output %}
-<div class="output">
-  <div class="block block-fill">
-    <div class="block-title">
-      Validation Result
-    </div>
-    <div class="container message-box" id="validate-result">
-      <!-- Validation status will be injected here via JS -->
-    </div>
-  </div>
-</div>
+  {{ components.panel({
+    title: 'Validation Result',
+    id: 'validate-result',
+    type: 'output',
+    isValidator: true,
+    fullscreen: false,
+    copy: false
+  }) }}
 {% endblock %}
 
 {% block tool_settings %}

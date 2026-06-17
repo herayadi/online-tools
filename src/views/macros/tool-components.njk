@@ -1,0 +1,62 @@
+{% macro panel(options) %}
+{% set title = options.title | default('Panel') %}
+{% set id = options.id | default('input') %}
+{% set type = options.type | default('input') %}
+{% set placeholder = options.placeholder | default('Enter here...') %}
+{% set readonly = options.readonly | default(false) %}
+{% set copy = options.copy | default(false) %}
+{% set fullscreen = options.fullscreen | default(true) %}
+{% set editor = options.editor | default(false) %}
+{% set editorLang = options.editorLang | default('') %}
+{% set droppable = options.droppable | default(false) %}
+{% set droppableHidden = options.droppableHidden | default(false) %}
+{% set isValidator = options.isValidator | default(false) %}
+{% set hiddenTextarea = options.hiddenTextarea | default(false) %}
+
+<div class="{{ type }} tool-panel">
+  <div class="block block-fill">
+    <div class="block-title">
+      {{ title }}
+      <div class="toolbar" role="toolbar" aria-label="{{ title }} Toolbar">
+        {% if copy %}
+        <button class="icon btn-copy" data-toggle="copy" data-clipboard-target="#{{ id }}" data-message="{{ title }} copied" aria-label="Copy {{ title }}">
+          <img src="images/copy.svg" alt="Copy" title="Copy" />
+        </button>
+        {% endif %}
+        {% if fullscreen %}
+        <button class="icon btn-fullscreen" data-toggle="fullscreen" aria-label="Toggle Fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Exit Full Screen" title="Exit Full Screen" style="display: none;" />
+        </button>
+        {% endif %}
+      </div>
+    </div>
+    
+    {% if isValidator %}
+      <div class="container message-box validation-result" id="{{ id }}" role="region" aria-live="polite">
+        <!-- Validation status will be injected here via JS -->
+      </div>
+    {% else %}
+      <textarea class="container tool-textarea" id="{{ id }}" spellcheck="false" placeholder="{{ placeholder }}" aria-label="{{ title }}"
+        {% if readonly %}readonly="readonly"{% endif %}
+        {% if hiddenTextarea %}style="display: none;"{% endif %}
+        {% if type == 'input' %}data-remember="{{ id }}" data-share="{{ id }}" data-auto-update{% endif %}
+        {% if editor %}data-toggle="monacoEditor"{% endif %}
+        {% if editorLang %}data-language="{{ editorLang }}"{% endif %}
+      ></textarea>
+    {% endif %}
+    
+    {% if droppable %}
+    <div class="droppable-zone container" id="droppable-zone" {% if droppableHidden %}style="display: none"{% endif %}>
+      <input class="droppable-file" type="file" id="file" data-auto-update aria-label="Upload file for {{ title }}" />
+      <div class="droppable-zone-wrapper">
+        <img class="droppable-zone-icon" src="images/file.svg" alt="File" />
+        <div class="droppable-zone-text">
+          Drag and drop the file here or click to select a file. It will process locally and won't be uploaded.
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

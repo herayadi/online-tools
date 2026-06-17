@@ -1,0 +1,11 @@
+<div class="related-tools section">
+  <h3>Related Tools</h3>
+  <div class="tools-list">
+    {% for relatedId in relatedTools %}
+      {% set relatedTool = toolsById[relatedId] %}
+      {% if relatedTool %}
+        <a href="{{ relatedTool.path }}" class="tool-chip">{{ relatedTool.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

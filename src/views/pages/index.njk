@@ -1,48 +1,70 @@
 {% extends "layouts/listing.njk" %}
 
 {% block listing_content %}
-<div class="hero">
+<div class="hero search-first-hero">
   <h2>Welcome to Online Tools</h2>
   <p>{{ site.description }}</p>
-  <div class="search-box">
-    <input type="text" id="global-search" placeholder="Search for tools..." />
+  <div class="search-box large search-container">
+    <input type="text" id="global-search" class="search-input" placeholder="Search for tools (e.g. md5, json, format)..." autocomplete="off" />
+    <div id="search-suggestions" class="search-suggestions dropdown-menu" style="display: none;"></div>
+  </div>
+  <div class="hero-quick-links">
+    <a href="explore/">Browse All Tools &rarr;</a>
   </div>
 </div>
 
-<div class="collections-grid">
-  {% for pack in collections %}
-  <div class="collection-card">
-    <h3>{{ pack.title }}</h3>
-    <p>{{ pack.description }}</p>
-    <div class="tools-list">
-      {% for toolId in pack.tools %}
-        {% set t = toolsById[toolId] %}
-        {% if t %}
-        <a href="{{ t.path }}" class="tool-chip">{{ t.title }}</a>
-        {% endif %}
-      {% endfor %}
-    </div>
+<div class="popular-section">
+  <h3>Popular Tools</h3>
+  <div class="explore-grid">
+    {% for tool in tools %}
+      {% if tool.popular %}
+        <a href="{{ tool.path }}" class="tool-card">
+          <div class="tool-icon">
+            <img src="images/icons/{{ tool.icon | default('wrench') }}.svg" alt="{{ tool.title }}" onerror="this.src='images/logo.svg'" />
+          </div>
+          <div class="tool-info">
+            <h3>{{ tool.title }}</h3>
+            <p>{{ tool.shortDescription | default(tool.description) | truncate(60) }}</p>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 
-<div class="categories-grid">
-  {% for cat in categories %}
-  <div class="category-section">
-    <h3>{{ cat.title }}</h3>
-    <div class="subcategory-grid">
-      {% for sub in cat.subcategories %}
-      <div class="subcategory-card">
-        <h4>{{ sub.title }}</h4>
-        <ul>
-          {% for t in toolsByCategory[cat.id][sub.id] %}
-          <li><a href="{{ t.path }}">{{ t.title }}</a></li>
-          {% endfor %}
-        </ul>
+<div class="collections-section">
+  <h3>Curated Collections</h3>
+  <div class="collections-grid">
+    {% for pack in collections %}
+    <div class="collection-card">
+      <h4>{{ pack.title }}</h4>
+      <p>{{ pack.description }}</p>
+      <div class="tools-list">
+        {% for toolId in pack.tools %}
+          {% set t = toolsById[toolId] %}
+          {% if t %}
+          <a href="{{ t.path }}" class="tool-chip">{{ t.title }}</a>
+          {% endif %}
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
+</div>
+
+<div class="categories-section">
+  <h3>Browse by Category</h3>
+  <div class="categories-grid">
+    {% for cat in categories %}
+    <div class="category-card">
+      <h4><a href="explore/?category={{ cat.id }}">{{ cat.title }}</a></h4>
+      <ul>
+        {% for sub in cat.subcategories %}
+          <li><a href="explore/?category={{ cat.id }}&subcategory={{ sub.id }}">{{ sub.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}

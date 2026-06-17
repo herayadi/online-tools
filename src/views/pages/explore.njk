@@ -3,29 +3,51 @@
 {% block listing_content %}
 <div class="explore-header">
   <h2>Explore Tools</h2>
-  <div class="search-box large">
-    <input type="text" id="explore-search" placeholder="Search by name, tag, or category..." />
+  <div class="search-box large search-container">
+    <input type="text" id="explore-search-input" class="search-input" placeholder="Search by name, tag, or keyword..." autocomplete="off" />
   </div>
 </div>
 
-<div class="explore-filters">
-  <button class="filter-btn active" data-filter="all">All</button>
-  {% for cat in categories %}
-  <button class="filter-btn" data-filter="{{ cat.id }}">{{ cat.title }}</button>
-  {% endfor %}
+<div class="explore-layout">
+  <aside class="explore-sidebar">
+    <div class="filter-group">
+      <h3>Categories</h3>
+      <div id="category-filters" class="filter-list">
+        <button class="filter-btn active" data-category="all">All Categories</button>
+        {% for cat in categories %}
+        <button class="filter-btn" data-category="{{ cat.id }}">{{ cat.title }}</button>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="filter-group" id="subcategory-filters-container" style="display: none;">
+      <h3>Subcategories</h3>
+      <div id="subcategory-filters" class="filter-list">
+        <!-- Injected via JS based on selected category -->
+      </div>
+    </div>
+  </aside>
+
+  <div class="explore-main">
+    <div id="search-results-meta" class="results-meta"></div>
+    <div class="explore-grid" id="search-results">
+      <!-- Injected via JS -->
+    </div>
+    
+    {% include "partials/empty-state.njk" %}
+  </div>
 </div>
 
-<div class="explore-grid" id="explore-results">
-  {% for tool in tools %}
-  <a href="{{ tool.path }}" class="tool-card" data-category="{{ tool.category }}" data-tags="{{ tool.tags | join(',') }}">
+<!-- Template for JS rendering -->
+<template id="tool-card-template">
+  <a href="" class="tool-card">
     <div class="tool-icon">
-      <img src="images/icons/{{ tool.icon | default('wrench') }}.svg" alt="{{ tool.title }}" onerror="this.src='images/logo.svg'" />
+      <img src="" alt="" onerror="this.src='images/logo.svg'" />
     </div>
     <div class="tool-info">
-      <h3>{{ tool.title }}</h3>
-      <p>{{ tool.shortDescription }}</p>
+      <h3></h3>
+      <p></p>
     </div>
   </a>
-  {% endfor %}
-</div>
+</template>
 {% endblock %}

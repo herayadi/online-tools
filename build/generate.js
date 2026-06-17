@@ -68,6 +68,42 @@ const globalContext = {
 // 5. Generate Pages
 console.log('Generating pages...');
 
+// Pre-calculate related tools and build search index
+console.log('Building search index and related tools...');
+const searchIndex = [];
+tools.forEach(tool => {
+  // Related tools fallback logic
+  if (!tool.relatedTools || tool.relatedTools.length === 0) {
+    tool.relatedTools = [];
+    
+    // Fallback 1: Same subcategory
+    const sameSub = tools.filter(t => t.id !== tool.id && t.category === tool.category && t.subcategory === tool.subcategory);
+    
+    // Fallback 2: Same category
+    const sameCat = tools.filter(t => t.id !== tool.id && t.category === tool.category && t.subcategory !== tool.subcategory);
+    
+    // Combine and take top 6
+    const combined = [...sameSub, ...sameCat].slice(0, 6);
+    tool.relatedTools = combined.map(t => t.id);
+  }
+
+  // Populate search index
+  searchIndex.push({
+    id: tool.id,
+    title: tool.title,
+    path: tool.path,
+    aliases: tool.aliases || [],
+    tags: tool.tags || [],
+    category: tool.category,
+    subcategory: tool.subcategory,
+    description: tool.shortDescription || tool.description,
+    popular: !!tool.popular,
+    featured: !!tool.featured
+  });
+});
+
+fs.outputFileSync(path.join(DIST_DIR, 'data', 'search-index.json'), JSON.stringify(searchIndex));
+
 // Home
 const indexHtml = env.render('pages/index.njk', {
   ...globalContext,

@@ -2,6 +2,7 @@
 
 {% block main %}
 <header>
+  {% include "partials/breadcrumbs.njk" %}
   <h1>{{ h1 | default(title) }}</h1>
   <p>{{ description }}</p>
 </header>
@@ -84,5 +85,7 @@
       delay: 100
     });
   </script>
+  
+  {% include "partials/related-tools.njk" %}
 </main>
 {% endblock %}

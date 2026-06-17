@@ -122,7 +122,7 @@
       <div class="tool-card-wrapper">
         <a href="${tool.path}" class="tool-card">
           <div class="tool-icon">
-            <img src="images/icons/${tool.icon || 'wrench'}.svg" alt="${tool.title}" onerror="this.src='images/logo.svg'" />
+            <img src="images/icons/${tool.icon || 'wrench'}.svg" alt="${tool.title}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/logo.svg';}else{this.style.display='none';}" />
           </div>
           <div class="tool-info">
             <h3>${tool.title}</h3>

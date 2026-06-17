@@ -6,6 +6,7 @@
   "scripts": {
     "scan": "node build/scanner.js",
     "build": "node build/generate.js",
+    "build:local": "node build/generate.js --local",
     "build:watch": "node build/generate.js --watch",
     "build:only": "node build/generate.js --only",
     "build:limit": "node build/generate.js --limit"

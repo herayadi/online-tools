@@ -14,6 +14,12 @@ const DIST_DIR = path.join(ROOT, 'dist');
 // 1. Data Loading
 console.log('Loading data...');
 const siteConfig = fs.readJSONSync(path.join(DATA_DIR, 'site.config.json'));
+
+if (process.argv.includes('--local')) {
+  siteConfig.basePath = '';
+  siteConfig.domain = 'http://localhost:3000';
+}
+
 const tools = fs.readJSONSync(path.join(DATA_DIR, 'tools.json'));
 const categories = fs.readJSONSync(path.join(DATA_DIR, 'categories.json'));
 const collections = fs.readJSONSync(path.join(DATA_DIR, 'collections.json'));
@@ -204,6 +210,49 @@ console.log('====================================');
 console.log('Build Complete!');
 console.log(`- Tools: ${tools.length}`);
 console.log(`- Redirects: ${redirects.length}`);
-console.log(`- Pages: 2 (Home, Explore)`);
+console.log(`- Pages: 3 (Home, Explore, Compare)`);
 console.log('Output directory: dist/');
 console.log('====================================');
+
+// 10. QA Automation (Lightweight)
+console.log('Running QA verifications...');
+const criticalAssets = [
+  'css/style.css',
+  'css/components.css',
+  'js/main.js',
+  'js/personalization.js',
+  'js/compare.js',
+  'js/search.js',
+  'images/logo.svg',
+  'data/search-index.json',
+  'index.html',
+  'explore/index.html',
+  'compare/index.html',
+  'sitemap.xml',
+  'robots.txt'
+];
+
+let qaFailed = false;
+criticalAssets.forEach(asset => {
+  const assetPath = path.join(DIST_DIR, asset);
+  if (!fs.existsSync(assetPath)) {
+    console.error(`[QA FAIL] Missing critical asset: ${asset}`);
+    qaFailed = true;
+  }
+});
+
+// Verify tools exist
+tools.forEach(tool => {
+  const toolPath = tool.path.endsWith('.html') ? path.join(DIST_DIR, tool.path) : path.join(DIST_DIR, tool.path, 'index.html');
+  if (!fs.existsSync(toolPath)) {
+    console.error(`[QA FAIL] Missing tool page: ${tool.path}`);
+    qaFailed = true;
+  }
+});
+
+if (qaFailed) {
+  console.error('[QA FAIL] Build verification failed due to missing assets.');
+  process.exit(1);
+} else {
+  console.log('[QA PASS] All critical assets and tool pages verified successfully.');
+}

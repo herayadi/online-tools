@@ -36,7 +36,7 @@
   </div>
 
   <div class="empty-state" id="compare-empty-state">
-    <img src="images/search-empty.svg" alt="No tools selected" onerror="this.src='images/logo.svg'" width="64" />
+    <img src="images/search-empty.svg" alt="No tools selected" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/logo.svg';}else{this.style.display='none';}" width="64" />
     <h3>No Tools Selected</h3>
     <p>Select up to 4 tools from the Explore page or Home page to compare them side-by-side.</p>
     <div class="empty-state-actions">

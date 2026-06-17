@@ -13,11 +13,23 @@
   </div>
 </div>
 
+<!-- Personalization Sections (Injected via JS) -->
+<div class="popular-section" id="home-favorites-section" style="display: none;">
+  <h3>Your Favorites</h3>
+  <div class="explore-grid" id="home-favorites-grid"></div>
+</div>
+
+<div class="popular-section" id="home-history-section" style="display: none;">
+  <h3>Recently Used</h3>
+  <div class="explore-grid" id="home-history-grid"></div>
+</div>
+
 <div class="popular-section">
   <h3>Popular Tools</h3>
   <div class="explore-grid">
     {% for tool in tools %}
       {% if tool.popular %}
+      <div class="tool-card-wrapper">
         <a href="{{ tool.path }}" class="tool-card">
           <div class="tool-icon">
             <img src="images/icons/{{ tool.icon | default('wrench') }}.svg" alt="{{ tool.title }}" onerror="this.src='images/logo.svg'" />
@@ -27,6 +39,10 @@
             <p>{{ tool.shortDescription | default(tool.description) | truncate(60) }}</p>
           </div>
         </a>
+        <button class="btn-favorite card-favorite" data-tool-id="{{ tool.id }}" aria-label="Toggle Favorite">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </button>
+      </div>
       {% endif %}
     {% endfor %}
   </div>

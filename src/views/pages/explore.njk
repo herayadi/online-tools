@@ -38,16 +38,21 @@
   </div>
 </div>
 
-<!-- Template for JS rendering -->
+<!-- Template for JS rendering (fallback) -->
 <template id="tool-card-template">
-  <a href="" class="tool-card">
-    <div class="tool-icon">
-      <img src="" alt="" onerror="this.src='images/logo.svg'" />
-    </div>
-    <div class="tool-info">
-      <h3></h3>
-      <p></p>
-    </div>
-  </a>
+  <div class="tool-card-wrapper">
+    <a href="" class="tool-card">
+      <div class="tool-icon">
+        <img src="" alt="" onerror="this.src='images/logo.svg'" />
+      </div>
+      <div class="tool-info">
+        <h3></h3>
+        <p></p>
+      </div>
+    </a>
+    <button class="btn-favorite card-favorite" data-tool-id="" aria-label="Toggle Favorite">
+      <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+    </button>
+  </div>
 </template>
 {% endblock %}

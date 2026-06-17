@@ -118,19 +118,32 @@
       }
       
       results.forEach(tool => {
-        const clone = cardTemplate.content.cloneNode(true);
-        const a = clone.querySelector('a');
-        const img = clone.querySelector('img');
-        const h3 = clone.querySelector('h3');
-        const p = clone.querySelector('p');
-        
-        a.href = tool.path;
-        img.src = `images/icons/${tool.icon || 'wrench'}.svg`;
-        h3.textContent = tool.title;
-        p.textContent = (tool.description || '').substring(0, 60) + ((tool.description && tool.description.length > 60) ? '...' : '');
-        
-        exploreResults.appendChild(clone);
+        if (window.OTPersonalization) {
+          const div = document.createElement('div');
+          div.innerHTML = window.OTPersonalization.createToolCardHtml(tool);
+          exploreResults.appendChild(div.firstElementChild);
+        } else {
+          const clone = cardTemplate.content.cloneNode(true);
+          const a = clone.querySelector('a');
+          const img = clone.querySelector('img');
+          const h3 = clone.querySelector('h3');
+          const p = clone.querySelector('p');
+          const btn = clone.querySelector('.btn-favorite');
+          
+          a.href = tool.path;
+          img.src = `images/icons/${tool.icon || 'wrench'}.svg`;
+          h3.textContent = tool.title;
+          p.textContent = (tool.description || '').substring(0, 60) + ((tool.description && tool.description.length > 60) ? '...' : '');
+          if (btn) btn.dataset.toolId = tool.id;
+          
+          exploreResults.appendChild(clone);
+        }
       });
+    }
+    
+    // Bind new favorite buttons if any
+    if (window.OTPersonalization && window.OTPersonalization.updateFavoriteUI) {
+      window.OTPersonalization.updateFavoriteUI();
     }
   }
 

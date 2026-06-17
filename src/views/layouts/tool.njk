@@ -1,9 +1,16 @@
 {% extends "layouts/base.njk" %}
 
 {% block main %}
-<header>
-  {% include "partials/breadcrumbs.njk" %}
-  <h1>{{ h1 | default(title) }}</h1>
+<header class="tool-header">
+  <div class="tool-header-main">
+    <div>
+      {% include "partials/breadcrumbs.njk" %}
+      <h1>{{ h1 | default(title) }}</h1>
+    </div>
+    <button class="btn-favorite page-favorite" data-tool-id="{{ id }}" aria-label="Toggle Favorite">
+      <!-- Icon injected by JS -->
+    </button>
+  </div>
   <p>{{ description }}</p>
 </header>
 <main>

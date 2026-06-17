@@ -288,3 +288,54 @@
   border-radius: var(--ot-radius);
   overflow-y: auto;
 }
+
+/* Personalization */
+.tool-card-wrapper {
+  position: relative;
+  display: block;
+}
+
+.btn-favorite {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ot-text-muted);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-favorite:hover {
+  color: var(--ot-primary);
+  transform: scale(1.1);
+}
+
+.btn-favorite.active {
+  color: #ff4757;
+}
+
+.card-favorite {
+  position: absolute;
+  top: var(--ot-spacing-sm);
+  right: var(--ot-spacing-sm);
+  padding: var(--ot-spacing-xs);
+  background: var(--ot-bg-surface);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.page-favorite {
+  padding: var(--ot-spacing-sm);
+  border: 1px solid var(--ot-border);
+  border-radius: var(--ot-radius);
+  background: var(--ot-bg-surface);
+  margin-left: auto;
+}
+
+.tool-header-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}

@@ -23,6 +23,7 @@
   --ot-sidebar-width: 260px;
   --ot-radius: 6px;
   --ot-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --ot-icon-filter: none;
 }
 
 .dark-theme {
@@ -31,4 +32,5 @@
   --ot-text-main: #f8f9fa;
   --ot-text-muted: #adb5bd;
   --ot-border: #343a40;
+  --ot-icon-filter: invert(1) brightness(0.9);
 }

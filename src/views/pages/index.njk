@@ -75,15 +75,17 @@
 
 <div class="categories-section">
   <h3>Browse by Category</h3>
-  <div class="categories-grid">
+  <div class="categories-grid modern-categories">
     {% for cat in categories %}
-    <div class="category-card">
-      <h4><a href="{{ asset('explore/?category=' + cat.id) }}">{{ cat.title }}</a></h4>
-      <ul>
+    <div class="category-card-modern">
+      <div class="category-header">
+        <h4 class="category-title"><a href="{{ asset('explore/?category=' + cat.id) }}">{{ cat.title }}</a></h4>
+      </div>
+      <div class="subcategory-pills">
         {% for sub in cat.subcategories %}
-          <li><a href="{{ asset('explore/?category=' + cat.id + '&subcategory=' + sub.id) }}">{{ sub.title }}</a></li>
+          <a class="subcategory-pill" href="{{ asset('explore/?category=' + cat.id + '&subcategory=' + sub.id) }}">{{ sub.title }}</a>
         {% endfor %}
-      </ul>
+      </div>
     </div>
     {% endfor %}
   </div>

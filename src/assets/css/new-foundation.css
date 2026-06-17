@@ -6,3 +6,10 @@
 /* 
   Utilities will be added here in the future 
 */
+
+img[src$=".svg"] {
+  filter: var(--ot-icon-filter);
+}
+img[src*="logo.svg"] {
+  filter: none;
+}

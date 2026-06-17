@@ -1,5 +1,11 @@
 {% extends "layouts/base.njk" %}
 
+{% block page_styles %}
+  {% for style in styles %}
+    <link rel="stylesheet" href="{{ asset(style) }}" />
+  {% endfor %}
+{% endblock %}
+
 {% block main %}
 <header class="tool-header">
   <div class="tool-header-main">
@@ -55,7 +61,7 @@
   <script>
     ++waitLoadCount;
     delayScripts.push({
-      src: "{{ script }}",
+      src: "{{ asset(script) }}",
       {% if loop.last and methodAssignment %}
       onload: function () {
         {{ methodAssignment | safe }};

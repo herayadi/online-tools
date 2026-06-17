@@ -1,0 +1,98 @@
+{% extends "layouts/tool.njk" %}
+
+{% block tool_input %}
+<div class="input">
+  <div class="block block-fill">
+    <div class="block-title">
+      Input
+      <div class="toolbar">
+        <button class="icon" data-toggle="fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
+        </button>
+      </div>
+    </div>
+    <textarea class="container" id="input" spellcheck="false" placeholder="Enter here..." data-remember="input" data-share="input" data-auto-update data-toggle="monacoEditor"></textarea>
+    <div class="droppable-zone container" id="droppable-zone" style="display: none">
+      <input class="droppable-file" type="file" id="file" data-auto-update />
+      <div class="droppable-zone-wrapper">
+        <img class="droppable-zone-icon" src="images/file.svg" alt="File" />
+        <div class="droppable-zone-text">
+          Drag and drop the file here or click to select a file. It will process locally and won't be uploaded.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_output %}
+<div class="output">
+  <div class="block block-fill">
+    <div class="block-title">
+      Output
+      <div class="toolbar">
+        <button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied">
+          <img src="images/copy.svg" alt="Copy" title="Copy" />
+        </button>
+        <button class="icon" data-toggle="fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
+        </button>
+      </div>
+    </div>
+    <textarea class="container" id="output" spellcheck="false" placeholder="Output here..." data-toggle="monacoEditor" readonly="readonly"></textarea>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_settings %}
+<div class="setting">
+  <label for="file-type">Input Type</label>
+  <select id="file-type" data-remember="source" data-share="source" data-auto-update>
+    <option value="text">Text</option>
+    <option value="file">File</option>
+    <option value="url">URL</option>
+  </select>
+</div>
+<div class="setting text-only">
+  <label for="input-type">Input Encoding</label>
+  <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+    <option value="utf-8" selected>UTF-8</option>
+    <option value="hex">Hex</option>
+    <option value="base64">Base64</option>
+  </select>
+</div>
+<div class="setting text-only">
+  <label for="output-type">Output Encoding</label>
+  <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update>
+    <option value="hex">Hex (Lower Case)</option>
+    <option value="hex_upper">Hex (Upper Case)</option>
+    <option value="base64">Base64</option>
+  </select>
+</div>
+
+<!-- AES/DES specific settings shell - for now we just dump standard crypto settings if needed or load via JS -->
+<div class="setting">
+  <label for="key-size">Key Size</label>
+  <select id="key-size" data-remember="key-size" data-option="key-size" data-share="key_size">
+    <option value="128">128 Bits</option>
+    <option value="192">192 Bits</option>
+    <option value="256" selected>256 Bits</option>
+  </select>
+</div>
+<div class="setting">
+  <label for="mode">Mode</label>
+  <select id="mode" data-remember="mode" data-option="mode" data-share="mode">
+    <option value="CBC">CBC</option>
+    <option value="CFB">CFB</option>
+    <option value="CTR">CTR</option>
+    <option value="OFB">OFB</option>
+    <option value="ECB">ECB</option>
+  </select>
+</div>
+<div class="setting" id="passphrase-block">
+  <label for="passphrase">Passphrase</label>
+  <input type="text" id="passphrase" data-remember="passphrase" data-option="passphrase" data-share="passphrase" />
+</div>
+{% endblock %}

@@ -1,0 +1,70 @@
+/* Tool Card Component */
+.tool-card {
+  display: flex;
+  align-items: center;
+  padding: var(--ot-spacing-md);
+  background: var(--ot-bg-surface);
+  border: 1px solid var(--ot-border);
+  border-radius: var(--ot-radius);
+  transition: all 0.2s ease;
+  color: var(--ot-text-main);
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+  shadow: var(--ot-shadow);
+  text-decoration: none;
+  border-color: var(--ot-primary);
+}
+
+.tool-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ot-bg);
+  border-radius: var(--ot-radius);
+  margin-right: var(--ot-spacing-md);
+}
+
+.tool-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.tool-info h3 {
+  margin: 0 0 var(--ot-spacing-xs) 0;
+  font-size: 1.1rem;
+}
+
+.tool-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ot-text-muted);
+}
+
+/* Collection Card Component */
+.collection-card {
+  background: var(--ot-bg-surface);
+  border: 1px solid var(--ot-border);
+  border-radius: var(--ot-radius);
+  padding: var(--ot-spacing-md);
+}
+
+.tool-chip {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 4px 4px 0 0;
+  background: var(--ot-bg);
+  border: 1px solid var(--ot-border);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: var(--ot-text-muted);
+}
+.tool-chip:hover {
+  background: var(--ot-primary);
+  color: white;
+  text-decoration: none;
+}

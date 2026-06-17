@@ -1,0 +1,67 @@
+{% extends "layouts/tool.njk" %}
+
+{% block tool_input %}
+<div class="input">
+  <div class="block block-fill">
+    <div class="block-title">
+      Input
+      <div class="toolbar">
+        <button class="icon" data-toggle="fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
+        </button>
+      </div>
+    </div>
+    <textarea class="container" id="input" spellcheck="false" placeholder="Enter the URL here..." data-remember="input" data-share="input" style="display: none"></textarea>
+    <div class="droppable-zone container" id="droppable-zone">
+      <input class="droppable-file" type="file" id="file" data-auto-update />
+      <div class="droppable-zone-wrapper">
+        <img class="droppable-zone-icon" src="images/file.svg" alt="File" />
+        <div class="droppable-zone-text">
+          Drag and drop the file here or click to select a file. It will process locally and won't be uploaded.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_output %}
+<div class="output">
+  <div class="block block-fill">
+    <div class="block-title">
+      Output
+      <div class="toolbar">
+        <button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied">
+          <img src="images/copy.svg" alt="Copy" title="Copy" />
+        </button>
+        <button class="icon" data-toggle="fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
+        </button>
+      </div>
+    </div>
+    <textarea class="container" id="output" spellcheck="false" placeholder="Output here..." readonly="readonly"></textarea>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_settings %}
+<div class="setting">
+  <label for="file-type">Input Type</label>
+  <select id="file-type" data-remember="file-type" data-auto-update>
+    <option value="file">File</option>
+    <option value="url">URL</option>
+  </select>
+</div>
+{% if settings.outputEncoding %}
+<div class="setting">
+  <label for="output-type">Output Encoding</label>
+  <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+    <option value="hex">Hex (Lower Case)</option>
+    <option value="hex_upper">Hex (Upper Case)</option>
+    <option value="base64" data-load-encoding="base64">Base64</option>
+  </select>
+</div>
+{% endif %}
+{% endblock %}

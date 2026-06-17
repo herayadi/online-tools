@@ -1,0 +1,31 @@
+{% extends "layouts/listing.njk" %}
+
+{% block listing_content %}
+<div class="explore-header">
+  <h2>Explore Tools</h2>
+  <div class="search-box large">
+    <input type="text" id="explore-search" placeholder="Search by name, tag, or category..." />
+  </div>
+</div>
+
+<div class="explore-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  {% for cat in categories %}
+  <button class="filter-btn" data-filter="{{ cat.id }}">{{ cat.title }}</button>
+  {% endfor %}
+</div>
+
+<div class="explore-grid" id="explore-results">
+  {% for tool in tools %}
+  <a href="{{ tool.path }}" class="tool-card" data-category="{{ tool.category }}" data-tags="{{ tool.tags | join(',') }}">
+    <div class="tool-icon">
+      <img src="images/icons/{{ tool.icon | default('wrench') }}.svg" alt="{{ tool.title }}" onerror="this.src='images/logo.svg'" />
+    </div>
+    <div class="tool-info">
+      <h3>{{ tool.title }}</h3>
+      <p>{{ tool.shortDescription }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

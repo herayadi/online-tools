@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: var(--ot-font-sans);
+  background-color: var(--ot-bg);
+  color: var(--ot-text-main);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--ot-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  color: var(--ot-text-main);
+}

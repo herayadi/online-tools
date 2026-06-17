@@ -1,0 +1,35 @@
+{% extends "layouts/tool.njk" %}
+
+{% block tool_input %}
+<div class="input">
+  <div class="block block-fill">
+    <div class="block-title">
+      Input
+      <div class="toolbar">
+        <button class="icon" data-toggle="fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
+        </button>
+      </div>
+    </div>
+    <textarea class="container" id="input" spellcheck="false" placeholder="Enter here..." data-remember="input" data-share="input" data-auto-update data-toggle="monacoEditor" data-language="json"></textarea>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_output %}
+<div class="output">
+  <div class="block block-fill">
+    <div class="block-title">
+      Validation Result
+    </div>
+    <div class="container message-box" id="validate-result">
+      <!-- Validation status will be injected here via JS -->
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_settings %}
+<!-- Validators generally don't have many settings in this tool, except auto-update which is handled by layout -->
+{% endblock %}

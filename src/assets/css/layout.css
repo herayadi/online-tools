@@ -1,0 +1,19 @@
+/* Listing layout for Home & Explore */
+.listing-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--ot-spacing-xl) var(--ot-spacing-md);
+}
+
+.collections-grid,
+.explore-grid,
+.subcategory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--ot-spacing-lg);
+  margin-bottom: var(--ot-spacing-xl);
+}
+
+.category-section {
+  margin-bottom: var(--ot-spacing-xl);
+}

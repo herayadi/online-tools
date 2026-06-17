@@ -1,0 +1,17 @@
+{
+  "name": "online-tools",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Online Tools - Static site with hashing, encoding, encryption, formatting tools",
+  "scripts": {
+    "scan": "node build/scanner.js",
+    "build": "node build/generate.js",
+    "build:watch": "node build/generate.js --watch",
+    "build:only": "node build/generate.js --only",
+    "build:limit": "node build/generate.js --limit"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.5",
+    "nunjucks": "^3.2.4"
+  }
+}

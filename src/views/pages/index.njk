@@ -1,0 +1,48 @@
+{% extends "layouts/listing.njk" %}
+
+{% block listing_content %}
+<div class="hero">
+  <h2>Welcome to Online Tools</h2>
+  <p>{{ site.description }}</p>
+  <div class="search-box">
+    <input type="text" id="global-search" placeholder="Search for tools..." />
+  </div>
+</div>
+
+<div class="collections-grid">
+  {% for pack in collections %}
+  <div class="collection-card">
+    <h3>{{ pack.title }}</h3>
+    <p>{{ pack.description }}</p>
+    <div class="tools-list">
+      {% for toolId in pack.tools %}
+        {% set t = toolsById[toolId] %}
+        {% if t %}
+        <a href="{{ t.path }}" class="tool-chip">{{ t.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="categories-grid">
+  {% for cat in categories %}
+  <div class="category-section">
+    <h3>{{ cat.title }}</h3>
+    <div class="subcategory-grid">
+      {% for sub in cat.subcategories %}
+      <div class="subcategory-card">
+        <h4>{{ sub.title }}</h4>
+        <ul>
+          {% for t in toolsByCategory[cat.id][sub.id] %}
+          <li><a href="{{ t.path }}">{{ t.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

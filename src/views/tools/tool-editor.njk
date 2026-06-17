@@ -1,0 +1,52 @@
+{% extends "layouts/tool.njk" %}
+
+{% block tool_input %}
+<div class="input">
+  <div class="block block-fill">
+    <div class="block-title">
+      Input
+      <div class="toolbar">
+        <button class="icon" data-toggle="fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
+        </button>
+      </div>
+    </div>
+    <textarea class="container" id="input" spellcheck="false" placeholder="Enter here..." data-remember="input" data-share="input" data-auto-update data-toggle="monacoEditor" data-language="json"></textarea>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_output %}
+<div class="output">
+  <div class="block block-fill">
+    <div class="block-title">
+      Output
+      <div class="toolbar">
+        <button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied">
+          <img src="images/copy.svg" alt="Copy" title="Copy" />
+        </button>
+        <button class="icon" data-toggle="fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
+        </button>
+      </div>
+    </div>
+    <textarea class="container" id="output" spellcheck="false" placeholder="Output here..." data-toggle="monacoEditor" data-language="json" readonly="readonly"></textarea>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_settings %}
+<div class="setting">
+  <label for="indent-type">Indent Type</label>
+  <select id="indent-type" data-option="indent-type" data-remember="indent-type">
+    <option value="space" selected>Space</option>
+    <option value="tab">Tab</option>
+  </select>
+</div>
+<div class="setting">
+  <label for="indent">Indent</label>
+  <input id="indent" type="number" value="2" step="1" min="1" max="10" data-option="indent" data-remember="indent" />
+</div>
+{% endblock %}

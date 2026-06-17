@@ -1,0 +1,88 @@
+{% extends "layouts/base.njk" %}
+
+{% block main %}
+<header>
+  <h1>{{ h1 | default(title) }}</h1>
+  <p>{{ description }}</p>
+</header>
+<main>
+  <div class="layout">
+    <div class="layout-block">
+      {% block tool_input %}{% endblock %}
+      {% block tool_output %}{% endblock %}
+    </div>
+    <div class="settings">
+      <div class="block block-fill">
+        <div class="block-title">Settings</div>
+        <div class="container">
+          <div class="setting">
+            <a class="btn" id="execute">{{ actionLabel | default('Execute') }}</a>
+          </div>
+          {% if settings.autoUpdate %}
+          <div class="setting">
+            <label class="switcher">
+              <input type="checkbox" value="1" id="auto-update" checked />
+              <div class="toggle"></div>
+              <span>Auto Update</span>
+            </label>
+          </div>
+          {% endif %}
+          {% if settings.rememberInput %}
+          <div class="setting">
+            <label class="switcher">
+              <input type="checkbox" value="1" id="remember-input" />
+              <div class="toggle"></div>
+              <span>Remember Input</span>
+            </label>
+          </div>
+          {% endif %}
+          
+          {% block tool_settings %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% for script in scripts %}
+  <script>
+    ++waitLoadCount;
+    delayScripts.push({
+      src: "{{ script }}",
+      {% if loop.last and methodAssignment %}
+      onload: function () {
+        {{ methodAssignment | safe }};
+        methodLoad();
+      }
+      {% endif %}
+    });
+  </script>
+  {% endfor %}
+  
+  {% if settings.monacoEditor %}
+  <script>
+    ++waitLoadCount;
+    delayScripts.push({
+      src: "js/monaco-editor.js?v=1",
+      onload: function () {
+        if(typeof methodLoad !== 'undefined') methodLoad();
+      }
+    });
+  </script>
+  {% endif %}
+  
+  <script>
+    delayScripts.push({
+      src: "js/clipboard.min.js",
+      onload: function () {
+        if(typeof ClipboardJS !== 'undefined') {
+          new ClipboardJS('[data-toggle="copy"]').on("success", function (e) {
+            showMessage(e.trigger.getAttribute("data-message") || "Copied");
+            gtag("event", "copy");
+          });
+        }
+      },
+      delay: 100
+    });
+  </script>
+</main>
+{% endblock %}

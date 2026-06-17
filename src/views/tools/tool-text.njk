@@ -1,0 +1,86 @@
+{% extends "layouts/tool.njk" %}
+
+{% block tool_input %}
+<div class="input">
+  <div class="block block-fill">
+    <div class="block-title">
+      Input
+      <div class="toolbar">
+        <button class="icon" data-toggle="fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
+        </button>
+      </div>
+    </div>
+    <textarea class="container" id="input" spellcheck="false" placeholder="Enter here..." data-remember="input" data-share="input" data-auto-update></textarea>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_output %}
+<div class="output">
+  <div class="block block-fill">
+    <div class="block-title">
+      Output
+      <div class="toolbar">
+        <button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied">
+          <img src="images/copy.svg" alt="Copy" title="Copy" />
+        </button>
+        <button class="icon" data-toggle="fullscreen">
+          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Full Screen" title="Full Screen" />
+        </button>
+      </div>
+    </div>
+    <textarea class="container" id="output" spellcheck="false" placeholder="Output here..." readonly="readonly"></textarea>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_settings %}
+{% if settings.inputEncoding %}
+<div class="setting">
+  <label for="input-type">Input Type</label>
+  <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+    <option value="utf-8" selected>UTF-8</option>
+    <!-- Simplified for generator for now, full list can be a macro -->
+    <option value="hex">Hex</option>
+    <option value="base64">Base64</option>
+  </select>
+</div>
+{% endif %}
+{% if settings.outputEncoding %}
+<div class="setting">
+  <label for="output-type">Output Encoding</label>
+  <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update>
+    <option value="hex">Hex (Lower Case)</option>
+    <option value="hex_upper">Hex (Upper Case)</option>
+    <option value="base64" data-load-encoding="base64">Base64</option>
+  </select>
+</div>
+{% endif %}
+{% if settings.hmac %}
+<div class="setting">
+  <label class="switcher">
+    <input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update />
+    <div class="toggle"></div>
+    <span>Enable HMAC</span>
+  </label>
+</div>
+<details class="setting-group" id="hmac" style="display: none" open>
+  <summary>HMAC</summary>
+  <div class="setting">
+    <label for="hmac-input-type">Encoding</label>
+    <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+      <option value="utf-8" selected>UTF-8</option>
+      <option value="hex">Hex</option>
+      <option value="base64">Base64</option>
+    </select>
+  </div>
+  <div class="setting">
+    <label for="hmac-key">Key</label>
+    <input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-auto-update />
+  </div>
+</details>
+{% endif %}
+{% endblock %}

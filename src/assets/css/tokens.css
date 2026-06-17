@@ -1,0 +1,34 @@
+:root {
+  /* Color Palette */
+  --ot-bg: #f8f9fa;
+  --ot-bg-surface: #ffffff;
+  --ot-text-main: #212529;
+  --ot-text-muted: #6c757d;
+  --ot-primary: #0d6efd;
+  --ot-primary-hover: #0b5ed7;
+  --ot-border: #dee2e6;
+  
+  /* Typography */
+  --ot-font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --ot-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  
+  /* Spacing */
+  --ot-spacing-xs: 0.25rem;
+  --ot-spacing-sm: 0.5rem;
+  --ot-spacing-md: 1rem;
+  --ot-spacing-lg: 1.5rem;
+  --ot-spacing-xl: 2rem;
+  
+  /* Layout */
+  --ot-sidebar-width: 260px;
+  --ot-radius: 6px;
+  --ot-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.dark-theme {
+  --ot-bg: #121212;
+  --ot-bg-surface: #1e1e1e;
+  --ot-text-main: #f8f9fa;
+  --ot-text-muted: #adb5bd;
+  --ot-border: #343a40;
+}

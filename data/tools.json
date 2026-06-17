@@ -1,0 +1,5669 @@
+[
+  {
+    "id": "aes-decrypt",
+    "title": "AES Decryption",
+    "slug": "aes-decrypt",
+    "path": "aes/decrypt/",
+    "category": "crypto",
+    "subcategory": "aes",
+    "description": "This online tool helps you decrypt text or a file using AES. It supports various modes and padding schemes. It also supports PBKDF2 or EvpKDF, with customizable salt, iteration, and hash settings.",
+    "shortDescription": "AES Decryption tool",
+    "tags": [
+      "aes",
+      "decrypt",
+      "hex",
+      "base64",
+      "passphrase",
+      "aes-128",
+      "aes-192",
+      "aes-256",
+      "cbc",
+      "ctr",
+      "cfb",
+      "ofb",
+      "ecb",
+      "pkcs7",
+      "iso97971",
+      "ansix923",
+      "iso10126",
+      "pbkdf2",
+      "evpkdf",
+      "file",
+      "decryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-crypto",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-js.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decrypt",
+    "relatedTools": [
+      "aes-encrypt"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 1
+  },
+  {
+    "id": "aes-encrypt",
+    "title": "AES Encryption",
+    "slug": "aes-encrypt",
+    "path": "aes/encrypt/",
+    "category": "crypto",
+    "subcategory": "aes",
+    "description": "This online tool helps you encrypt text or a file from local storage or a URL using AES. It supports various modes and padding schemes. It also supports PBKDF2 or EvpKDF, with customizable salt, iteration, and hash settings.",
+    "shortDescription": "AES Encryption tool",
+    "tags": [
+      "aes",
+      "encrypt",
+      "hex",
+      "base64",
+      "passphrase",
+      "aes-128",
+      "aes-192",
+      "aes-256",
+      "cbc",
+      "ctr",
+      "cfb",
+      "ofb",
+      "ecb",
+      "pkcs7",
+      "iso97971",
+      "ansix923",
+      "iso10126",
+      "pbkdf2",
+      "evpkdf",
+      "file",
+      "url",
+      "encryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-crypto",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-js.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encrypt",
+    "relatedTools": [
+      "aes-decrypt"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 2
+  },
+  {
+    "id": "base32-decode",
+    "title": "Base32 Decode",
+    "slug": "base32-decode",
+    "path": "base32_decode.html",
+    "category": "encoding",
+    "subcategory": "base32",
+    "description": "This online Base32 decoding tool helps you decode Base32 to text or binary. You can output UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "Base32 Decode tool",
+    "tags": [
+      "base32",
+      "decode",
+      "string",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "bas64"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base32.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "base32-decode-file",
+      "base32-encode",
+      "base32-encode-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 3,
+    "swapTarget": null
+  },
+  {
+    "id": "base32-decode-file",
+    "title": "Decode Base32 to File",
+    "slug": "base32-decode-file",
+    "path": "base32_decode_file.html",
+    "category": "encoding",
+    "subcategory": "base32",
+    "description": "This online Base32 decoding tool helps you decode Base32 to a file for download.",
+    "shortDescription": "Decode Base32 to File tool",
+    "tags": [
+      "base32",
+      "decode",
+      "download",
+      "file",
+      "to"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base32.js",
+      "js/base32.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "base32-decode",
+      "base32-encode",
+      "base32-encode-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 4
+  },
+  {
+    "id": "base32-encode",
+    "title": "Base32 Encode",
+    "slug": "base32-encode",
+    "path": "base32_encode.html",
+    "category": "encoding",
+    "subcategory": "base32",
+    "description": "This online Base32 encoding tool helps you encode text or binary to Base32. You can input UTF-8, UTF-16, Hex, Bas64, or other encodings",
+    "shortDescription": "Base32 Encode tool",
+    "tags": [
+      "base32",
+      "encode",
+      "string",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "bas64"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base32.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "base32-decode",
+      "base32-decode-file",
+      "base32-encode-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 5,
+    "swapTarget": null
+  },
+  {
+    "id": "base32-encode-file",
+    "title": "Encode File to Base32",
+    "slug": "base32-encode-file",
+    "path": "base32_encode_file.html",
+    "category": "encoding",
+    "subcategory": "base32",
+    "description": "This online Base32 encoding tool helps you encode a file from local or URL to Base32 without uploading the file.",
+    "shortDescription": "Encode File to Base32 tool",
+    "tags": [
+      "base32",
+      "encode",
+      "file",
+      "url",
+      "to"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base32.js",
+      "js/base32.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "base32-decode",
+      "base32-decode-file",
+      "base32-encode"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 6
+  },
+  {
+    "id": "base58-decode-file",
+    "title": "Decode Base58 to File",
+    "slug": "base58-decode-file",
+    "path": "base58/decode/file/",
+    "category": "encoding",
+    "subcategory": "base58",
+    "description": "This online Base58 decoding tool helps you decode Base58 to a file for download.",
+    "shortDescription": "Decode Base58 to File tool",
+    "tags": [
+      "base58",
+      "decode",
+      "download",
+      "file",
+      "to"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base58.js",
+      "js/base-x.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "base58-decode",
+      "base58-encode-file",
+      "base58-encode"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 7
+  },
+  {
+    "id": "base58-decode",
+    "title": "Base58 Decode",
+    "slug": "base58-decode",
+    "path": "base58/decode/",
+    "category": "encoding",
+    "subcategory": "base58",
+    "description": "This online Base58 decoding tool helps you decode Base58 to text or binary. You can output UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "Base58 Decode tool",
+    "tags": [
+      "base58",
+      "decode",
+      "string",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "bas64"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base58.js",
+      "js/base-x.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "base58-decode-file",
+      "base58-encode-file",
+      "base58-encode"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 8,
+    "swapTarget": null
+  },
+  {
+    "id": "base58-encode-file",
+    "title": "Encode File to Base58",
+    "slug": "base58-encode-file",
+    "path": "base58/encode/file/",
+    "category": "encoding",
+    "subcategory": "base58",
+    "description": "This online Base58 encoding tool helps you encode a file from local or URL to Base58 without uploading the file.",
+    "shortDescription": "Encode File to Base58 tool",
+    "tags": [
+      "base58",
+      "encode",
+      "file",
+      "url",
+      "to"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base58.js",
+      "js/base-x.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "base58-decode-file",
+      "base58-decode",
+      "base58-encode"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 9
+  },
+  {
+    "id": "base58-encode",
+    "title": "Base58 Encode",
+    "slug": "base58-encode",
+    "path": "base58/encode/",
+    "category": "encoding",
+    "subcategory": "base58",
+    "description": "This online Base58 encoding tool helps you encode text or binary to Base58. You can input UTF-8, UTF-16, Hex, Bas64, or other encodings",
+    "shortDescription": "Base58 Encode tool",
+    "tags": [
+      "base58",
+      "encode",
+      "string",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "bas64"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base58.js",
+      "js/base-x.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "base58-decode-file",
+      "base58-decode",
+      "base58-encode-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 10,
+    "swapTarget": null
+  },
+  {
+    "id": "base64-decode",
+    "title": "Base64 Decode",
+    "slug": "base64-decode",
+    "path": "base64_decode.html",
+    "category": "encoding",
+    "subcategory": "base64",
+    "description": "This online Base64 decoding tool helps you decode Base64 to text or binary. You can output UTF-8, UTF-16, Hex, or other encodings. It also supports various formats such as RFC 4648 (standard and URL Safe), RFC 2045 (MIME), RFC 2152 (UTF-7), and RFC 3501 (IMAP).",
+    "shortDescription": "Base64 Decode tool",
+    "tags": [
+      "base64",
+      "decode",
+      "string"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base64.js",
+      "js/base64.min.js.4.1"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "base64-decode-file",
+      "base64-encode",
+      "base64-encode-file"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 11,
+    "swapTarget": null
+  },
+  {
+    "id": "base64-decode-file",
+    "title": "Decode Base64 to File",
+    "slug": "base64-decode-file",
+    "path": "base64_decode_file.html",
+    "category": "encoding",
+    "subcategory": "base64",
+    "description": "This online Base64 decoding tool helps you decode Base64 to a file for download. It also supports various formats such as RFC 4648 (standard and URL Safe), RFC 2045 (MIME), RFC 2152 (UTF-7), and RFC 3501 (IMAP)",
+    "shortDescription": "Decode Base64 to File tool",
+    "tags": [
+      "base64",
+      "decode",
+      "download",
+      "file",
+      "to"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base64.js",
+      "js/base64.min.js.4.1"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "base64-decode",
+      "base64-encode",
+      "base64-encode-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 12
+  },
+  {
+    "id": "base64-encode",
+    "title": "Base64 Encode",
+    "slug": "base64-encode",
+    "path": "base64_encode.html",
+    "category": "encoding",
+    "subcategory": "base64",
+    "description": "This online Base64 encoding tool helps you encode text or binary to Base64. You can input UTF-8, UTF-16, Hex, or other encodings. It also supports various formats such as RFC 4648 (standard and URL Safe), RFC 2045 (MIME), RFC 2152 (UTF-7), and RFC 3501 (IMAP).",
+    "shortDescription": "Base64 Encode tool",
+    "tags": [
+      "base64",
+      "encode",
+      "string",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "rfc 4648",
+      "url safe",
+      "rfc 2045 (mime)",
+      "rfc 2152 (utf-7)",
+      "rfc 3501 (imap)"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base64.js",
+      "js/base64.min.js.4.1"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "base64-decode",
+      "base64-decode-file",
+      "base64-encode-file"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 13,
+    "swapTarget": null
+  },
+  {
+    "id": "base64-encode-file",
+    "title": "Encode File to Base64",
+    "slug": "base64-encode-file",
+    "path": "base64_encode_file.html",
+    "category": "encoding",
+    "subcategory": "base64",
+    "description": "This online Base64 encoding tool helps you encode a file from local or URL to Base64 without uploading the file. It also supports various formats such as RFC 4648 (standard and URL Safe), RFC 2045 (MIME), RFC 2152 (UTF-7), and RFC 3501 (IMAP).",
+    "shortDescription": "Encode File to Base64 tool",
+    "tags": [
+      "base64",
+      "encode",
+      "file",
+      "url",
+      "to"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/base64.js",
+      "js/base64.min.js.4.1"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "base64-decode",
+      "base64-decode-file",
+      "base64-encode"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 14
+  },
+  {
+    "id": "blake2b-file",
+    "title": "BLAKE2b File Hash",
+    "slug": "blake2b-file",
+    "path": "blake2b/file/",
+    "category": "hash",
+    "subcategory": "blake",
+    "description": "This BLAKE2b online tool helps you calculate the hash of a file from local or URL using BLAKE2b without uploading the file.",
+    "shortDescription": "BLAKE2b File Hash tool",
+    "tags": [
+      "blake2b",
+      "hash",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/hash-wasm.js",
+      "js/blake2b.umd.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "blake2b",
+      "blake2s-file",
+      "blake2s",
+      "blake3-file",
+      "blake3"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 15
+  },
+  {
+    "id": "blake2b",
+    "title": "BLAKE2b",
+    "slug": "blake2b",
+    "path": "blake2b/",
+    "category": "hash",
+    "subcategory": "blake",
+    "description": "This BLAKE2b online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "BLAKE2b tool",
+    "tags": [
+      "blake2b",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "binary"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/hash-wasm.js",
+      "js/blake2b.umd.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "blake2b-file",
+      "blake2s-file",
+      "blake2s",
+      "blake3-file",
+      "blake3"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 16
+  },
+  {
+    "id": "blake2s-file",
+    "title": "BLAKE2s File Hash",
+    "slug": "blake2s-file",
+    "path": "blake2s/file/",
+    "category": "hash",
+    "subcategory": "blake",
+    "description": "This BLAKE2s online tool helps you calculate the hash of a file from local or URL using BLAKE2s without uploading the file.",
+    "shortDescription": "BLAKE2s File Hash tool",
+    "tags": [
+      "blake2s",
+      "hash",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/hash-wasm.js",
+      "js/blake2s.umd.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "blake2b-file",
+      "blake2b",
+      "blake2s",
+      "blake3-file",
+      "blake3"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 17
+  },
+  {
+    "id": "blake2s",
+    "title": "BLAKE2s",
+    "slug": "blake2s",
+    "path": "blake2s/",
+    "category": "hash",
+    "subcategory": "blake",
+    "description": "This BLAKE2s online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "BLAKE2s tool",
+    "tags": [
+      "blake2s",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "binary"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/hash-wasm.js",
+      "js/blake2s.umd.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "blake2b-file",
+      "blake2b",
+      "blake2s-file",
+      "blake3-file",
+      "blake3"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 18
+  },
+  {
+    "id": "blake3-file",
+    "title": "BLAKE3 File Hash",
+    "slug": "blake3-file",
+    "path": "blake3/file/",
+    "category": "hash",
+    "subcategory": "blake",
+    "description": "This BLAKE3 online tool helps you calculate the hash of a file from local or URL using BLAKE3 without uploading the file.",
+    "shortDescription": "BLAKE3 File Hash tool",
+    "tags": [
+      "blake3",
+      "hash",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/blake3.js",
+      "js/blake3-js.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "blake2b-file",
+      "blake2b",
+      "blake2s-file",
+      "blake2s",
+      "blake3"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 19
+  },
+  {
+    "id": "blake3",
+    "title": "BLAKE3",
+    "slug": "blake3",
+    "path": "blake3/",
+    "category": "hash",
+    "subcategory": "blake",
+    "description": "This BLAKE3 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "BLAKE3 tool",
+    "tags": [
+      "blake3",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "binary"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/blake3.js",
+      "js/blake3-js.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "blake2b-file",
+      "blake2b",
+      "blake2s-file",
+      "blake2s",
+      "blake3-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 20
+  },
+  {
+    "id": "case-constant",
+    "title": "Constant Case Converter",
+    "slug": "case-constant",
+    "path": "case/constant/",
+    "category": "converter",
+    "subcategory": "case",
+    "description": "Convert string to constant case. (Screaming snake case, MACRO_CASE)",
+    "shortDescription": "Constant Case Converter tool",
+    "tags": [
+      "converter",
+      "constant case",
+      "screaming snake case",
+      "macro_case",
+      "constant",
+      "case"
+    ],
+    "aliases": [],
+    "icon": "arrow-right-left",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/change-case.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Convert",
+    "relatedTools": [
+      "case-kebab",
+      "case-lower",
+      "case-lower-camel",
+      "case-snake",
+      "case-upper",
+      "case-upper-camel"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 21
+  },
+  {
+    "id": "case-kebab",
+    "title": "Kebab Case Converter",
+    "slug": "case-kebab",
+    "path": "case/kebab/",
+    "category": "converter",
+    "subcategory": "case",
+    "description": "Convert string to kebab case. (Dash case, Lisp case, Spinal case)",
+    "shortDescription": "Kebab Case Converter tool",
+    "tags": [
+      "converter",
+      "kebab case",
+      "dash case",
+      "lisp case",
+      "spinal case",
+      "kebab",
+      "case"
+    ],
+    "aliases": [],
+    "icon": "arrow-right-left",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/change-case.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Convert",
+    "relatedTools": [
+      "case-constant",
+      "case-lower",
+      "case-lower-camel",
+      "case-snake",
+      "case-upper",
+      "case-upper-camel"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 22
+  },
+  {
+    "id": "case-lower",
+    "title": "Lower Case Converter",
+    "slug": "case-lower",
+    "path": "case/lower/",
+    "category": "converter",
+    "subcategory": "case",
+    "description": "Convert string to lower case. (Downcase)",
+    "shortDescription": "Lower Case Converter tool",
+    "tags": [
+      "converter",
+      "lower case",
+      "downcase",
+      "lower",
+      "case"
+    ],
+    "aliases": [],
+    "icon": "arrow-right-left",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Convert",
+    "relatedTools": [
+      "case-constant",
+      "case-kebab",
+      "case-lower-camel",
+      "case-snake",
+      "case-upper",
+      "case-upper-camel"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 23
+  },
+  {
+    "id": "case-lower-camel",
+    "title": "Lower Camel Case Converter",
+    "slug": "case-lower-camel",
+    "path": "case/lower-camel/",
+    "category": "converter",
+    "subcategory": "case",
+    "description": "Convert string to lower camel case (Dromedary case).",
+    "shortDescription": "Lower Camel Case Converter tool",
+    "tags": [
+      "converter",
+      "lower camel case",
+      "dromedary case",
+      "lower",
+      "camel",
+      "case"
+    ],
+    "aliases": [],
+    "icon": "arrow-right-left",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/change-case.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Convert",
+    "relatedTools": [
+      "case-constant",
+      "case-kebab",
+      "case-lower",
+      "case-snake",
+      "case-upper",
+      "case-upper-camel"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 24
+  },
+  {
+    "id": "case-snake",
+    "title": "Snake Case Converter",
+    "slug": "case-snake",
+    "path": "case/snake/",
+    "category": "converter",
+    "subcategory": "case",
+    "description": "Convert string to snake case. (Snail case, Pothole case)",
+    "shortDescription": "Snake Case Converter tool",
+    "tags": [
+      "converter",
+      "snake case",
+      "snail case",
+      "pothole case",
+      "snake",
+      "case"
+    ],
+    "aliases": [],
+    "icon": "arrow-right-left",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/change-case.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Convert",
+    "relatedTools": [
+      "case-constant",
+      "case-kebab",
+      "case-lower",
+      "case-lower-camel",
+      "case-upper",
+      "case-upper-camel"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 25
+  },
+  {
+    "id": "case-upper",
+    "title": "Upper Case Converter",
+    "slug": "case-upper",
+    "path": "case/upper/",
+    "category": "converter",
+    "subcategory": "case",
+    "description": "Convert string to upper case. (Upcase, All caps)",
+    "shortDescription": "Upper Case Converter tool",
+    "tags": [
+      "converter",
+      "upper case",
+      "upcase",
+      "all caps",
+      "upper",
+      "case"
+    ],
+    "aliases": [],
+    "icon": "arrow-right-left",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Convert",
+    "relatedTools": [
+      "case-constant",
+      "case-kebab",
+      "case-lower",
+      "case-lower-camel",
+      "case-snake",
+      "case-upper-camel"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 26
+  },
+  {
+    "id": "case-upper-camel",
+    "title": "Upper Camel Case Converter",
+    "slug": "case-upper-camel",
+    "path": "case/upper-camel/",
+    "category": "converter",
+    "subcategory": "case",
+    "description": "Convert string to upper camel case (Pascal case).",
+    "shortDescription": "Upper Camel Case Converter tool",
+    "tags": [
+      "converter",
+      "upper camel case",
+      "pascal case",
+      "upper",
+      "camel",
+      "case"
+    ],
+    "aliases": [],
+    "icon": "arrow-right-left",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/change-case.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Convert",
+    "relatedTools": [
+      "case-constant",
+      "case-kebab",
+      "case-lower",
+      "case-lower-camel",
+      "case-snake",
+      "case-upper"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 27
+  },
+  {
+    "id": "crc",
+    "title": "CRC",
+    "slug": "crc",
+    "path": "crc/",
+    "category": "hash",
+    "subcategory": "crc",
+    "description": "This online tool helps you calculate the checksum of text or a file from local storage or a URL using CRC. It supports various models such as CRC-32, CRC-16, CRC-8, CRC-24, CRC-64, and other predefined models. It also supports custom models.",
+    "shortDescription": "CRC tool",
+    "tags": [
+      "crc",
+      "crc-8",
+      "crc-16",
+      "crc-24",
+      "crc-32",
+      "crc-64",
+      "hash",
+      "checksum",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-crypto",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crc.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Calculate",
+    "relatedTools": [],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 28
+  },
+  {
+    "id": "cshake128-file",
+    "title": "cSHAKE128 File Hash",
+    "slug": "cshake128-file",
+    "path": "cshake128/file/",
+    "category": "hash",
+    "subcategory": "cshake",
+    "description": "This cSHAKE128 online tool helps you calculate the hash of a file from local or URL using cSHAKE128 without uploading the file.",
+    "shortDescription": "cSHAKE128 File Hash tool",
+    "tags": [
+      "sha3",
+      "cshake",
+      "cshake128",
+      "hash",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "cshake128",
+      "cshake256-file",
+      "cshake256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 29
+  },
+  {
+    "id": "cshake128",
+    "title": "cSHAKE128",
+    "slug": "cshake128",
+    "path": "cshake128/",
+    "category": "hash",
+    "subcategory": "cshake",
+    "description": "This cSHAKE128 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "cSHAKE128 tool",
+    "tags": [
+      "sha3",
+      "cshake",
+      "cshake128",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "binary"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "cshake128-file",
+      "cshake256-file",
+      "cshake256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 30
+  },
+  {
+    "id": "cshake256-file",
+    "title": "cSHAKE256 File Hash",
+    "slug": "cshake256-file",
+    "path": "cshake256/file/",
+    "category": "hash",
+    "subcategory": "cshake",
+    "description": "This cSHAKE256 online tool helps you calculate the hash of a file from local or URL using cSHAKE256 without uploading the file.",
+    "shortDescription": "cSHAKE256 File Hash tool",
+    "tags": [
+      "sha3",
+      "cshake",
+      "cshake256",
+      "hash",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "cshake128-file",
+      "cshake128",
+      "cshake256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 31
+  },
+  {
+    "id": "cshake256",
+    "title": "cSHAKE256",
+    "slug": "cshake256",
+    "path": "cshake256/",
+    "category": "hash",
+    "subcategory": "cshake",
+    "description": "This cSHAKE256 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "cSHAKE256 tool",
+    "tags": [
+      "sha3",
+      "cshake",
+      "cshake256",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "binary"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "cshake128-file",
+      "cshake128",
+      "cshake256-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 32
+  },
+  {
+    "id": "des-decrypt",
+    "title": "DES Decryption",
+    "slug": "des-decrypt",
+    "path": "des/decrypt/",
+    "category": "crypto",
+    "subcategory": "des",
+    "description": "This online tool helps you decrypt text or a file using DES. It supports various modes and padding schemes. It also supports PBKDF2 or EvpKDF, with customizable salt, iteration, and hash settings.",
+    "shortDescription": "DES Decryption tool",
+    "tags": [
+      "des",
+      "decrypt",
+      "hex",
+      "base64",
+      "passphrase",
+      "cbc",
+      "ctr",
+      "cfb",
+      "ofb",
+      "ecb",
+      "pkcs7",
+      "iso97971",
+      "ansix923",
+      "iso10126",
+      "pbkdf2",
+      "evpkdf",
+      "file",
+      "decryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-crypto",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-js.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decrypt",
+    "relatedTools": [
+      "des-encrypt"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 33
+  },
+  {
+    "id": "des-encrypt",
+    "title": "DES Encryption",
+    "slug": "des-encrypt",
+    "path": "des/encrypt/",
+    "category": "crypto",
+    "subcategory": "des",
+    "description": "This online tool helps you encrypt text or a file from local storage or a URL using DES. It supports various modes and padding schemes. It also supports PBKDF2 or EvpKDF, with customizable salt, iteration, and hash settings.",
+    "shortDescription": "DES Encryption tool",
+    "tags": [
+      "des",
+      "encrypt",
+      "hex",
+      "base64",
+      "passphrase",
+      "cbc",
+      "ctr",
+      "cfb",
+      "ofb",
+      "ecb",
+      "pkcs7",
+      "iso97971",
+      "ansix923",
+      "iso10126",
+      "pbkdf2",
+      "evpkdf",
+      "file",
+      "url",
+      "encryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-crypto",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-js.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encrypt",
+    "relatedTools": [
+      "des-decrypt"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 34
+  },
+  {
+    "id": "double-sha256",
+    "title": "Double SHA256",
+    "slug": "double-sha256",
+    "path": "double_sha256.html",
+    "category": "hash",
+    "subcategory": "sha2",
+    "description": "This Double SHA256 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "Double SHA256 tool",
+    "tags": [
+      "sha256",
+      "hash",
+      "double sha256",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "double"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha224",
+      "sha224-checksum",
+      "sha256",
+      "sha256-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 35
+  },
+  {
+    "id": "ecdsa-key-generator",
+    "title": "ECDSA Key Generator",
+    "slug": "ecdsa-key-generator",
+    "path": "ecdsa/key-generator/",
+    "category": "crypto",
+    "subcategory": "ecdsa",
+    "description": "This online tool helps you generate a pair of ECDSA keys. It supports PEM, HEX, and Base64 formats, as well as various curves. The PEM format supports PKCS#1, PKCS#5, and PKCS#8.",
+    "shortDescription": "ECDSA Key Generator tool",
+    "tags": [
+      "ecdsa",
+      "secp256k1",
+      "key",
+      "generate",
+      "pem",
+      "hex",
+      "base64",
+      "pkcs#1",
+      "pkcs#5",
+      "pkcs#8",
+      "generator"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/jsrsasign.js",
+      "js/jsrsasign-all-min.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": false
+    },
+    "actionLabel": "Generate",
+    "relatedTools": [
+      "ecdsa-sign",
+      "ecdsa-verify"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 36
+  },
+  {
+    "id": "ecdsa-sign",
+    "title": "ECDSA Sign Message",
+    "slug": "ecdsa-sign",
+    "path": "ecdsa/sign/",
+    "category": "crypto",
+    "subcategory": "ecdsa",
+    "description": "This online tool helps you sign messages using ECDSA. It supports various curves and signature algorithms. You can also use PEM with a passphrase.",
+    "shortDescription": "ECDSA Sign Message tool",
+    "tags": [
+      "ecdsa",
+      "sign",
+      "signature",
+      "pem",
+      "hex",
+      "base64",
+      "curve",
+      "passphrase",
+      "secp256k1",
+      "message"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/jsrsasign.js",
+      "js/jsrsasign-all-min.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Sign",
+    "relatedTools": [
+      "ecdsa-key-generator",
+      "ecdsa-verify"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 37
+  },
+  {
+    "id": "ecdsa-verify",
+    "title": "ECDSA Verify Signature",
+    "slug": "ecdsa-verify",
+    "path": "ecdsa/verify/",
+    "category": "crypto",
+    "subcategory": "ecdsa",
+    "description": "This online tool helps you verify signatures using ECDSA. It supports various curves and signature algorithms.",
+    "shortDescription": "ECDSA Verify Signature tool",
+    "tags": [
+      "ecdsa",
+      "verify",
+      "signature",
+      "pem",
+      "hex",
+      "base64",
+      "curve",
+      "secp256k1"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-validator",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/jsrsasign.js",
+      "js/jsrsasign-all-min.min.js",
+      "js/validator.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Verify",
+    "relatedTools": [
+      "ecdsa-key-generator",
+      "ecdsa-sign"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 38
+  },
+  {
+    "id": "hex-decode",
+    "title": "Decode Hex (Base16) to String",
+    "slug": "hex-decode",
+    "path": "hex_decode.html",
+    "category": "encoding",
+    "subcategory": "hex",
+    "description": "This online Hex (Base16) decoding tool helps you decode Hex to text or binary. You can output UTF-8, UTF-16, Base64, or other encodings.",
+    "shortDescription": "Decode Hex (Base16) to String tool",
+    "tags": [
+      "hex",
+      "decode",
+      "string",
+      "utf-8",
+      "utf-16",
+      "base16",
+      "bas64",
+      "(base16)",
+      "to"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/hex.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "hex-decode-file",
+      "hex-encode",
+      "hex-encode-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 39,
+    "swapTarget": null
+  },
+  {
+    "id": "hex-decode-file",
+    "title": "Decode Hex (Base16) to File",
+    "slug": "hex-decode-file",
+    "path": "hex_decode_file.html",
+    "category": "encoding",
+    "subcategory": "hex",
+    "description": "This online Hex (Base16) decoding tool helps you decode Hex to a file for download.",
+    "shortDescription": "Decode Hex (Base16) to File tool",
+    "tags": [
+      "hex",
+      "base16",
+      "decode",
+      "download",
+      "file",
+      "(base16)",
+      "to"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/hex.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "hex-decode",
+      "hex-encode",
+      "hex-encode-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 40
+  },
+  {
+    "id": "hex-encode",
+    "title": "Encode String to Hex (Base16)",
+    "slug": "hex-encode",
+    "path": "hex_encode.html",
+    "category": "encoding",
+    "subcategory": "hex",
+    "description": "This online Hex (Base16) encoding tool helps you encode text or binary to Hex. You can input UTF-8, UTF-16, Base64, or other encodings.",
+    "shortDescription": "Encode String to Hex (Base16) tool",
+    "tags": [
+      "hex",
+      "encode",
+      "string",
+      "utf-8",
+      "utf-16",
+      "base16",
+      "bas64",
+      "to",
+      "(base16)"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/hex.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "hex-decode",
+      "hex-decode-file",
+      "hex-encode-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 41,
+    "swapTarget": null
+  },
+  {
+    "id": "hex-encode-file",
+    "title": "Encode File to Hex (Base16)",
+    "slug": "hex-encode-file",
+    "path": "hex_encode_file.html",
+    "category": "encoding",
+    "subcategory": "hex",
+    "description": "This online Hex (Base16) encoding tool helps you encode a file from local or URL to Hex without uploading the file.",
+    "shortDescription": "Encode File to Hex (Base16) tool",
+    "tags": [
+      "hex",
+      "base16",
+      "encode",
+      "file",
+      "url",
+      "to",
+      "(base16)"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/hex.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "hex-decode",
+      "hex-decode-file",
+      "hex-encode"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 42
+  },
+  {
+    "id": "html-decode",
+    "title": "HTML Decode / Unescape",
+    "slug": "html-decode",
+    "path": "html_decode.html",
+    "category": "encoding",
+    "subcategory": "html",
+    "description": "This HTML decode online tool helps you decode entities encoding string to HTML.",
+    "shortDescription": "HTML Decode / Unescape tool",
+    "tags": [
+      "html",
+      "decode",
+      "unescape",
+      "htmldecode"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-editor",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/htmlencode.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "html-encode"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 43,
+    "swapTarget": null
+  },
+  {
+    "id": "html-encode",
+    "title": "HTML Encode / Escape",
+    "slug": "html-encode",
+    "path": "html_encode.html",
+    "category": "encoding",
+    "subcategory": "html",
+    "description": "This HTML encode online tool helps you encode HTML to entities encoding string.",
+    "shortDescription": "HTML Encode / Escape tool",
+    "tags": [
+      "html",
+      "encode",
+      "escape",
+      "htmlencode"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-editor",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/htmlencode.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "html-decode"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 44,
+    "swapTarget": null
+  },
+  {
+    "id": "json-formatter",
+    "title": "JSON Formatter",
+    "slug": "json-formatter",
+    "path": "json/formatter/",
+    "category": "formatter",
+    "subcategory": "json",
+    "description": "This free online JSON formatter helps you beautify your JSON string and make it more readable. You can choose the indentation level and characters.",
+    "shortDescription": "JSON Formatter tool",
+    "tags": [
+      "format",
+      "beautify",
+      "prettify",
+      "json",
+      "formatter"
+    ],
+    "aliases": [],
+    "icon": "braces",
+    "template": "tool-editor",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/json.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Format",
+    "relatedTools": [
+      "json-minifier",
+      "json-validator",
+      "json-viewer"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 45
+  },
+  {
+    "id": "json-minifier",
+    "title": "JSON Minifier",
+    "slug": "json-minifier",
+    "path": "json/minifier/",
+    "category": "formatter",
+    "subcategory": "json",
+    "description": "This free online JSON minifier helps you minify your JSON string and make it more cleaner. It can remove indentation and new lines to reduce size and make it one line.",
+    "shortDescription": "JSON Minifier tool",
+    "tags": [
+      "minify",
+      "compress",
+      "compact",
+      "json",
+      "minifier"
+    ],
+    "aliases": [],
+    "icon": "braces",
+    "template": "tool-editor",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/json.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Minify",
+    "relatedTools": [
+      "json-formatter",
+      "json-validator",
+      "json-viewer"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 46
+  },
+  {
+    "id": "json-validator",
+    "title": "JSON Validator",
+    "slug": "json-validator",
+    "path": "json/validator/",
+    "category": "formatter",
+    "subcategory": "json",
+    "description": "This free online JSON validator helps you validate your JSON string.",
+    "shortDescription": "JSON Validator tool",
+    "tags": [
+      "validate",
+      "checker",
+      "verify",
+      "json",
+      "validator"
+    ],
+    "aliases": [],
+    "icon": "braces",
+    "template": "tool-validator",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/json.js",
+      "js/validator.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Validate",
+    "relatedTools": [
+      "json-formatter",
+      "json-minifier",
+      "json-viewer"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 47
+  },
+  {
+    "id": "json-viewer",
+    "title": "JSON Viewer",
+    "slug": "json-viewer",
+    "path": "json/viewer/",
+    "category": "formatter",
+    "subcategory": "json",
+    "description": "This JSON Viewer online tool helps you view JSON object in a readable way.",
+    "shortDescription": "JSON Viewer tool",
+    "tags": [
+      "view",
+      "readable",
+      "inspect",
+      "debug",
+      "json",
+      "viewer"
+    ],
+    "aliases": [],
+    "icon": "braces",
+    "template": "tool-editor",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/json.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "View",
+    "relatedTools": [
+      "json-formatter",
+      "json-minifier",
+      "json-validator"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 48
+  },
+  {
+    "id": "keccak-224",
+    "title": "Keccak-224",
+    "slug": "keccak-224",
+    "path": "keccak_224.html",
+    "category": "hash",
+    "subcategory": "keccak",
+    "description": "This Keccak-224 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "Keccak-224 tool",
+    "tags": [
+      "sha3",
+      "keccak",
+      "keccak-224",
+      "keccak224",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "224"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "keccak-224-checksum",
+      "keccak-256",
+      "keccak-256-checksum",
+      "keccak-384",
+      "keccak-384-checksum",
+      "keccak-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 49
+  },
+  {
+    "id": "keccak-224-checksum",
+    "title": "Keccak-224 File Hash",
+    "slug": "keccak-224-checksum",
+    "path": "keccak_224_checksum.html",
+    "category": "hash",
+    "subcategory": "keccak",
+    "description": "This Keccak-224 online tool helps you calculate the hash of a file from local or URL using Keccak-224 without uploading the file.",
+    "shortDescription": "Keccak-224 File Hash tool",
+    "tags": [
+      "sha3",
+      "keccak-224",
+      "keccak224",
+      "keccak",
+      "hash",
+      "checksum",
+      "file",
+      "url",
+      "224"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "keccak-224",
+      "keccak-256",
+      "keccak-256-checksum",
+      "keccak-384",
+      "keccak-384-checksum",
+      "keccak-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 50
+  },
+  {
+    "id": "keccak-256",
+    "title": "Keccak-256",
+    "slug": "keccak-256",
+    "path": "keccak_256.html",
+    "category": "hash",
+    "subcategory": "keccak",
+    "description": "This Keccak-256 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "Keccak-256 tool",
+    "tags": [
+      "sha3",
+      "keccak",
+      "keccak-256",
+      "keccak256",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "256"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "keccak-224",
+      "keccak-224-checksum",
+      "keccak-256-checksum",
+      "keccak-384",
+      "keccak-384-checksum",
+      "keccak-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 51
+  },
+  {
+    "id": "keccak-256-checksum",
+    "title": "Keccak-256 File Hash",
+    "slug": "keccak-256-checksum",
+    "path": "keccak_256_checksum.html",
+    "category": "hash",
+    "subcategory": "keccak",
+    "description": "This Keccak-256 online tool helps you calculate the hash of a file from local or URL using Keccak-256 without uploading the file.",
+    "shortDescription": "Keccak-256 File Hash tool",
+    "tags": [
+      "sha3",
+      "keccak-256",
+      "keccak256",
+      "keccak",
+      "hash",
+      "checksum",
+      "file",
+      "url",
+      "256"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "keccak-224",
+      "keccak-224-checksum",
+      "keccak-256",
+      "keccak-384",
+      "keccak-384-checksum",
+      "keccak-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 52
+  },
+  {
+    "id": "keccak-384",
+    "title": "Keccak-384",
+    "slug": "keccak-384",
+    "path": "keccak_384.html",
+    "category": "hash",
+    "subcategory": "keccak",
+    "description": "This Keccak-384 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "Keccak-384 tool",
+    "tags": [
+      "sha3",
+      "keccak",
+      "keccak-384",
+      "keccak384",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "384"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "keccak-224",
+      "keccak-224-checksum",
+      "keccak-256",
+      "keccak-256-checksum",
+      "keccak-384-checksum",
+      "keccak-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 53
+  },
+  {
+    "id": "keccak-384-checksum",
+    "title": "Keccak-384 File Hash",
+    "slug": "keccak-384-checksum",
+    "path": "keccak_384_checksum.html",
+    "category": "hash",
+    "subcategory": "keccak",
+    "description": "This Keccak-384 online tool helps you calculate the hash of a file from local or URL using Keccak-384 without uploading the file.",
+    "shortDescription": "Keccak-384 File Hash tool",
+    "tags": [
+      "sha3",
+      "keccak-384",
+      "keccak384",
+      "keccak",
+      "hash",
+      "checksum",
+      "file",
+      "url",
+      "384"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "keccak-224",
+      "keccak-224-checksum",
+      "keccak-256",
+      "keccak-256-checksum",
+      "keccak-384",
+      "keccak-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 54
+  },
+  {
+    "id": "keccak-512",
+    "title": "Keccak-512",
+    "slug": "keccak-512",
+    "path": "keccak_512.html",
+    "category": "hash",
+    "subcategory": "keccak",
+    "description": "This Keccak-512 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "Keccak-512 tool",
+    "tags": [
+      "sha3",
+      "keccak",
+      "keccak-512",
+      "keccak512",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "512"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "keccak-224",
+      "keccak-224-checksum",
+      "keccak-256",
+      "keccak-256-checksum",
+      "keccak-384",
+      "keccak-384-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 55
+  },
+  {
+    "id": "keccak-512-checksum",
+    "title": "Keccak-512 File Hash",
+    "slug": "keccak-512-checksum",
+    "path": "keccak_512_checksum.html",
+    "category": "hash",
+    "subcategory": "keccak",
+    "description": "This Keccak-512 online tool helps you calculate the hash of a file from local or URL using Keccak-512 without uploading the file.",
+    "shortDescription": "Keccak-512 File Hash tool",
+    "tags": [
+      "sha3",
+      "keccak-512",
+      "keccak512",
+      "keccak",
+      "hash",
+      "checksum",
+      "file",
+      "url",
+      "512"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "keccak-224",
+      "keccak-224-checksum",
+      "keccak-256",
+      "keccak-256-checksum",
+      "keccak-384",
+      "keccak-384-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 56
+  },
+  {
+    "id": "kmac128-file",
+    "title": "KMAC128 File Hash",
+    "slug": "kmac128-file",
+    "path": "kmac128/file/",
+    "category": "hash",
+    "subcategory": "kmac",
+    "description": "This KMAC128 online tool helps you calculate the hash of a file from local or URL using KMAC128 without uploading the file.",
+    "shortDescription": "KMAC128 File Hash tool",
+    "tags": [
+      "sha3",
+      "kmac",
+      "kmac128",
+      "hash",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "kmac128",
+      "kmac256-file",
+      "kmac256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 57
+  },
+  {
+    "id": "kmac128",
+    "title": "KMAC128",
+    "slug": "kmac128",
+    "path": "kmac128/",
+    "category": "hash",
+    "subcategory": "kmac",
+    "description": "This KMAC128 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "KMAC128 tool",
+    "tags": [
+      "sha3",
+      "kmac",
+      "kmac128",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "binary"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "kmac128-file",
+      "kmac256-file",
+      "kmac256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 58
+  },
+  {
+    "id": "kmac256-file",
+    "title": "KMAC256 File Hash",
+    "slug": "kmac256-file",
+    "path": "kmac256/file/",
+    "category": "hash",
+    "subcategory": "kmac",
+    "description": "This KMAC256 online tool helps you calculate the hash of a file from local or URL using KMAC256 without uploading the file.",
+    "shortDescription": "KMAC256 File Hash tool",
+    "tags": [
+      "sha3",
+      "kmac",
+      "kmac256",
+      "hash",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "kmac128-file",
+      "kmac128",
+      "kmac256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 59
+  },
+  {
+    "id": "kmac256",
+    "title": "KMAC256",
+    "slug": "kmac256",
+    "path": "kmac256/",
+    "category": "hash",
+    "subcategory": "kmac",
+    "description": "This KMAC256 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "KMAC256 tool",
+    "tags": [
+      "sha3",
+      "kmac",
+      "kmac256",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "binary"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "kmac128-file",
+      "kmac128",
+      "kmac256-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 60
+  },
+  {
+    "id": "md2",
+    "title": "MD2",
+    "slug": "md2",
+    "path": "md2.html",
+    "category": "hash",
+    "subcategory": "md",
+    "description": "This MD2 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "MD2 tool",
+    "tags": [
+      "md2",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "md2-file-hash",
+      "md4",
+      "md4-file-hash",
+      "md5",
+      "md5-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 61
+  },
+  {
+    "id": "md2-file-hash",
+    "title": "MD2 File Hash",
+    "slug": "md2-file-hash",
+    "path": "md2_file_hash.html",
+    "category": "hash",
+    "subcategory": "md",
+    "description": "This MD2 online tool helps you calculate the hash of a file from local or URL using MD2 without uploading the file. It also supports HMAC.",
+    "shortDescription": "MD2 File Hash tool",
+    "tags": [
+      "md2",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "md2",
+      "md4",
+      "md4-file-hash",
+      "md5",
+      "md5-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 62
+  },
+  {
+    "id": "md4",
+    "title": "MD4",
+    "slug": "md4",
+    "path": "md4.html",
+    "category": "hash",
+    "subcategory": "md",
+    "description": "This MD4 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "MD4 tool",
+    "tags": [
+      "md4",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/md4.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "md2",
+      "md2-file-hash",
+      "md4-file-hash",
+      "md5",
+      "md5-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 63
+  },
+  {
+    "id": "md4-file-hash",
+    "title": "MD4 File Hash",
+    "slug": "md4-file-hash",
+    "path": "md4_file_hash.html",
+    "category": "hash",
+    "subcategory": "md",
+    "description": "This MD4 online tool helps you calculate the hash of a file from local or URL using MD4 without uploading the file. It also supports HMAC.",
+    "shortDescription": "MD4 File Hash tool",
+    "tags": [
+      "md4",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/md4.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "md2",
+      "md2-file-hash",
+      "md4",
+      "md5",
+      "md5-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 64
+  },
+  {
+    "id": "md5",
+    "title": "MD5",
+    "slug": "md5",
+    "path": "md5.html",
+    "category": "hash",
+    "subcategory": "md",
+    "description": "This MD5 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "MD5 tool",
+    "tags": [
+      "md5",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/md5.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "md2",
+      "md2-file-hash",
+      "md4",
+      "md4-file-hash",
+      "md5-checksum"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 65
+  },
+  {
+    "id": "md5-checksum",
+    "title": "MD5 File Checksum",
+    "slug": "md5-checksum",
+    "path": "md5_checksum.html",
+    "category": "hash",
+    "subcategory": "md",
+    "description": "This MD5 online tool helps you calculate the hash of a file from local or URL using MD5 without uploading the file. It also supports HMAC.",
+    "shortDescription": "MD5 File Checksum tool",
+    "tags": [
+      "md5",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/md5.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "md2",
+      "md2-file-hash",
+      "md4",
+      "md4-file-hash",
+      "md5"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 66
+  },
+  {
+    "id": "qr-code-generator",
+    "title": "QR Code Generator",
+    "slug": "qr-code-generator",
+    "path": "qr-code/generator/",
+    "category": "utility",
+    "subcategory": "other",
+    "description": "This online QR code tool helps you generate a QR code and customize its design. You can download the image, share a link, or use an embedded script. Quick and free.",
+    "shortDescription": "QR Code Generator tool",
+    "tags": [
+      "qr code",
+      "generator",
+      "png",
+      "jpg",
+      "svg",
+      "webp",
+      "customized",
+      "color",
+      "image",
+      "qr",
+      "code"
+    ],
+    "aliases": [],
+    "icon": "wrench",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/qrcode.js",
+      "js/qr-code-styling.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Generate",
+    "relatedTools": [
+      "qr-code",
+      "syntax-highlight"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 67
+  },
+  {
+    "id": "qr-code",
+    "title": "QR Code",
+    "slug": "qr-code",
+    "path": "qr-code/",
+    "category": "utility",
+    "subcategory": "other",
+    "description": "",
+    "shortDescription": "QR Code tool",
+    "tags": [
+      "qr",
+      "code"
+    ],
+    "aliases": [],
+    "icon": "wrench",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": false
+    },
+    "actionLabel": "Execute",
+    "relatedTools": [
+      "qr-code-generator",
+      "syntax-highlight"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 68
+  },
+  {
+    "id": "rc4-decrypt",
+    "title": "RC4 Decryption",
+    "slug": "rc4-decrypt",
+    "path": "rc4/decrypt/",
+    "category": "crypto",
+    "subcategory": "rc4",
+    "description": "This online tool helps you decrypt text or a file using RC4. It supports various modes and padding schemes. It also supports PBKDF2 or EvpKDF, with customizable salt, iteration, and hash settings. It also supports drop bytes.",
+    "shortDescription": "RC4 Decryption tool",
+    "tags": [
+      "rc4",
+      "arc4",
+      "decrypt",
+      "hex",
+      "base64",
+      "passphrase",
+      "pbkdf2",
+      "evpkdf",
+      "drop",
+      "file",
+      "decryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-crypto",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-js.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decrypt",
+    "relatedTools": [
+      "rc4-encrypt"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 69
+  },
+  {
+    "id": "rc4-encrypt",
+    "title": "RC4 Encryption",
+    "slug": "rc4-encrypt",
+    "path": "rc4/encrypt/",
+    "category": "crypto",
+    "subcategory": "rc4",
+    "description": "This online tool helps you encrypt text or a file from local storage or a URL using RC4. It supports various modes and padding schemes. It also supports PBKDF2 or EvpKDF, with customizable salt, iteration, and hash settings. It also supports drop bytes.",
+    "shortDescription": "RC4 Encryption tool",
+    "tags": [
+      "rc4",
+      "arc4",
+      "encrypt",
+      "hex",
+      "base64",
+      "passphrase",
+      "pbkdf2",
+      "evpkdf",
+      "drop",
+      "file",
+      "url",
+      "encryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-crypto",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-js.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encrypt",
+    "relatedTools": [
+      "rc4-decrypt"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 70
+  },
+  {
+    "id": "ripemd-128-file",
+    "title": "RIPEMD-128 File Hash",
+    "slug": "ripemd-128-file",
+    "path": "ripemd-128/file/",
+    "category": "hash",
+    "subcategory": "ripemd",
+    "description": "This RIPEMD-128 online tool helps you calculate the hash of a file from local or URL using RIPEMD-128 without uploading the file. It also supports HMAC.",
+    "shortDescription": "RIPEMD-128 File Hash tool",
+    "tags": [
+      "ripemd-128",
+      "ripemd128",
+      "hash",
+      "file",
+      "url",
+      "hmac",
+      "ripemd",
+      "128"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "ripemd-128",
+      "ripemd-160-file",
+      "ripemd-160",
+      "ripemd-256-file",
+      "ripemd-256",
+      "ripemd-320-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 71
+  },
+  {
+    "id": "ripemd-128",
+    "title": "RIPEMD-128",
+    "slug": "ripemd-128",
+    "path": "ripemd-128/",
+    "category": "hash",
+    "subcategory": "ripemd",
+    "description": "This RIPEMD-128 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "RIPEMD-128 tool",
+    "tags": [
+      "ripemd-128",
+      "ripemd128",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "binary",
+      "hmac",
+      "ripemd",
+      "128"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "ripemd-128-file",
+      "ripemd-160-file",
+      "ripemd-160",
+      "ripemd-256-file",
+      "ripemd-256",
+      "ripemd-320-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 72
+  },
+  {
+    "id": "ripemd-160-file",
+    "title": "RIPEMD-160 File Hash",
+    "slug": "ripemd-160-file",
+    "path": "ripemd-160/file/",
+    "category": "hash",
+    "subcategory": "ripemd",
+    "description": "This RIPEMD-160 online tool helps you calculate the hash of a file from local or URL using RIPEMD-160 without uploading the file. It also supports HMAC.",
+    "shortDescription": "RIPEMD-160 File Hash tool",
+    "tags": [
+      "ripemd-160",
+      "ripemd160",
+      "hash",
+      "file",
+      "url",
+      "hmac",
+      "ripemd",
+      "160"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "ripemd-128-file",
+      "ripemd-128",
+      "ripemd-160",
+      "ripemd-256-file",
+      "ripemd-256",
+      "ripemd-320-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 73
+  },
+  {
+    "id": "ripemd-160",
+    "title": "RIPEMD-160",
+    "slug": "ripemd-160",
+    "path": "ripemd-160/",
+    "category": "hash",
+    "subcategory": "ripemd",
+    "description": "This RIPEMD-160 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "RIPEMD-160 tool",
+    "tags": [
+      "ripemd-160",
+      "ripemd160",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "binary",
+      "hmac",
+      "ripemd",
+      "160"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "ripemd-128-file",
+      "ripemd-128",
+      "ripemd-160-file",
+      "ripemd-256-file",
+      "ripemd-256",
+      "ripemd-320-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 74
+  },
+  {
+    "id": "ripemd-256-file",
+    "title": "RIPEMD-256 File Hash",
+    "slug": "ripemd-256-file",
+    "path": "ripemd-256/file/",
+    "category": "hash",
+    "subcategory": "ripemd",
+    "description": "This RIPEMD-256 online tool helps you calculate the hash of a file from local or URL using RIPEMD-256 without uploading the file. It also supports HMAC.",
+    "shortDescription": "RIPEMD-256 File Hash tool",
+    "tags": [
+      "ripemd-256",
+      "ripemd256",
+      "hash",
+      "file",
+      "url",
+      "hmac",
+      "ripemd",
+      "256"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "ripemd-128-file",
+      "ripemd-128",
+      "ripemd-160-file",
+      "ripemd-160",
+      "ripemd-256",
+      "ripemd-320-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 75
+  },
+  {
+    "id": "ripemd-256",
+    "title": "RIPEMD-256",
+    "slug": "ripemd-256",
+    "path": "ripemd-256/",
+    "category": "hash",
+    "subcategory": "ripemd",
+    "description": "This RIPEMD-256 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "RIPEMD-256 tool",
+    "tags": [
+      "ripemd-256",
+      "ripemd256",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "binary",
+      "hmac",
+      "ripemd",
+      "256"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "ripemd-128-file",
+      "ripemd-128",
+      "ripemd-160-file",
+      "ripemd-160",
+      "ripemd-256-file",
+      "ripemd-320-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 76
+  },
+  {
+    "id": "ripemd-320-file",
+    "title": "RIPEMD-320 File Hash",
+    "slug": "ripemd-320-file",
+    "path": "ripemd-320/file/",
+    "category": "hash",
+    "subcategory": "ripemd",
+    "description": "This RIPEMD-320 online tool helps you calculate the hash of a file from local or URL using RIPEMD-320 without uploading the file. It also supports HMAC.",
+    "shortDescription": "RIPEMD-320 File Hash tool",
+    "tags": [
+      "ripemd-320",
+      "ripemd320",
+      "hash",
+      "file",
+      "url",
+      "hmac",
+      "ripemd",
+      "320"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "ripemd-128-file",
+      "ripemd-128",
+      "ripemd-160-file",
+      "ripemd-160",
+      "ripemd-256-file",
+      "ripemd-256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 77
+  },
+  {
+    "id": "ripemd-320",
+    "title": "RIPEMD-320",
+    "slug": "ripemd-320",
+    "path": "ripemd-320/",
+    "category": "hash",
+    "subcategory": "ripemd",
+    "description": "This RIPEMD-320 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "RIPEMD-320 tool",
+    "tags": [
+      "ripemd-320",
+      "ripemd320",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "binary",
+      "hmac",
+      "ripemd",
+      "320"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-api.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "ripemd-128-file",
+      "ripemd-128",
+      "ripemd-160-file",
+      "ripemd-160",
+      "ripemd-256-file",
+      "ripemd-256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 78
+  },
+  {
+    "id": "rsa-decrypt",
+    "title": "RSA Decryption",
+    "slug": "rsa-decrypt",
+    "path": "rsa/decrypt/",
+    "category": "crypto",
+    "subcategory": "rsa",
+    "description": "This online tool helps you decrypt messages using RSA. It supports PKCS#1 and OAEP with various hash algorithms. You can also use PEM with a passphrase.",
+    "shortDescription": "RSA Decryption tool",
+    "tags": [
+      "rsa",
+      "decrypt",
+      "pem",
+      "hex",
+      "base64",
+      "passphrase",
+      "ecb",
+      "pkcs#",
+      "oaep",
+      "mgf1",
+      "sha1",
+      "sha224",
+      "sha256",
+      "sha384",
+      "decryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/jsrsasign-rsa.js",
+      "js/jsrsasign-all-min.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decrypt",
+    "relatedTools": [
+      "rsa-encrypt",
+      "rsa-key-generator",
+      "rsa-sign",
+      "rsa-verify"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 79
+  },
+  {
+    "id": "rsa-encrypt",
+    "title": "RSA Encryption",
+    "slug": "rsa-encrypt",
+    "path": "rsa/encrypt/",
+    "category": "crypto",
+    "subcategory": "rsa",
+    "description": "This online tool helps you encrypt messages using RSA. It supports PKCS#1 and OAEP with various hash algorithms.",
+    "shortDescription": "RSA Encryption tool",
+    "tags": [
+      "rsa",
+      "encrypt",
+      "pem",
+      "hex",
+      "base64",
+      "passphrase",
+      "ecb",
+      "pkcs#",
+      "oaep",
+      "mgf1",
+      "sha1",
+      "sha224",
+      "sha256",
+      "sha384",
+      "encryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/jsrsasign-rsa.js",
+      "js/jsrsasign-all-min.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encrypt",
+    "relatedTools": [
+      "rsa-decrypt",
+      "rsa-key-generator",
+      "rsa-sign",
+      "rsa-verify"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 80
+  },
+  {
+    "id": "rsa-key-generator",
+    "title": "RSA Key Generator",
+    "slug": "rsa-key-generator",
+    "path": "rsa/key-generator/",
+    "category": "crypto",
+    "subcategory": "rsa",
+    "description": "This online tool helps you generate a pair of RSA keys. The PEM format supports PKCS#1, PKCS#5, and PKCS#8.",
+    "shortDescription": "RSA Key Generator tool",
+    "tags": [
+      "rsa",
+      "key",
+      "generate",
+      "pem",
+      "pkcs#1",
+      "pkcs#5",
+      "pkcs#8",
+      "generator"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/jsrsasign.js",
+      "js/jsrsasign-all-min.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": false
+    },
+    "actionLabel": "Generate",
+    "relatedTools": [
+      "rsa-decrypt",
+      "rsa-encrypt",
+      "rsa-sign",
+      "rsa-verify"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 81
+  },
+  {
+    "id": "rsa-sign",
+    "title": "RSA Sign Message",
+    "slug": "rsa-sign",
+    "path": "rsa/sign/",
+    "category": "crypto",
+    "subcategory": "rsa",
+    "description": "This online tool helps you sign messages using RSA. It supports various signature algorithms. You can also use PEM with a passphrase.",
+    "shortDescription": "RSA Sign Message tool",
+    "tags": [
+      "rsa",
+      "sign",
+      "signature",
+      "pem",
+      "hex",
+      "base64",
+      "passphrase",
+      "message"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/jsrsasign.js",
+      "js/jsrsasign-all-min.min.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Sign",
+    "relatedTools": [
+      "rsa-decrypt",
+      "rsa-encrypt",
+      "rsa-key-generator",
+      "rsa-verify"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 82
+  },
+  {
+    "id": "rsa-verify",
+    "title": "RSA Verify Signature",
+    "slug": "rsa-verify",
+    "path": "rsa/verify/",
+    "category": "crypto",
+    "subcategory": "rsa",
+    "description": "This online tool helps you verify signatures using RSA. It supports various curves and signature algorithms.",
+    "shortDescription": "RSA Verify Signature tool",
+    "tags": [
+      "rsa",
+      "verify",
+      "signature",
+      "pem",
+      "hex",
+      "base64"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-validator",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/jsrsasign.js",
+      "js/jsrsasign-all-min.min.js",
+      "js/validator.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Verify",
+    "relatedTools": [
+      "rsa-decrypt",
+      "rsa-encrypt",
+      "rsa-key-generator",
+      "rsa-sign"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 83
+  },
+  {
+    "id": "sha1",
+    "title": "SHA1",
+    "slug": "sha1",
+    "path": "sha1.html",
+    "category": "hash",
+    "subcategory": "sha1",
+    "description": "This SHA1 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "SHA1 tool",
+    "tags": [
+      "sha1",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha1-checksum"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 84
+  },
+  {
+    "id": "sha1-checksum",
+    "title": "SHA1 File Checksum",
+    "slug": "sha1-checksum",
+    "path": "sha1_checksum.html",
+    "category": "hash",
+    "subcategory": "sha1",
+    "description": "This SHA1 online tool helps you calculate the hash of a file from local or URL using SHA1 without uploading the file. It also supports HMAC.",
+    "shortDescription": "SHA1 File Checksum tool",
+    "tags": [
+      "sha1",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha1"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 85
+  },
+  {
+    "id": "sha224",
+    "title": "SHA224",
+    "slug": "sha224",
+    "path": "sha224.html",
+    "category": "hash",
+    "subcategory": "sha2",
+    "description": "This SHA224 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "SHA224 tool",
+    "tags": [
+      "sha224",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "double-sha256",
+      "sha224-checksum",
+      "sha256",
+      "sha256-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 86
+  },
+  {
+    "id": "sha224-checksum",
+    "title": "SHA224 File Hash",
+    "slug": "sha224-checksum",
+    "path": "sha224_checksum.html",
+    "category": "hash",
+    "subcategory": "sha2",
+    "description": "This SHA224 online tool helps you calculate the hash of a file from local or URL using SHA224 without uploading the file. It also supports HMAC.",
+    "shortDescription": "SHA224 File Hash tool",
+    "tags": [
+      "sha224",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "double-sha256",
+      "sha224",
+      "sha256",
+      "sha256-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 87
+  },
+  {
+    "id": "sha256",
+    "title": "SHA256",
+    "slug": "sha256",
+    "path": "sha256.html",
+    "category": "hash",
+    "subcategory": "sha2",
+    "description": "This SHA256 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "SHA256 tool",
+    "tags": [
+      "sha256",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "double-sha256",
+      "sha224",
+      "sha224-checksum",
+      "sha256-checksum"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 88
+  },
+  {
+    "id": "sha256-checksum",
+    "title": "SHA256 File Checksum",
+    "slug": "sha256-checksum",
+    "path": "sha256_checksum.html",
+    "category": "hash",
+    "subcategory": "sha2",
+    "description": "This SHA256 online tool helps you calculate the hash of a file from local or URL using SHA256 without uploading the file. It also supports HMAC.",
+    "shortDescription": "SHA256 File Checksum tool",
+    "tags": [
+      "sha256",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "double-sha256",
+      "sha224",
+      "sha224-checksum",
+      "sha256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 89
+  },
+  {
+    "id": "sha384",
+    "title": "SHA384",
+    "slug": "sha384",
+    "path": "sha384.html",
+    "category": "hash",
+    "subcategory": "sha2-512",
+    "description": "This SHA384 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "SHA384 tool",
+    "tags": [
+      "sha384",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha384-file-hash",
+      "sha512",
+      "sha512-224",
+      "sha512-224-file-hash",
+      "sha512-256",
+      "sha512-256-file-hash"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 90
+  },
+  {
+    "id": "sha384-file-hash",
+    "title": "SHA384 File Hash",
+    "slug": "sha384-file-hash",
+    "path": "sha384_file_hash.html",
+    "category": "hash",
+    "subcategory": "sha2-512",
+    "description": "This SHA384 online tool helps you calculate the hash of a file from local or URL using SHA384 without uploading the file. It also supports HMAC.",
+    "shortDescription": "SHA384 File Hash tool",
+    "tags": [
+      "sha384",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha384",
+      "sha512",
+      "sha512-224",
+      "sha512-224-file-hash",
+      "sha512-256",
+      "sha512-256-file-hash"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 91
+  },
+  {
+    "id": "sha3-224",
+    "title": "SHA3-224",
+    "slug": "sha3-224",
+    "path": "sha3_224.html",
+    "category": "hash",
+    "subcategory": "sha3",
+    "description": "This SHA3-224 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "SHA3-224 tool",
+    "tags": [
+      "sha3",
+      "sha3-224",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "224"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha3-224-checksum",
+      "sha3-256",
+      "sha3-256-checksum",
+      "sha3-384",
+      "sha3-384-checksum",
+      "sha3-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 92
+  },
+  {
+    "id": "sha3-224-checksum",
+    "title": "SHA3-224 File Hash",
+    "slug": "sha3-224-checksum",
+    "path": "sha3_224_checksum.html",
+    "category": "hash",
+    "subcategory": "sha3",
+    "description": "This SHA3-224 online tool helps you calculate the hash of a file from local or URL using SHA3-224 without uploading the file.",
+    "shortDescription": "SHA3-224 File Hash tool",
+    "tags": [
+      "sha3",
+      "sha3-224",
+      "hash",
+      "checksum",
+      "file",
+      "url",
+      "224"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha3-224",
+      "sha3-256",
+      "sha3-256-checksum",
+      "sha3-384",
+      "sha3-384-checksum",
+      "sha3-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 93
+  },
+  {
+    "id": "sha3-256",
+    "title": "SHA3-256",
+    "slug": "sha3-256",
+    "path": "sha3_256.html",
+    "category": "hash",
+    "subcategory": "sha3",
+    "description": "This SHA3-256 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "SHA3-256 tool",
+    "tags": [
+      "sha3",
+      "sha3-256",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "256"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha3-224",
+      "sha3-224-checksum",
+      "sha3-256-checksum",
+      "sha3-384",
+      "sha3-384-checksum",
+      "sha3-512"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 94
+  },
+  {
+    "id": "sha3-256-checksum",
+    "title": "SHA3-256 File Hash",
+    "slug": "sha3-256-checksum",
+    "path": "sha3_256_checksum.html",
+    "category": "hash",
+    "subcategory": "sha3",
+    "description": "This SHA3-256 online tool helps you calculate the hash of a file from local or URL using SHA3-256 without uploading the file.",
+    "shortDescription": "SHA3-256 File Hash tool",
+    "tags": [
+      "sha3",
+      "sha3-256",
+      "hash",
+      "checksum",
+      "file",
+      "url",
+      "256"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha3-224",
+      "sha3-224-checksum",
+      "sha3-256",
+      "sha3-384",
+      "sha3-384-checksum",
+      "sha3-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 95
+  },
+  {
+    "id": "sha3-384",
+    "title": "SHA3-384",
+    "slug": "sha3-384",
+    "path": "sha3_384.html",
+    "category": "hash",
+    "subcategory": "sha3",
+    "description": "This SHA3-384 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "SHA3-384 tool",
+    "tags": [
+      "sha3",
+      "sha3-384",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "384"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha3-224",
+      "sha3-224-checksum",
+      "sha3-256",
+      "sha3-256-checksum",
+      "sha3-384-checksum",
+      "sha3-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 96
+  },
+  {
+    "id": "sha3-384-checksum",
+    "title": "SHA3-384 File Hash",
+    "slug": "sha3-384-checksum",
+    "path": "sha3_384_checksum.html",
+    "category": "hash",
+    "subcategory": "sha3",
+    "description": "This SHA3-384 online tool helps you calculate the hash of a file from local or URL using SHA3-384 without uploading the file.",
+    "shortDescription": "SHA3-384 File Hash tool",
+    "tags": [
+      "sha3",
+      "sha3-384",
+      "hash",
+      "checksum",
+      "file",
+      "url",
+      "384"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha3-224",
+      "sha3-224-checksum",
+      "sha3-256",
+      "sha3-256-checksum",
+      "sha3-384",
+      "sha3-512"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 97
+  },
+  {
+    "id": "sha3-512",
+    "title": "SHA3-512",
+    "slug": "sha3-512",
+    "path": "sha3_512.html",
+    "category": "hash",
+    "subcategory": "sha3",
+    "description": "This SHA3-512 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "SHA3-512 tool",
+    "tags": [
+      "sha3",
+      "sha3-512",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "512"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha3-224",
+      "sha3-224-checksum",
+      "sha3-256",
+      "sha3-256-checksum",
+      "sha3-384",
+      "sha3-384-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 98
+  },
+  {
+    "id": "sha3-512-checksum",
+    "title": "SHA3-512 File Hash",
+    "slug": "sha3-512-checksum",
+    "path": "sha3_512_checksum.html",
+    "category": "hash",
+    "subcategory": "sha3",
+    "description": "This SHA3-512 online tool helps you calculate the hash of a file from local or URL using SHA3-512 without uploading the file.",
+    "shortDescription": "SHA3-512 File Hash tool",
+    "tags": [
+      "sha3",
+      "sha3-512",
+      "hash",
+      "checksum",
+      "file",
+      "url",
+      "512"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha3-224",
+      "sha3-224-checksum",
+      "sha3-256",
+      "sha3-256-checksum",
+      "sha3-384",
+      "sha3-384-checksum"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 99
+  },
+  {
+    "id": "sha512",
+    "title": "SHA512",
+    "slug": "sha512",
+    "path": "sha512.html",
+    "category": "hash",
+    "subcategory": "sha2-512",
+    "description": "This SHA512 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "SHA512 tool",
+    "tags": [
+      "sha512",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha384",
+      "sha384-file-hash",
+      "sha512-224",
+      "sha512-224-file-hash",
+      "sha512-256",
+      "sha512-256-file-hash"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 100
+  },
+  {
+    "id": "sha512-224",
+    "title": "SHA512/224",
+    "slug": "sha512-224",
+    "path": "sha512_224.html",
+    "category": "hash",
+    "subcategory": "sha2-512",
+    "description": "This SHA512/224 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "SHA512/224 tool",
+    "tags": [
+      "sha512/224",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "sha512",
+      "224"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha384",
+      "sha384-file-hash",
+      "sha512",
+      "sha512-224-file-hash",
+      "sha512-256",
+      "sha512-256-file-hash"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 101
+  },
+  {
+    "id": "sha512-224-file-hash",
+    "title": "SHA512/224 File Hash",
+    "slug": "sha512-224-file-hash",
+    "path": "sha512_224_file_hash.html",
+    "category": "hash",
+    "subcategory": "sha2-512",
+    "description": "This SHA512/224 online tool helps you calculate the hash of a file from local or URL using SHA512/224 without uploading the file. It also supports HMAC.",
+    "shortDescription": "SHA512/224 File Hash tool",
+    "tags": [
+      "sha512/224",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url",
+      "sha512",
+      "224"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha384",
+      "sha384-file-hash",
+      "sha512",
+      "sha512-224",
+      "sha512-256",
+      "sha512-256-file-hash"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 102
+  },
+  {
+    "id": "sha512-256",
+    "title": "SHA512/256",
+    "slug": "sha512-256",
+    "path": "sha512_256.html",
+    "category": "hash",
+    "subcategory": "sha2-512",
+    "description": "This SHA512/256 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings. It also supports HMAC.",
+    "shortDescription": "SHA512/256 tool",
+    "tags": [
+      "sha512/256",
+      "hash",
+      "hmac",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "base64",
+      "sha512",
+      "256"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha384",
+      "sha384-file-hash",
+      "sha512",
+      "sha512-224",
+      "sha512-224-file-hash",
+      "sha512-256-file-hash"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 103
+  },
+  {
+    "id": "sha512-256-file-hash",
+    "title": "SHA512/256 File Hash",
+    "slug": "sha512-256-file-hash",
+    "path": "sha512_256_file_hash.html",
+    "category": "hash",
+    "subcategory": "sha2-512",
+    "description": "This SHA512/256 online tool helps you calculate the hash of a file from local or URL using SHA512/256 without uploading the file. It also supports HMAC.",
+    "shortDescription": "SHA512/256 File Hash tool",
+    "tags": [
+      "sha512/256",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url",
+      "sha512",
+      "256"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha384",
+      "sha384-file-hash",
+      "sha512",
+      "sha512-224",
+      "sha512-224-file-hash",
+      "sha512-256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 104
+  },
+  {
+    "id": "sha512-file-hash",
+    "title": "SHA512 File Hash",
+    "slug": "sha512-file-hash",
+    "path": "sha512_file_hash.html",
+    "category": "hash",
+    "subcategory": "sha2-512",
+    "description": "This SHA512 online tool helps you calculate the hash of a file from local or URL using SHA512 without uploading the file. It also supports HMAC.",
+    "shortDescription": "SHA512 File Hash tool",
+    "tags": [
+      "sha512",
+      "hash",
+      "checksum",
+      "file",
+      "hmac",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": true,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "sha384",
+      "sha384-file-hash",
+      "sha512",
+      "sha512-224",
+      "sha512-224-file-hash",
+      "sha512-256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 105
+  },
+  {
+    "id": "shake128-file",
+    "title": "SHAKE128 File Hash",
+    "slug": "shake128-file",
+    "path": "shake128/file/",
+    "category": "hash",
+    "subcategory": "shake",
+    "description": "This SHAKE128 online tool helps you calculate the hash of a file from local or URL using SHAKE128 without uploading the file.",
+    "shortDescription": "SHAKE128 File Hash tool",
+    "tags": [
+      "sha3",
+      "shake",
+      "shake128",
+      "hash",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "shake128",
+      "shake256-file",
+      "shake256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 106
+  },
+  {
+    "id": "shake128",
+    "title": "SHAKE128",
+    "slug": "shake128",
+    "path": "shake128/",
+    "category": "hash",
+    "subcategory": "shake",
+    "description": "This SHAKE128 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "SHAKE128 tool",
+    "tags": [
+      "sha3",
+      "shake",
+      "shake128",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "binary"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "shake128-file",
+      "shake256-file",
+      "shake256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 107
+  },
+  {
+    "id": "shake256-file",
+    "title": "SHAKE256 File Hash",
+    "slug": "shake256-file",
+    "path": "shake256/file/",
+    "category": "hash",
+    "subcategory": "shake",
+    "description": "This SHAKE256 online tool helps you calculate the hash of a file from local or URL using SHAKE256 without uploading the file.",
+    "shortDescription": "SHAKE256 File Hash tool",
+    "tags": [
+      "sha3",
+      "shake",
+      "shake256",
+      "hash",
+      "file",
+      "url"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-file",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "shake128-file",
+      "shake128",
+      "shake256"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 108
+  },
+  {
+    "id": "shake256",
+    "title": "SHAKE256",
+    "slug": "shake256",
+    "path": "shake256/",
+    "category": "hash",
+    "subcategory": "shake",
+    "description": "This SHAKE256 online tool helps you calculate hashes from strings. You can input UTF-8, UTF-16, Hex, Base64, or other encodings.",
+    "shortDescription": "SHAKE256 tool",
+    "tags": [
+      "sha3",
+      "shake",
+      "shake256",
+      "hash",
+      "utf-8",
+      "utf-16",
+      "hex",
+      "binary"
+    ],
+    "aliases": [],
+    "icon": "hash",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Hash",
+    "relatedTools": [
+      "shake128-file",
+      "shake128",
+      "shake256-file"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 109
+  },
+  {
+    "id": "syntax-highlight",
+    "title": "Syntax Highlight",
+    "slug": "syntax-highlight",
+    "path": "syntax-highlight/",
+    "category": "utility",
+    "subcategory": "other",
+    "description": "This syntax highlight online tool helps you highlight your code. Supports many languages such as JavaScript, C++, C#, Java... and so on.",
+    "shortDescription": "Syntax Highlight tool",
+    "tags": [
+      "syntax highlight",
+      "syntax",
+      "highlight"
+    ],
+    "aliases": [],
+    "icon": "wrench",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/syntax-highlight.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Highlight",
+    "relatedTools": [
+      "qr-code-generator",
+      "qr-code"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 110
+  },
+  {
+    "id": "triple-des-decrypt",
+    "title": "Triple DES Decryption",
+    "slug": "triple-des-decrypt",
+    "path": "triple-des/decrypt/",
+    "category": "crypto",
+    "subcategory": "triple-des",
+    "description": "This online tool helps you decrypt text or a file using Triple DES (3DES). It supports various modes and padding schemes. It also supports PBKDF2 or EvpKDF, with customizable salt, iteration, and hash settings.",
+    "shortDescription": "Triple DES Decryption tool",
+    "tags": [
+      "triple des",
+      "3des",
+      "des-ede",
+      "decrypt",
+      "hex",
+      "base64",
+      "passphrase",
+      "cbc",
+      "ctr",
+      "cfb",
+      "ofb",
+      "ecb",
+      "pkcs7",
+      "iso97971",
+      "ansix923",
+      "iso10126",
+      "pbkdf2",
+      "evpkdf",
+      "file",
+      "triple",
+      "des",
+      "decryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-crypto",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-js.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decrypt",
+    "relatedTools": [
+      "triple-des-encrypt"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 111
+  },
+  {
+    "id": "triple-des-encrypt",
+    "title": "Triple DES Encryption",
+    "slug": "triple-des-encrypt",
+    "path": "triple-des/encrypt/",
+    "category": "crypto",
+    "subcategory": "triple-des",
+    "description": "This online tool helps you encrypt text or a file from local storage or a URL using Triple DES (3DES). It supports various modes and padding schemes. It also supports PBKDF2 or EvpKDF, with customizable salt, iteration, and hash settings.",
+    "shortDescription": "Triple DES Encryption tool",
+    "tags": [
+      "triple des",
+      "3des",
+      "des-ede",
+      "encrypt",
+      "hex",
+      "base64",
+      "passphrase",
+      "cbc",
+      "ctr",
+      "cfb",
+      "ofb",
+      "ecb",
+      "pkcs7",
+      "iso97971",
+      "ansix923",
+      "iso10126",
+      "pbkdf2",
+      "evpkdf",
+      "file",
+      "url",
+      "triple",
+      "des",
+      "encryption"
+    ],
+    "aliases": [],
+    "icon": "lock",
+    "template": "tool-crypto",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/crypto-js.js"
+    ],
+    "settings": {
+      "inputEncoding": true,
+      "outputEncoding": true,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": true,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encrypt",
+    "relatedTools": [
+      "triple-des-decrypt"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 112
+  },
+  {
+    "id": "url-decode",
+    "title": "URL Decode",
+    "slug": "url-decode",
+    "path": "url_decode.html",
+    "category": "encoding",
+    "subcategory": "url",
+    "description": "This URL decode online tool helps you decode percent-encoding string to URL.",
+    "shortDescription": "URL Decode tool",
+    "tags": [
+      "url",
+      "decode",
+      "urldecode"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Decode",
+    "relatedTools": [
+      "url-encode"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 113,
+    "swapTarget": null
+  },
+  {
+    "id": "url-encode",
+    "title": "URL Encode",
+    "slug": "url-encode",
+    "path": "url_encode.html",
+    "category": "encoding",
+    "subcategory": "url",
+    "description": "This URL encode online tool helps you encode URL to percent-encoding string.",
+    "shortDescription": "URL Encode tool",
+    "tags": [
+      "url",
+      "encode",
+      "urlencode"
+    ],
+    "aliases": [],
+    "icon": "code",
+    "template": "tool-text",
+    "modes": [
+      "single"
+    ],
+    "scripts": [],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Encode",
+    "relatedTools": [
+      "url-decode"
+    ],
+    "popular": true,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 114,
+    "swapTarget": null
+  },
+  {
+    "id": "xml-formatter",
+    "title": "XML Formatter",
+    "slug": "xml-formatter",
+    "path": "xml/formatter/",
+    "category": "formatter",
+    "subcategory": "xml",
+    "description": "This free online XML formatter helps you beautify your XML string and make it more readable. You can choose the indentation level and characters.",
+    "shortDescription": "XML Formatter tool",
+    "tags": [
+      "format",
+      "beautify",
+      "prettify",
+      "xml",
+      "formatter"
+    ],
+    "aliases": [],
+    "icon": "braces",
+    "template": "tool-editor",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/xml.js",
+      "js/xml-formatter-singleton.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Format",
+    "relatedTools": [
+      "xml-minifier",
+      "xml-validator"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 115
+  },
+  {
+    "id": "xml-minifier",
+    "title": "XML Minifier",
+    "slug": "xml-minifier",
+    "path": "xml/minifier/",
+    "category": "formatter",
+    "subcategory": "xml",
+    "description": "This free online XML minifier helps you minify your XML string and make it more cleaner. It can remove indentation, new lines and comments to reduce size.",
+    "shortDescription": "XML Minifier tool",
+    "tags": [
+      "minify",
+      "compress",
+      "compact",
+      "xml",
+      "minifier"
+    ],
+    "aliases": [],
+    "icon": "braces",
+    "template": "tool-editor",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/xml.js",
+      "js/xml-formatter-singleton.min.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Minify",
+    "relatedTools": [
+      "xml-formatter",
+      "xml-validator"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 116
+  },
+  {
+    "id": "xml-validator",
+    "title": "XML Validator",
+    "slug": "xml-validator",
+    "path": "xml/validator/",
+    "category": "formatter",
+    "subcategory": "xml",
+    "description": "This free online XML validator helps you validate your XML string.",
+    "shortDescription": "XML Validator tool",
+    "tags": [
+      "minify",
+      "compress",
+      "compact",
+      "xml",
+      "validator"
+    ],
+    "aliases": [],
+    "icon": "braces",
+    "template": "tool-validator",
+    "modes": [
+      "single"
+    ],
+    "scripts": [
+      "js/xml.js",
+      "js/validator.js"
+    ],
+    "settings": {
+      "inputEncoding": false,
+      "outputEncoding": false,
+      "hmac": false,
+      "autoUpdate": true,
+      "rememberInput": true,
+      "fileInput": false,
+      "monacoEditor": true
+    },
+    "actionLabel": "Validate",
+    "relatedTools": [
+      "xml-formatter",
+      "xml-minifier"
+    ],
+    "popular": false,
+    "featured": false,
+    "addedAt": "2024-01-01",
+    "order": 117
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "developer-pack",
+    "title": "Developer Pack",
+    "description": "Essential tools for daily development workflows",
+    "icon": "terminal",
+    "tools": [
+      "base64-encode", "base64-decode", "url-encode", "url-decode",
+      "json-formatter", "json-minifier", "json-validator",
+      "md5", "sha256"
+    ]
+  },
+  {
+    "id": "security-pack",
+    "title": "Security Pack",
+    "description": "Hashing, encryption, signing, and key generation tools",
+    "icon": "shield",
+    "tools": [
+      "sha256", "sha512", "sha3-256",
+      "aes-encrypt", "aes-decrypt",
+      "rsa-encrypt", "rsa-decrypt", "rsa-sign", "rsa-verify",
+      "ecdsa-sign", "ecdsa-verify"
+    ]
+  },
+  {
+    "id": "data-pack",
+    "title": "Data Pack",
+    "description": "JSON, XML, and structured data transformation tools",
+    "icon": "database",
+    "tools": [
+      "json-formatter", "json-minifier", "json-viewer", "json-validator",
+      "xml-formatter", "xml-minifier", "xml-validator"
+    ]
+  },
+  {
+    "id": "text-pack",
+    "title": "Text Pack",
+    "description": "Text encoding, decoding, and case conversion tools",
+    "icon": "type",
+    "tools": [
+      "base64-encode", "base64-decode",
+      "hex-encode", "hex-decode",
+      "html-encode", "html-decode",
+      "lower-case", "upper-case", "camel-case", "snake-case", "kebab-case"
+    ]
+  }
+]

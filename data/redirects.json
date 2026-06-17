@@ -1,0 +1,230 @@
+[
+  {
+    "relPath": "aes/decrypt/file/index.html",
+    "target": "/online-tools/aes/decrypt/"
+  },
+  {
+    "relPath": "aes/encrypt/file/index.html",
+    "target": "/online-tools/aes/encrypt/"
+  },
+  {
+    "relPath": "base58_decode.html",
+    "target": "/online-tools/base58/decode/"
+  },
+  {
+    "relPath": "base58_decode_file.html",
+    "target": "/online-tools/base58/decode/file/"
+  },
+  {
+    "relPath": "base58_encode.html",
+    "target": "/online-tools/base58/encode/"
+  },
+  {
+    "relPath": "base58_encode_file.html",
+    "target": "/online-tools/base58/encode/file/"
+  },
+  {
+    "relPath": "blake2b.html",
+    "target": "/online-tools/blake2b/"
+  },
+  {
+    "relPath": "blake2b_file_hash.html",
+    "target": "/online-tools/blake2b/file/"
+  },
+  {
+    "relPath": "blake2s.html",
+    "target": "/online-tools/blake2s/"
+  },
+  {
+    "relPath": "blake2s_file_hash.html",
+    "target": "/online-tools/blake2s/file/"
+  },
+  {
+    "relPath": "blake3.html",
+    "target": "/online-tools/blake3/"
+  },
+  {
+    "relPath": "blake3_file_hash.html",
+    "target": "/online-tools/blake3/file/"
+  },
+  {
+    "relPath": "convert_constant_case.html",
+    "target": "/online-tools/case/constant/"
+  },
+  {
+    "relPath": "convert_kebab_case.html",
+    "target": "/online-tools/case/kebab/"
+  },
+  {
+    "relPath": "convert_lower_camel_case.html",
+    "target": "/online-tools/case/lower-camel/"
+  },
+  {
+    "relPath": "convert_lower_case.html",
+    "target": "/online-tools/case/lower/"
+  },
+  {
+    "relPath": "convert_snake_case.html",
+    "target": "/online-tools/case/snake/"
+  },
+  {
+    "relPath": "convert_upper_camel_case.html",
+    "target": "/online-tools/case/upper-camel/"
+  },
+  {
+    "relPath": "convert_upper_case.html",
+    "target": "/online-tools/case/upper/"
+  },
+  {
+    "relPath": "crc16.html",
+    "target": "/online-tools/crc/"
+  },
+  {
+    "relPath": "crc16_checksum.html",
+    "target": "/online-tools/crc/"
+  },
+  {
+    "relPath": "crc32.html",
+    "target": "/online-tools/crc/"
+  },
+  {
+    "relPath": "crc32_checksum.html",
+    "target": "/online-tools/crc/"
+  },
+  {
+    "relPath": "cshake128.html",
+    "target": "/online-tools/cshake128/"
+  },
+  {
+    "relPath": "cshake128_file_hash.html",
+    "target": "/online-tools/cshake128/file/"
+  },
+  {
+    "relPath": "cshake256.html",
+    "target": "/online-tools/cshake256/"
+  },
+  {
+    "relPath": "cshake256_file_hash.html",
+    "target": "/online-tools/cshake256/file/"
+  },
+  {
+    "relPath": "des/decrypt/file/index.html",
+    "target": "/online-tools/des/decrypt/"
+  },
+  {
+    "relPath": "des/encrypt/file/index.html",
+    "target": "/online-tools/des/encrypt/"
+  },
+  {
+    "relPath": "ecdsa_sign.html",
+    "target": "/online-tools/ecdsa/sign/"
+  },
+  {
+    "relPath": "ecdsa_verify.html",
+    "target": "/online-tools/ecdsa/verify/"
+  },
+  {
+    "relPath": "json_formatter.html",
+    "target": "/online-tools/json/formatter/"
+  },
+  {
+    "relPath": "json_minifier.html",
+    "target": "/online-tools/json/minifier/"
+  },
+  {
+    "relPath": "json_viewer.html",
+    "target": "/online-tools/json/viewer/"
+  },
+  {
+    "relPath": "kmac128.html",
+    "target": "/online-tools/kmac128/"
+  },
+  {
+    "relPath": "kmac128_file_hash.html",
+    "target": "/online-tools/kmac128/file/"
+  },
+  {
+    "relPath": "kmac256.html",
+    "target": "/online-tools/kmac256/"
+  },
+  {
+    "relPath": "kmac256_file_hash.html",
+    "target": "/online-tools/kmac256/file/"
+  },
+  {
+    "relPath": "qrcode.html",
+    "target": "/online-tools/qr-code/generator/"
+  },
+  {
+    "relPath": "qrcode_embed.html",
+    "target": "/online-tools/qr-code/"
+  },
+  {
+    "relPath": "rc4/decrypt/file/index.html",
+    "target": "/online-tools/rc4/decrypt/"
+  },
+  {
+    "relPath": "rc4/encrypt/file/index.html",
+    "target": "/online-tools/rc4/encrypt/"
+  },
+  {
+    "relPath": "ripemd_128.html",
+    "target": "/online-tools/ripemd-128/"
+  },
+  {
+    "relPath": "ripemd_128_checksum.html",
+    "target": "/online-tools/ripemd-128/file/"
+  },
+  {
+    "relPath": "ripemd_160.html",
+    "target": "/online-tools/ripemd-160/"
+  },
+  {
+    "relPath": "ripemd_160_checksum.html",
+    "target": "/online-tools/ripemd-160/file/"
+  },
+  {
+    "relPath": "ripemd_256.html",
+    "target": "/online-tools/ripemd-256/"
+  },
+  {
+    "relPath": "ripemd_256_checksum.html",
+    "target": "/online-tools/ripemd-256/file/"
+  },
+  {
+    "relPath": "ripemd_320.html",
+    "target": "/online-tools/ripemd-320/"
+  },
+  {
+    "relPath": "ripemd_320_checksum.html",
+    "target": "/online-tools/ripemd-320/file/"
+  },
+  {
+    "relPath": "shake_128.html",
+    "target": "/online-tools/shake128/"
+  },
+  {
+    "relPath": "shake_128_checksum.html",
+    "target": "/online-tools/shake128/file/"
+  },
+  {
+    "relPath": "shake_256.html",
+    "target": "/online-tools/shake256/"
+  },
+  {
+    "relPath": "shake_256_checksum.html",
+    "target": "/online-tools/shake256/file/"
+  },
+  {
+    "relPath": "syntax_highlight.html",
+    "target": "/online-tools/syntax-highlight/"
+  },
+  {
+    "relPath": "triple-des/decrypt/file/index.html",
+    "target": "/online-tools/triple-des/decrypt/"
+  },
+  {
+    "relPath": "triple-des/encrypt/file/index.html",
+    "target": "/online-tools/triple-des/encrypt/"
+  }
+]

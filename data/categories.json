@@ -1,0 +1,85 @@
+[
+  {
+    "id": "hash",
+    "title": "Hash",
+    "icon": "hash",
+    "description": "Cryptographic hash functions for generating fixed-size digests",
+    "order": 1,
+    "subcategories": [
+      { "id": "crc", "title": "CRC", "order": 1 },
+      { "id": "md", "title": "MD", "order": 2 },
+      { "id": "sha1", "title": "SHA1", "order": 3 },
+      { "id": "sha2", "title": "SHA2", "order": 4 },
+      { "id": "sha2-512", "title": "SHA2-512", "order": 5 },
+      { "id": "sha3", "title": "SHA3", "order": 6 },
+      { "id": "keccak", "title": "Keccak", "order": 7 },
+      { "id": "shake", "title": "SHAKE", "order": 8 },
+      { "id": "cshake", "title": "cSHAKE", "order": 9 },
+      { "id": "kmac", "title": "KMAC", "order": 10 },
+      { "id": "ripemd", "title": "RIPEMD", "order": 11 },
+      { "id": "blake", "title": "BLAKE", "order": 12 }
+    ]
+  },
+  {
+    "id": "crypto",
+    "title": "Cryptography",
+    "icon": "lock",
+    "description": "Encryption, decryption, signing, and key generation",
+    "order": 2,
+    "subcategories": [
+      { "id": "aes", "title": "AES", "order": 1 },
+      { "id": "des", "title": "DES", "order": 2 },
+      { "id": "triple-des", "title": "Triple DES", "order": 3 },
+      { "id": "rc4", "title": "RC4", "order": 4 },
+      { "id": "ecdsa", "title": "ECDSA", "order": 5 },
+      { "id": "rsa", "title": "RSA", "order": 6 }
+    ]
+  },
+  {
+    "id": "encoding",
+    "title": "Encode / Decode",
+    "icon": "code",
+    "description": "Hex, Base32, Base58, Base64, HTML, URL encoding and decoding",
+    "order": 3,
+    "subcategories": [
+      { "id": "hex", "title": "Hex (Base16)", "order": 1 },
+      { "id": "base32", "title": "Base32", "order": 2 },
+      { "id": "base58", "title": "Base58", "order": 3 },
+      { "id": "base64", "title": "Base64", "order": 4 },
+      { "id": "html", "title": "HTML", "order": 5 },
+      { "id": "url", "title": "URL", "order": 6 }
+    ]
+  },
+  {
+    "id": "formatter",
+    "title": "Formatters",
+    "icon": "braces",
+    "description": "JSON and XML formatting, validation, and viewing",
+    "order": 4,
+    "subcategories": [
+      { "id": "json", "title": "JSON", "order": 1 },
+      { "id": "xml", "title": "XML", "order": 2 }
+    ]
+  },
+  {
+    "id": "converter",
+    "title": "Converters",
+    "icon": "arrow-right-left",
+    "description": "Case conversion and data format transformation",
+    "order": 5,
+    "subcategories": [
+      { "id": "case", "title": "Case", "order": 1 }
+    ]
+  },
+  {
+    "id": "utility",
+    "title": "Utility",
+    "icon": "wrench",
+    "description": "QR codes, syntax highlighting, and miscellaneous tools",
+    "order": 6,
+    "subcategories": [
+      { "id": "qr", "title": "QR / Barcode", "order": 1 },
+      { "id": "other", "title": "Others", "order": 2 }
+    ]
+  }
+]

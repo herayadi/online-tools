@@ -1,12 +1,12 @@
 <nav aria-label="breadcrumb" class="breadcrumbs">
   <ol>
-    <li><a href="./">Home</a></li>
+    <li><a href="{{ asset('') }}">Home</a></li>
     {% set cat = categories | selectattr("id", "equalto", category) | first %}
     {% if cat %}
-      <li><a href="explore/?category={{ cat.id }}">{{ cat.title }}</a></li>
+      <li><a href="{{ asset('explore/?category=' + cat.id) }}">{{ cat.title }}</a></li>
       {% set sub = cat.subcategories | selectattr("id", "equalto", subcategory) | first %}
       {% if sub %}
-        <li><a href="explore/?category={{ cat.id }}&subcategory={{ sub.id }}">{{ sub.title }}</a></li>
+        <li><a href="{{ asset('explore/?category=' + cat.id + '&subcategory=' + sub.id) }}">{{ sub.title }}</a></li>
       {% endif %}
     {% endif %}
     <li aria-current="page">{{ title }}</li>

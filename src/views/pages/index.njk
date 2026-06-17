@@ -9,7 +9,7 @@
     <div id="search-suggestions" class="search-suggestions dropdown-menu" style="display: none;"></div>
   </div>
   <div class="hero-quick-links">
-    <a href="explore/">Browse All Tools &rarr;</a>
+    <a href="{{ asset('explore/') }}">Browse All Tools &rarr;</a>
   </div>
 </div>
 
@@ -30,7 +30,7 @@
     {% for tool in tools %}
       {% if tool.popular %}
       <div class="tool-card-wrapper">
-        <a href="{{ tool.path }}" class="tool-card">
+        <a href="{{ asset(tool.path) }}" class="tool-card">
           <div class="tool-icon">
             <img src="{{ asset('images/icons/' + (tool.icon | default('wrench')) + '.svg') }}" alt="{{ tool.title }}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='{{ asset('images/logo.svg') }}';}else{this.style.display='none';}" />
           </div>
@@ -64,7 +64,7 @@
         {% for toolId in pack.tools %}
           {% set t = toolsById[toolId] %}
           {% if t %}
-          <a href="{{ t.path }}" class="tool-chip">{{ t.title }}</a>
+          <a href="{{ asset(t.path) }}" class="tool-chip">{{ t.title }}</a>
           {% endif %}
         {% endfor %}
       </div>
@@ -78,10 +78,10 @@
   <div class="categories-grid">
     {% for cat in categories %}
     <div class="category-card">
-      <h4><a href="explore/?category={{ cat.id }}">{{ cat.title }}</a></h4>
+      <h4><a href="{{ asset('explore/?category=' + cat.id) }}">{{ cat.title }}</a></h4>
       <ul>
         {% for sub in cat.subcategories %}
-          <li><a href="explore/?category={{ cat.id }}&subcategory={{ sub.id }}">{{ sub.title }}</a></li>
+          <li><a href="{{ asset('explore/?category=' + cat.id + '&subcategory=' + sub.id) }}">{{ sub.title }}</a></li>
         {% endfor %}
       </ul>
     </div>

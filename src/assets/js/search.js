@@ -130,7 +130,7 @@
           const p = clone.querySelector('p');
           const btn = clone.querySelector('.btn-favorite');
           
-          a.href = tool.path;
+          a.href = (window.OT_ASSET_BASE || '') + tool.path;
           img.src = `${window.OT_ASSET_BASE || ''}images/icons/${tool.icon || 'wrench'}.svg`;
           h3.textContent = tool.title;
           p.textContent = (tool.description || '').substring(0, 60) + ((tool.description && tool.description.length > 60) ? '...' : '');
@@ -209,9 +209,9 @@
       const div = document.createElement('div');
       div.className = 'suggestion-item';
       div.textContent = tool.title;
-      div.dataset.path = tool.path;
+      div.dataset.path = (window.OT_ASSET_BASE || '') + tool.path;
       div.addEventListener('click', () => {
-        window.location.href = tool.path;
+        window.location.href = (window.OT_ASSET_BASE || '') + tool.path;
       });
       suggestionsBox.appendChild(div);
     });
@@ -238,7 +238,7 @@
         window.location.href = items[activeSuggestionIndex].dataset.path;
       } else {
         // Go to explore page with query
-        window.location.href = `explore/?q=${encodeURIComponent(globalInput.value)}`;
+        window.location.href = `${window.OT_ASSET_BASE || ''}explore/?q=${encodeURIComponent(globalInput.value)}`;
       }
     } else if (e.key === 'Escape') {
       suggestionsBox.style.display = 'none';

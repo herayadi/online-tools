@@ -4,7 +4,7 @@
     {% for relatedId in relatedTools %}
       {% set relatedTool = toolsById[relatedId] %}
       {% if relatedTool %}
-        <a href="{{ relatedTool.path }}" class="tool-chip">{{ relatedTool.title }}</a>
+        <a href="{{ asset(relatedTool.path) }}" class="tool-chip">{{ relatedTool.title }}</a>
       {% endif %}
     {% endfor %}
   </div>

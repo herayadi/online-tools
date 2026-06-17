@@ -1,6 +1,6 @@
 {
   "siteName": "Online Tools",
-  "domain": "https://emn178.github.io/online-tools",
+  "domain": "https://emn178.github.io",
   "basePath": "/online-tools",
   "description": "A collection of free online tools for developers. Format JSON, encrypt data, calculate hashes, and more.",
   "keywords": ["online tools", "developer tools", "hash", "crypto", "encoder", "formatter"],

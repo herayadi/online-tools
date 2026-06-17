@@ -124,9 +124,8 @@ function renderPage(templatePath, context, outPathRelative) {
     relativeToRoot = new Array(depth).fill('..').join('/');
   }
 
-  // Determine base path for assets
-  const isLocal = process.argv.includes('--local');
-  const resolvedBasePath = isLocal ? relativeToRoot : siteConfig.basePath;
+  // Always use relative paths for maximum portability (works locally and in prod)
+  const resolvedBasePath = relativeToRoot;
 
   const pageContext = {
     ...globalContext,

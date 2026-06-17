@@ -14,7 +14,7 @@
     
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ title }}" />
-    <meta property="og:url" content="{{ site.domain }}{% if path %}/{{ path }}{% else %}/{% endif %}" />
+    <meta property="og:url" content="{{ site.domain }}{% if site.basePath %}{{ site.basePath }}{% endif %}/{% if path %}{{ path }}{% endif %}" />
     <meta property="og:site_name" content="{{ site.siteName }}" />
     <meta property="og:description" content="{{ description | default(site.description) }}" />
     <meta property="og:locale" content="en" />
@@ -23,7 +23,7 @@
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:image" content="{{ site.domain }}{% if site.basePath %}{{ site.basePath }}{% endif %}/images/logo.svg" />
     
-    <link rel="canonical" href="{{ site.domain }}{% if path %}/{{ path }}{% else %}/{% endif %}" />
+    <link rel="canonical" href="{{ site.domain }}{% if site.basePath %}{{ site.basePath }}{% endif %}/{% if path %}{{ path }}{% endif %}" />
     <link rel="icon" href="{{ asset('images/logo.svg') }}" />
     
     <script>

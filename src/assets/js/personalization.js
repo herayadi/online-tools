@@ -120,7 +120,7 @@
 
     return `
       <div class="tool-card-wrapper">
-        <a href="${tool.path}" class="tool-card">
+        <a href="${window.OT_ASSET_BASE || ''}${tool.path}" class="tool-card">
           <div class="tool-icon">
             <img src="${window.OT_ASSET_BASE || ''}images/icons/${tool.icon || 'wrench'}.svg" alt="${tool.title}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='${window.OT_ASSET_BASE || ''}images/logo.svg';}else{this.style.display='none';}" />
           </div>

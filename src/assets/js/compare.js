@@ -101,7 +101,7 @@
           <span id="compare-fab-count">0 tools selected</span>
           <div class="fab-actions">
             <button class="btn btn-secondary btn-sm" id="fab-clear">Clear</button>
-            <a href="compare/" class="btn btn-primary btn-sm">Compare</a>
+            <a href="${window.OT_ASSET_BASE || ''}compare/" class="btn btn-primary btn-sm">Compare</a>
           </div>
         </div>
       `;
@@ -158,7 +158,7 @@
       <th>
         <div class="compare-th-content">
           <img src="${window.OT_ASSET_BASE || ''}images/icons/${t.icon || 'wrench'}.svg" width="24" height="24" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='${window.OT_ASSET_BASE || ''}images/logo.svg';}else{this.style.display='none';}" />
-          <a href="${t.path}">${t.title}</a>
+          <a href="${window.OT_ASSET_BASE || ''}${t.path}">${t.title}</a>
           <button class="icon btn-compare active" data-tool-id="${t.id}" title="Remove">&times;</button>
         </div>
       </th>

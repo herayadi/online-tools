@@ -2,7 +2,7 @@
   <div class="mask"></div>
   <div class="container">
     <header>
-      <a href="./">
+      <a href="{{ asset('') }}">
         <img src="{{ asset('images/logo.svg') }}" width="18" height="18" alt="Logo" />
         <h2>Online Tools</h2>
       </a>
@@ -24,7 +24,7 @@
           <ol>
             {% for t in toolsByCategory[cat.id][sub.id] %}
             <li{% if id == t.id %} class="active"{% endif %}>
-              <a href="{{ t.path }}">{{ t.title }}</a>
+              <a href="{{ asset(t.path) }}">{{ t.title }}</a>
             </li>
             {% endfor %}
           </ol>

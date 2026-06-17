@@ -4,7 +4,6 @@
   "private": true,
   "description": "Online Tools - Static site with hashing, encoding, encryption, formatting tools",
   "scripts": {
-    "scan": "node build/scanner.js",
     "build": "node build/generate.js",
     "build:local": "node build/generate.js --local",
     "preview": "npx serve dist -p 5500",

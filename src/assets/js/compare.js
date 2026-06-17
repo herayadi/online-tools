@@ -157,7 +157,7 @@
     tableHead.innerHTML = `<th>Feature</th>` + tools.map(t => `
       <th>
         <div class="compare-th-content">
-          <img src="images/icons/${t.icon || 'wrench'}.svg" width="24" height="24" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/logo.svg';}else{this.style.display='none';}" />
+          <img src="${window.OT_ASSET_BASE || ''}images/icons/${t.icon || 'wrench'}.svg" width="24" height="24" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='${window.OT_ASSET_BASE || ''}images/logo.svg';}else{this.style.display='none';}" />
           <a href="${t.path}">${t.title}</a>
           <button class="icon btn-compare active" data-tool-id="${t.id}" title="Remove">&times;</button>
         </div>

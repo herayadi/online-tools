@@ -1,5 +1,5 @@
 <div class="empty-state" id="empty-state" style="display: none;">
-  <img src="images/search-empty.svg" alt="No results found" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/logo.svg';}else{this.style.display='none';}" width="64" />
+  <img src="{{ asset('images/search-empty.svg') }}" alt="No results found" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='{{ asset('images/logo.svg') }}';}else{this.style.display='none';}" width="64" />
   <h3>No tools found</h3>
   <p>We couldn't find any tools matching your search criteria.</p>
   <div class="empty-state-actions">

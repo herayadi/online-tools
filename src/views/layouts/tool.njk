@@ -70,7 +70,7 @@
   <script>
     ++waitLoadCount;
     delayScripts.push({
-      src: "js/monaco-editor.js?v=1",
+      src: "{{ asset('js/monaco-editor.js?v=1') }}",
       onload: function () {
         if(typeof methodLoad !== 'undefined') methodLoad();
       }
@@ -80,7 +80,7 @@
   
   <script>
     delayScripts.push({
-      src: "js/clipboard.min.js",
+      src: "{{ asset('js/clipboard.min.js') }}",
       onload: function () {
         if(typeof ClipboardJS !== 'undefined') {
           new ClipboardJS('[data-toggle="copy"]').on("success", function (e) {

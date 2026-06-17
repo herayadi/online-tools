@@ -28,13 +28,13 @@
         {% endif %}
         {% if copy %}
         <button class="icon btn-copy" data-toggle="copy" data-clipboard-target="#{{ id }}" data-message="{{ title }} copied" aria-label="Copy {{ title }}">
-          <img src="images/copy.svg" alt="Copy" title="Copy" />
+          <img src="{{ asset('images/copy.svg') }}" alt="Copy" title="Copy" />
         </button>
         {% endif %}
         {% if fullscreen %}
         <button class="icon btn-fullscreen" data-toggle="fullscreen" aria-label="Toggle Fullscreen">
-          <img class="fullscreen-icon" src="images/fullscreen.svg" alt="Full Screen" title="Full Screen" />
-          <img class="fullscreen-icon-exit" src="images/fullscreen-exit.svg" alt="Exit Full Screen" title="Exit Full Screen" style="display: none;" />
+          <img class="fullscreen-icon" src="{{ asset('images/fullscreen.svg') }}" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="{{ asset('images/fullscreen-exit.svg') }}" alt="Exit Full Screen" title="Exit Full Screen" style="display: none;" />
         </button>
         {% endif %}
       </div>
@@ -58,7 +58,7 @@
     <div class="droppable-zone container" id="droppable-zone" {% if droppableHidden %}style="display: none"{% endif %}>
       <input class="droppable-file" type="file" id="file" data-auto-update aria-label="Upload file for {{ title }}" />
       <div class="droppable-zone-wrapper">
-        <img class="droppable-zone-icon" src="images/file.svg" alt="File" />
+        <img class="droppable-zone-icon" src="{{ asset('images/file.svg') }}" alt="File" />
         <div class="droppable-zone-text">
           Drag and drop the file here or click to select a file. It will process locally and won't be uploaded.
         </div>

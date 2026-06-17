@@ -88,7 +88,7 @@
   async function ensureIndexLoaded() {
     if (indexLoaded) return true;
     try {
-      const res = await fetch('data/search-index.json');
+      const res = await fetch(`${window.OT_ASSET_BASE || ''}data/search-index.json`);
       searchIndex = await res.json();
       indexLoaded = true;
       return true;
@@ -131,7 +131,7 @@
           const btn = clone.querySelector('.btn-favorite');
           
           a.href = tool.path;
-          img.src = `images/icons/${tool.icon || 'wrench'}.svg`;
+          img.src = `${window.OT_ASSET_BASE || ''}images/icons/${tool.icon || 'wrench'}.svg`;
           h3.textContent = tool.title;
           p.textContent = (tool.description || '').substring(0, 60) + ((tool.description && tool.description.length > 60) ? '...' : '');
           if (btn) btn.dataset.toolId = tool.id;

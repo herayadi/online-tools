@@ -54,11 +54,17 @@ categories.forEach(cat => {
 console.log('Cleaning dist directory...');
 fs.emptyDirSync(DIST_DIR);
 
-// 4. Configure Nunjucks
 const env = nunjucks.configure(SRC_DIR, {
   autoescape: false,
   trimBlocks: true,
   lstripBlocks: true
+});
+
+env.addGlobal('asset', function(assetPath) {
+  if (!assetPath) return '';
+  if (assetPath.startsWith('http')) return assetPath;
+  if (assetPath.startsWith('/')) assetPath = assetPath.substring(1);
+  return `${siteConfig.basePath ? siteConfig.basePath + '/' : ''}${assetPath}`;
 });
 
 // Global context

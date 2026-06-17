@@ -121,6 +121,15 @@ const exploreHtml = env.render('pages/explore.njk', {
 });
 fs.outputFileSync(path.join(DIST_DIR, 'explore', 'index.html'), exploreHtml);
 
+// Compare
+const compareHtml = env.render('pages/compare.njk', {
+  ...globalContext,
+  title: 'Compare Tools',
+  description: 'Compare multiple tools side-by-side.',
+  id: 'compare'
+});
+fs.outputFileSync(path.join(DIST_DIR, 'compare', 'index.html'), compareHtml);
+
 // 6. Generate Tools
 console.log(`Generating ${tools.length} tools...`);
 tools.forEach(tool => {

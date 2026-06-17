@@ -129,9 +129,14 @@
             <p>${(tool.description || '').substring(0, 60)}...</p>
           </div>
         </a>
-        <button class="btn-favorite card-favorite ${isFav ? 'active' : ''}" data-tool-id="${tool.id}" aria-label="Toggle Favorite" aria-pressed="${isFav}">
-          ${favIcon}
-        </button>
+        <div class="card-actions">
+          <button class="btn-compare card-compare" data-tool-id="${tool.id}" aria-label="Toggle Compare" title="Compare">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+          <button class="btn-favorite card-favorite ${isFav ? 'active' : ''}" data-tool-id="${tool.id}" aria-label="Toggle Favorite" aria-pressed="${isFav}">
+            ${favIcon}
+          </button>
+        </div>
       </div>
     `;
   }

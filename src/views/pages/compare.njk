@@ -1,0 +1,47 @@
+{% extends "layouts/base.njk" %}
+
+{% block main %}
+<header class="tool-header">
+  <div class="tool-header-main">
+    <div>
+      <nav aria-label="breadcrumb" class="breadcrumbs">
+        <ol>
+          <li><a href="./">Home</a></li>
+          <li aria-current="page">Compare</li>
+        </ol>
+      </nav>
+      <h1>Compare Tools</h1>
+    </div>
+  </div>
+  <p>Compare features, input/output support, and metadata side-by-side.</p>
+</header>
+
+<main class="compare-page">
+  <div class="compare-actions" id="compare-actions" style="display: none;">
+    <button class="btn btn-secondary" id="clear-compare-btn">Clear All</button>
+  </div>
+
+  <div id="compare-grid" class="compare-table-wrapper" style="display: none;">
+    <table class="compare-table">
+      <thead>
+        <tr id="compare-table-head">
+          <th>Feature</th>
+          <!-- Headers injected by JS -->
+        </tr>
+      </thead>
+      <tbody id="compare-table-body">
+        <!-- Rows injected by JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="empty-state" id="compare-empty-state">
+    <img src="images/search-empty.svg" alt="No tools selected" onerror="this.src='images/logo.svg'" width="64" />
+    <h3>No Tools Selected</h3>
+    <p>Select up to 4 tools from the Explore page or Home page to compare them side-by-side.</p>
+    <div class="empty-state-actions">
+      <a href="explore/" class="btn">Browse Tools</a>
+    </div>
+  </div>
+</main>
+{% endblock %}

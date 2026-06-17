@@ -12,12 +12,20 @@
 {% set droppableHidden = options.droppableHidden | default(false) %}
 {% set isValidator = options.isValidator | default(false) %}
 {% set hiddenTextarea = options.hiddenTextarea | default(false) %}
+{% set supportsBatch = options.supportsBatch | default(false) %}
 
 <div class="{{ type }} tool-panel">
   <div class="block block-fill">
     <div class="block-title">
       {{ title }}
       <div class="toolbar" role="toolbar" aria-label="{{ title }} Toolbar">
+        {% if type == 'input' and supportsBatch %}
+        <label class="switcher batch-switcher" title="Enable Batch Mode (process line by line)">
+          <input type="checkbox" id="batch-mode-toggle" />
+          <div class="toggle"></div>
+          <span style="font-size: 0.8rem; font-weight: normal; margin-right: 8px;">Batch</span>
+        </label>
+        {% endif %}
         {% if copy %}
         <button class="icon btn-copy" data-toggle="copy" data-clipboard-target="#{{ id }}" data-message="{{ title }} copied" aria-label="Copy {{ title }}">
           <img src="images/copy.svg" alt="Copy" title="Copy" />

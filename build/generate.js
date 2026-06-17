@@ -224,14 +224,22 @@ const legacyAssets = ['css', 'js', 'images'];
 legacyAssets.forEach(dir => {
   const src = path.join(ROOT, dir);
   if (fs.existsSync(src)) {
-    fs.copySync(src, path.join(DIST_DIR, dir));
+    try {
+      fs.copySync(src, path.join(DIST_DIR, dir));
+    } catch (err) {
+      console.warn(`Warning: Could not completely copy legacy asset folder ${dir} (some files might be locked):`, err.message);
+    }
   }
 });
 
 console.log('Copying new assets...');
 const newAssets = path.join(SRC_DIR, '..', 'assets');
 if (fs.existsSync(newAssets)) {
-  fs.copySync(newAssets, DIST_DIR);
+  try {
+    fs.copySync(newAssets, DIST_DIR);
+  } catch (err) {
+    console.warn(`Warning: Could not completely copy new assets (some files might be locked):`, err.message);
+  }
 }
 
 console.log('====================================');

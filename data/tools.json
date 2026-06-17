@@ -56,7 +56,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 1
+    "order": 1,
+    "methodAssignment": "withOptions(aes.decrypt, [\r\n                  \"key-size\",\r\n                  \"mode\",\r\n                  \"padding\",\r\n                  \"key-type\",\r\n                  \"passphrase\",\r\n                  \"hash\",\r\n                  \"custom-iteration\",\r\n                  \"iteration\",\r\n                  \"key\",\r\n                  \"iv\",\r\n                ])"
   },
   {
     "id": "aes-encrypt",
@@ -116,7 +117,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 2
+    "order": 2,
+    "methodAssignment": "withOptions(aes.encrypt, [\r\n                  \"key-size\",\r\n                  \"mode\",\r\n                  \"padding\",\r\n                  \"key-type\",\r\n                  \"passphrase\",\r\n                  \"hash\",\r\n                  \"custom-iteration\",\r\n                  \"iteration\",\r\n                  \"key\",\r\n                  \"iv\",\r\n                  \"salt-type\",\r\n                  \"salt\",\r\n                ])"
   },
   {
     "id": "base32-decode",
@@ -164,7 +166,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 3,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "base32.decode.asBytes"
   },
   {
     "id": "base32-decode-file",
@@ -210,7 +213,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 4
+    "order": 4,
+    "methodAssignment": "download"
   },
   {
     "id": "base32-encode",
@@ -258,7 +262,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 5,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "base32.encode"
   },
   {
     "id": "base32-encode-file",
@@ -304,7 +309,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 6
+    "order": 6,
+    "methodAssignment": "base32Encode"
   },
   {
     "id": "base58-decode-file",
@@ -350,7 +356,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 7
+    "order": 7,
+    "methodAssignment": "download"
   },
   {
     "id": "base58-decode",
@@ -399,7 +406,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 8,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "base58Decode"
   },
   {
     "id": "base58-encode-file",
@@ -445,7 +453,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 9
+    "order": 9,
+    "methodAssignment": "base58EncodeFile"
   },
   {
     "id": "base58-encode",
@@ -494,7 +503,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 10,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "base58Encode"
   },
   {
     "id": "base64-decode",
@@ -518,7 +528,7 @@
     ],
     "scripts": [
       "js/base64.js",
-      "js/base64.min.js.4.1"
+      "js/base64.min.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -539,7 +549,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 11,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "base64Decode"
   },
   {
     "id": "base64-decode-file",
@@ -565,7 +576,7 @@
     ],
     "scripts": [
       "js/base64.js",
-      "js/base64.min.js.4.1"
+      "js/base64.min.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -585,7 +596,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 12
+    "order": 12,
+    "methodAssignment": "download"
   },
   {
     "id": "base64-encode",
@@ -617,7 +629,7 @@
     ],
     "scripts": [
       "js/base64.js",
-      "js/base64.min.js.4.1"
+      "js/base64.min.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -638,7 +650,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 13,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "withOptions(base64Encode, [\"format\"])"
   },
   {
     "id": "base64-encode-file",
@@ -664,7 +677,7 @@
     ],
     "scripts": [
       "js/base64.js",
-      "js/base64.min.js.4.1"
+      "js/base64.min.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -684,7 +697,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 14
+    "order": 14,
+    "methodAssignment": "withOptions(base64Encode, [\"format\"])"
   },
   {
     "id": "blake2b-file",
@@ -731,7 +745,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 15
+    "order": 15,
+    "methodAssignment": "withOptions(hashwasm_blake2b, [\"bits\", \"key\"])"
   },
   {
     "id": "blake2b",
@@ -781,7 +796,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 16
+    "order": 16,
+    "methodAssignment": "withOptions(hashwasm_blake2b, [\"bits\", \"key\"])"
   },
   {
     "id": "blake2s-file",
@@ -828,7 +844,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 17
+    "order": 17,
+    "methodAssignment": "withOptions(hashwasm_blake2s, [\"bits\", \"key\"])"
   },
   {
     "id": "blake2s",
@@ -878,7 +895,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 18
+    "order": 18,
+    "methodAssignment": "withOptions(hashwasm_blake2s, [\"bits\", \"key\"])"
   },
   {
     "id": "blake3-file",
@@ -925,7 +943,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 19
+    "order": 19,
+    "methodAssignment": "withOptions(blake3, [\"bits\", \"key\"])"
   },
   {
     "id": "blake3",
@@ -975,7 +994,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 20
+    "order": 20,
+    "methodAssignment": "withOptions(blake3, [\"bits\", \"key\"])"
   },
   {
     "id": "case-constant",
@@ -1024,7 +1044,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 21
+    "order": 21,
+    "methodAssignment": "ChangeCase.constantCase"
   },
   {
     "id": "case-kebab",
@@ -1074,7 +1095,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 22
+    "order": 22,
+    "methodAssignment": "ChangeCase.kebabCase"
   },
   {
     "id": "case-lower",
@@ -1120,7 +1142,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 23
+    "order": 23,
+    "methodAssignment": "function toLowerCase(s) {\r\n                  return s.toLowerCase();\r\n                }"
   },
   {
     "id": "case-lower-camel",
@@ -1169,7 +1192,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 24
+    "order": 24,
+    "methodAssignment": "ChangeCase.camelCase"
   },
   {
     "id": "case-snake",
@@ -1218,7 +1242,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 25
+    "order": 25,
+    "methodAssignment": "ChangeCase.snakeCase"
   },
   {
     "id": "case-upper",
@@ -1265,7 +1290,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 26
+    "order": 26,
+    "methodAssignment": "function toUpperCase(s) {\r\n                  return s.toUpperCase();\r\n                }"
   },
   {
     "id": "case-upper-camel",
@@ -1314,7 +1340,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 27
+    "order": 27,
+    "methodAssignment": "ChangeCase.pascalCase"
   },
   {
     "id": "crc",
@@ -1364,7 +1391,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 28
+    "order": 28,
+    "methodAssignment": "withOptions(crc, [\r\n                  \"model\",\r\n                  \"width\",\r\n                  \"poly\",\r\n                  \"init\",\r\n                  \"xorout\",\r\n                  \"refin\",\r\n                  \"refout\",\r\n                ])"
   },
   {
     "id": "cshake128-file",
@@ -1408,7 +1436,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 29
+    "order": 29,
+    "methodAssignment": "withOptions(cshake_128, [\r\n                  \"bits\",\r\n                  \"function-name\",\r\n                  \"customization\",\r\n                ])"
   },
   {
     "id": "cshake128",
@@ -1454,7 +1483,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 30
+    "order": 30,
+    "methodAssignment": "withOptions(cshake_128, [\r\n                  \"bits\",\r\n                  \"function-name\",\r\n                  \"customization\",\r\n                ])"
   },
   {
     "id": "cshake256-file",
@@ -1498,7 +1528,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 31
+    "order": 31,
+    "methodAssignment": "withOptions(cshake_256, [\r\n                  \"bits\",\r\n                  \"function-name\",\r\n                  \"customization\",\r\n                ])"
   },
   {
     "id": "cshake256",
@@ -1544,7 +1575,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 32
+    "order": 32,
+    "methodAssignment": "withOptions(cshake_256, [\r\n                  \"bits\",\r\n                  \"function-name\",\r\n                  \"customization\",\r\n                ])"
   },
   {
     "id": "des-decrypt",
@@ -1600,7 +1632,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 33
+    "order": 33,
+    "methodAssignment": "withOptions(des.decrypt, [\r\n                  \"mode\",\r\n                  \"padding\",\r\n                  \"key-type\",\r\n                  \"passphrase\",\r\n                  \"hash\",\r\n                  \"custom-iteration\",\r\n                  \"iteration\",\r\n                  \"key\",\r\n                  \"iv\",\r\n                ])"
   },
   {
     "id": "des-encrypt",
@@ -1657,7 +1690,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 34
+    "order": 34,
+    "methodAssignment": "withOptions(des.encrypt, [\r\n                  \"mode\",\r\n                  \"padding\",\r\n                  \"key-type\",\r\n                  \"passphrase\",\r\n                  \"hash\",\r\n                  \"custom-iteration\",\r\n                  \"iteration\",\r\n                  \"key\",\r\n                  \"iv\",\r\n                  \"salt-type\",\r\n                  \"salt\",\r\n                ])"
   },
   {
     "id": "double-sha256",
@@ -1704,7 +1738,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 35
+    "order": 35,
+    "methodAssignment": "double_sha256"
   },
   {
     "id": "ecdsa-key-generator",
@@ -1755,7 +1790,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 36
+    "order": 36,
+    "methodAssignment": "withOptions(ecdsa.generate, [\r\n                  \"curve\",\r\n                  \"key-type\",\r\n                  \"pem-format\",\r\n                  \"cipher-algorithm\",\r\n                  \"passphrase-enabled\",\r\n                  \"passphrase\",\r\n                ])"
   },
   {
     "id": "ecdsa-sign",
@@ -1805,7 +1841,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 37
+    "order": 37,
+    "methodAssignment": "withOptions(ecdsa.sign, [\r\n                  \"curve\",\r\n                  \"private-key-input-type\",\r\n                  \"private-key\",\r\n                  \"algorithm\",\r\n                  \"passphrase\",\r\n                ])"
   },
   {
     "id": "ecdsa-verify",
@@ -1854,7 +1891,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 38
+    "order": 38,
+    "methodAssignment": "withOptions(ecdsa.verify, [\r\n                  \"curve\",\r\n                  \"public-key-input-type\",\r\n                  \"public-key\",\r\n                  \"algorithm\",\r\n                  \"signature-input-type\",\r\n                  \"signature\",\r\n                ])"
   },
   {
     "id": "hex-decode",
@@ -1904,7 +1942,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 39,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "hexDecode"
   },
   {
     "id": "hex-decode-file",
@@ -1951,7 +1990,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 40
+    "order": 40,
+    "methodAssignment": "download"
   },
   {
     "id": "hex-encode",
@@ -2001,7 +2041,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 41,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "withOptions(hexEncode, [\"upper-case\"])"
   },
   {
     "id": "hex-encode-file",
@@ -2048,7 +2089,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 42
+    "order": 42,
+    "methodAssignment": "withOptions(hexEncode, [\"upper-case\"])"
   },
   {
     "id": "html-decode",
@@ -2091,7 +2133,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 43,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "htmlDecode"
   },
   {
     "id": "html-encode",
@@ -2134,7 +2177,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 44,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "htmlEncode"
   },
   {
     "id": "json-formatter",
@@ -2179,7 +2223,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 45
+    "order": 45,
+    "methodAssignment": "withOptions(json.format, [\r\n                  \"indent-type\",\r\n                  \"indent\",\r\n                ])"
   },
   {
     "id": "json-minifier",
@@ -2224,7 +2269,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 46
+    "order": 46,
+    "methodAssignment": "json.minify"
   },
   {
     "id": "json-validator",
@@ -2270,7 +2316,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 47
+    "order": 47,
+    "methodAssignment": "json.validate"
   },
   {
     "id": "json-viewer",
@@ -2316,7 +2363,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 48
+    "order": 48,
+    "methodAssignment": "json.view"
   },
   {
     "id": "keccak-224",
@@ -2367,7 +2415,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 49
+    "order": 49,
+    "methodAssignment": "keccak_224"
   },
   {
     "id": "keccak-224-checksum",
@@ -2417,7 +2466,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 50
+    "order": 50,
+    "methodAssignment": "keccak_224"
   },
   {
     "id": "keccak-256",
@@ -2468,7 +2518,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 51
+    "order": 51,
+    "methodAssignment": "keccak_256"
   },
   {
     "id": "keccak-256-checksum",
@@ -2518,7 +2569,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 52
+    "order": 52,
+    "methodAssignment": "keccak_256"
   },
   {
     "id": "keccak-384",
@@ -2569,7 +2621,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 53
+    "order": 53,
+    "methodAssignment": "keccak_384"
   },
   {
     "id": "keccak-384-checksum",
@@ -2619,7 +2672,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 54
+    "order": 54,
+    "methodAssignment": "keccak_384"
   },
   {
     "id": "keccak-512",
@@ -2670,7 +2724,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 55
+    "order": 55,
+    "methodAssignment": "keccak_512"
   },
   {
     "id": "keccak-512-checksum",
@@ -2720,7 +2775,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 56
+    "order": 56,
+    "methodAssignment": "keccak_512"
   },
   {
     "id": "kmac128-file",
@@ -2764,7 +2820,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 57
+    "order": 57,
+    "methodAssignment": "withOptions(\r\n                  kmac128,\r\n                  [\"kmac\", \"bits\", \"customization\"],\r\n                  1\r\n                )"
   },
   {
     "id": "kmac128",
@@ -2810,7 +2867,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 58
+    "order": 58,
+    "methodAssignment": "withOptions(\r\n                  kmac128,\r\n                  [\"kmac\", \"bits\", \"customization\"],\r\n                  1\r\n                )"
   },
   {
     "id": "kmac256-file",
@@ -2854,7 +2912,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 59
+    "order": 59,
+    "methodAssignment": "withOptions(\r\n                  kmac256,\r\n                  [\"kmac\", \"bits\", \"customization\"],\r\n                  1\r\n                )"
   },
   {
     "id": "kmac256",
@@ -2900,7 +2959,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 60
+    "order": 60,
+    "methodAssignment": "withOptions(\r\n                  kmac256,\r\n                  [\"kmac\", \"bits\", \"customization\"],\r\n                  1\r\n                )"
   },
   {
     "id": "md2",
@@ -2949,7 +3009,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 61
+    "order": 61,
+    "methodAssignment": "md2"
   },
   {
     "id": "md2-file-hash",
@@ -2997,7 +3058,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 62
+    "order": 62,
+    "methodAssignment": "md2"
   },
   {
     "id": "md4",
@@ -3046,7 +3108,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 63
+    "order": 63,
+    "methodAssignment": "md4"
   },
   {
     "id": "md4-file-hash",
@@ -3094,7 +3157,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 64
+    "order": 64,
+    "methodAssignment": "md4"
   },
   {
     "id": "md5",
@@ -3143,7 +3207,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 65
+    "order": 65,
+    "methodAssignment": "md5"
   },
   {
     "id": "md5-checksum",
@@ -3191,7 +3256,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 66
+    "order": 66,
+    "methodAssignment": "md5"
   },
   {
     "id": "qr-code-generator",
@@ -3242,7 +3308,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 67
+    "order": 67,
+    "methodAssignment": "withOptions(generate, [])"
   },
   {
     "id": "qr-code",
@@ -3330,7 +3397,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 69
+    "order": 69,
+    "methodAssignment": "withOptions(rc4.decrypt, [\r\n                  \"drop\",\r\n                  \"key-type\",\r\n                  \"passphrase\",\r\n                  \"hash\",\r\n                  \"custom-iteration\",\r\n                  \"iteration\",\r\n                  \"key\",\r\n                  \"dk-size\",\r\n                ])"
   },
   {
     "id": "rc4-encrypt",
@@ -3380,7 +3448,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 70
+    "order": 70,
+    "methodAssignment": "withOptions(rc4.encrypt, [\r\n                  \"drop\",\r\n                  \"key-type\",\r\n                  \"passphrase\",\r\n                  \"hash\",\r\n                  \"custom-iteration\",\r\n                  \"iteration\",\r\n                  \"key\",\r\n                  \"dk-size\",\r\n                  \"salt-type\",\r\n                  \"salt\",\r\n                ])"
   },
   {
     "id": "ripemd-128-file",
@@ -3431,7 +3500,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 71
+    "order": 71,
+    "methodAssignment": "ripemd128"
   },
   {
     "id": "ripemd-128",
@@ -3485,7 +3555,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 72
+    "order": 72,
+    "methodAssignment": "ripemd128"
   },
   {
     "id": "ripemd-160-file",
@@ -3536,7 +3607,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 73
+    "order": 73,
+    "methodAssignment": "ripemd160"
   },
   {
     "id": "ripemd-160",
@@ -3590,7 +3662,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 74
+    "order": 74,
+    "methodAssignment": "ripemd160"
   },
   {
     "id": "ripemd-256-file",
@@ -3641,7 +3714,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 75
+    "order": 75,
+    "methodAssignment": "ripemd256"
   },
   {
     "id": "ripemd-256",
@@ -3695,7 +3769,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 76
+    "order": 76,
+    "methodAssignment": "ripemd256"
   },
   {
     "id": "ripemd-320-file",
@@ -3746,7 +3821,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 77
+    "order": 77,
+    "methodAssignment": "ripemd320"
   },
   {
     "id": "ripemd-320",
@@ -3800,7 +3876,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 78
+    "order": 78,
+    "methodAssignment": "ripemd320"
   },
   {
     "id": "rsa-decrypt",
@@ -3857,7 +3934,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 79
+    "order": 79,
+    "methodAssignment": "withOptions(rsa.decrypt, [\r\n                  \"rsa-algorithm\",\r\n                  \"private-key\",\r\n                  \"passphrase\",\r\n                ])"
   },
   {
     "id": "rsa-encrypt",
@@ -3914,7 +3992,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 80
+    "order": 80,
+    "methodAssignment": "withOptions(rsa.encrypt, [\r\n                  \"rsa-algorithm\",\r\n                  \"public-key\",\r\n                ])"
   },
   {
     "id": "rsa-key-generator",
@@ -3964,7 +4043,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 81
+    "order": 81,
+    "methodAssignment": "withOptions(rsa.generate, [\r\n                  \"rsa-bits\",\r\n                  \"pem-format\",\r\n                  \"cipher-algorithm\",\r\n                  \"passphrase-enabled\",\r\n                  \"passphrase\",\r\n                ])"
   },
   {
     "id": "rsa-sign",
@@ -4014,7 +4094,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 82
+    "order": 82,
+    "methodAssignment": "withOptions(rsa.sign, [\r\n                  \"private-key\",\r\n                  \"algorithm\",\r\n                  \"passphrase\",\r\n                ])"
   },
   {
     "id": "rsa-verify",
@@ -4063,7 +4144,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 83
+    "order": 83,
+    "methodAssignment": "withOptions(rsa.verify, [\r\n                  \"public-key\",\r\n                  \"algorithm\",\r\n                  \"signature-input-type\",\r\n                  \"signature\",\r\n                ])"
   },
   {
     "id": "sha1",
@@ -4106,7 +4188,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 84
+    "order": 84,
+    "methodAssignment": "sha1"
   },
   {
     "id": "sha1-checksum",
@@ -4148,7 +4231,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 85
+    "order": 85,
+    "methodAssignment": "sha1"
   },
   {
     "id": "sha224",
@@ -4194,7 +4278,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 86
+    "order": 86,
+    "methodAssignment": "sha224"
   },
   {
     "id": "sha224-checksum",
@@ -4239,7 +4324,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 87
+    "order": 87,
+    "methodAssignment": "sha224"
   },
   {
     "id": "sha256",
@@ -4285,7 +4371,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 88
+    "order": 88,
+    "methodAssignment": "sha256"
   },
   {
     "id": "sha256-checksum",
@@ -4330,7 +4417,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 89
+    "order": 89,
+    "methodAssignment": "sha256"
   },
   {
     "id": "sha384",
@@ -4378,7 +4466,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 90
+    "order": 90,
+    "methodAssignment": "sha384"
   },
   {
     "id": "sha384-file-hash",
@@ -4425,7 +4514,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 91
+    "order": 91,
+    "methodAssignment": "sha384"
   },
   {
     "id": "sha3-224",
@@ -4474,7 +4564,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 92
+    "order": 92,
+    "methodAssignment": "sha3_224"
   },
   {
     "id": "sha3-224-checksum",
@@ -4522,7 +4613,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 93
+    "order": 93,
+    "methodAssignment": "sha3_224"
   },
   {
     "id": "sha3-256",
@@ -4571,7 +4663,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 94
+    "order": 94,
+    "methodAssignment": "sha3_256"
   },
   {
     "id": "sha3-256-checksum",
@@ -4619,7 +4712,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 95
+    "order": 95,
+    "methodAssignment": "sha3_256"
   },
   {
     "id": "sha3-384",
@@ -4668,7 +4762,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 96
+    "order": 96,
+    "methodAssignment": "sha3_384"
   },
   {
     "id": "sha3-384-checksum",
@@ -4716,7 +4811,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 97
+    "order": 97,
+    "methodAssignment": "sha3_384"
   },
   {
     "id": "sha3-512",
@@ -4765,7 +4861,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 98
+    "order": 98,
+    "methodAssignment": "sha3_512"
   },
   {
     "id": "sha3-512-checksum",
@@ -4813,7 +4910,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 99
+    "order": 99,
+    "methodAssignment": "sha3_512"
   },
   {
     "id": "sha512",
@@ -4861,7 +4959,8 @@
     "popular": true,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 100
+    "order": 100,
+    "methodAssignment": "sha512"
   },
   {
     "id": "sha512-224",
@@ -4911,7 +5010,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 101
+    "order": 101,
+    "methodAssignment": "sha512_224"
   },
   {
     "id": "sha512-224-file-hash",
@@ -4960,7 +5060,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 102
+    "order": 102,
+    "methodAssignment": "sha512_224"
   },
   {
     "id": "sha512-256",
@@ -5010,7 +5111,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 103
+    "order": 103,
+    "methodAssignment": "sha512_256"
   },
   {
     "id": "sha512-256-file-hash",
@@ -5059,7 +5161,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 104
+    "order": 104,
+    "methodAssignment": "sha512_256"
   },
   {
     "id": "sha512-file-hash",
@@ -5106,7 +5209,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 105
+    "order": 105,
+    "methodAssignment": "sha512"
   },
   {
     "id": "shake128-file",
@@ -5150,7 +5254,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 106
+    "order": 106,
+    "methodAssignment": "withOptions(shake_128, [\"bits\"])"
   },
   {
     "id": "shake128",
@@ -5196,7 +5301,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 107
+    "order": 107,
+    "methodAssignment": "withOptions(shake_128, [\"bits\"])"
   },
   {
     "id": "shake256-file",
@@ -5240,7 +5346,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 108
+    "order": 108,
+    "methodAssignment": "withOptions(shake_256, [\"bits\"])"
   },
   {
     "id": "shake256",
@@ -5286,7 +5393,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 109
+    "order": 109,
+    "methodAssignment": "withOptions(shake_256, [\"bits\"])"
   },
   {
     "id": "syntax-highlight",
@@ -5328,7 +5436,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 110
+    "order": 110,
+    "methodAssignment": "highlight"
   },
   {
     "id": "triple-des-decrypt",
@@ -5388,7 +5497,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 111
+    "order": 111,
+    "methodAssignment": "withOptions(tripleDes.decrypt, [\r\n                  \"key-size\",\r\n                  \"mode\",\r\n                  \"padding\",\r\n                  \"key-type\",\r\n                  \"passphrase\",\r\n                  \"hash\",\r\n                  \"custom-iteration\",\r\n                  \"iteration\",\r\n                  \"key\",\r\n                  \"iv\",\r\n                ])"
   },
   {
     "id": "triple-des-encrypt",
@@ -5449,7 +5559,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 112
+    "order": 112,
+    "methodAssignment": "withOptions(tripleDes.encrypt, [\r\n                  \"key-size\",\r\n                  \"mode\",\r\n                  \"padding\",\r\n                  \"key-type\",\r\n                  \"passphrase\",\r\n                  \"hash\",\r\n                  \"custom-iteration\",\r\n                  \"iteration\",\r\n                  \"key\",\r\n                  \"iv\",\r\n                  \"salt-type\",\r\n                  \"salt\",\r\n                ])"
   },
   {
     "id": "url-decode",
@@ -5489,7 +5600,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 113,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "decodeURIComponent"
   },
   {
     "id": "url-encode",
@@ -5529,7 +5641,8 @@
     "featured": false,
     "addedAt": "2024-01-01",
     "order": 114,
-    "swapTarget": null
+    "swapTarget": null,
+    "methodAssignment": "encodeURIComponent"
   },
   {
     "id": "xml-formatter",
@@ -5574,7 +5687,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 115
+    "order": 115,
+    "methodAssignment": "withOptions(xml.format, [\r\n                  \"indent-type\",\r\n                  \"indent\",\r\n                ])"
   },
   {
     "id": "xml-minifier",
@@ -5619,7 +5733,8 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 116
+    "order": 116,
+    "methodAssignment": "withOptions(xml.minify, [\"remove-comments\"])"
   },
   {
     "id": "xml-validator",
@@ -5664,6 +5779,7 @@
     "popular": false,
     "featured": false,
     "addedAt": "2024-01-01",
-    "order": 117
+    "order": 117,
+    "methodAssignment": "xml.validate"
   }
 ]

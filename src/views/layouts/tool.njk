@@ -59,13 +59,14 @@
   
   <script>
     var pageScriptsLoaded = 0;
-    var pageScriptsCount = {{ scripts.length if scripts else 0 }};
+    var pageScriptsCount = {% if scripts and scripts.length > 0 %}{{ scripts.length }}{% else %}1{% endif %};
     function checkPageScripts() {
       pageScriptsLoaded++;
       if (pageScriptsLoaded === pageScriptsCount) {
         {% if methodAssignment %}
         window.method = {{ methodAssignment | safe }};
         {% endif %}
+        if (typeof methodLoad !== 'undefined') methodLoad();
       }
     }
   </script>
@@ -76,7 +77,6 @@
       src: "{{ asset(script) }}",
       onload: function () {
         checkPageScripts();
-        methodLoad();
       }
     });
   </script>
@@ -87,10 +87,7 @@
     delayScripts.push({
       src: "",
       onload: function () {
-        {% if methodAssignment %}
-        window.method = {{ methodAssignment | safe }};
-        {% endif %}
-        methodLoad();
+        checkPageScripts();
       }
     });
   </script>

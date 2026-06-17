@@ -2,40 +2,40 @@
  * build/generate.js - Phase 2 Static Site Generator
  */
 
-const fs = require('fs-extra');
-const path = require('path');
-const nunjucks = require('nunjucks');
+const fs = require("fs-extra");
+const path = require("path");
+const nunjucks = require("nunjucks");
 
-const ROOT = path.resolve(__dirname, '..');
-const SRC_DIR = path.join(ROOT, 'src', 'views');
-const DATA_DIR = path.join(ROOT, 'data');
-const DIST_DIR = path.join(ROOT, 'dist');
+const ROOT = path.resolve(__dirname, "..");
+const SRC_DIR = path.join(ROOT, "src", "views");
+const DATA_DIR = path.join(ROOT, "data");
+const DIST_DIR = path.join(ROOT, "dist");
 
 // 1. Data Loading
-console.log('Loading data...');
-const siteConfig = fs.readJSONSync(path.join(DATA_DIR, 'site.config.json'));
+console.log("Loading data...");
+const siteConfig = fs.readJSONSync(path.join(DATA_DIR, "site.config.json"));
 
-if (process.argv.includes('--local')) {
-  siteConfig.basePath = '';
-  siteConfig.domain = 'http://localhost:3000';
+if (process.argv.includes("--local")) {
+  siteConfig.basePath = "";
+  siteConfig.domain = "http://localhost:3000";
 }
 
-const tools = fs.readJSONSync(path.join(DATA_DIR, 'tools.json'));
-const categories = fs.readJSONSync(path.join(DATA_DIR, 'categories.json'));
-const collections = fs.readJSONSync(path.join(DATA_DIR, 'collections.json'));
-const redirects = fs.readJSONSync(path.join(DATA_DIR, 'redirects.json'));
+const tools = fs.readJSONSync(path.join(DATA_DIR, "tools.json"));
+const categories = fs.readJSONSync(path.join(DATA_DIR, "categories.json"));
+const collections = fs.readJSONSync(path.join(DATA_DIR, "collections.json"));
+const redirects = fs.readJSONSync(path.join(DATA_DIR, "redirects.json"));
 
 // 2. Validation
-console.log('Validating data...');
+console.log("Validating data...");
 const toolIds = new Set();
 const toolPaths = new Set();
 const toolsById = {};
 
-tools.forEach(t => {
+tools.forEach((t) => {
   if (toolIds.has(t.id)) throw new Error(`Duplicate tool ID: ${t.id}`);
   if (toolPaths.has(t.path)) throw new Error(`Duplicate tool path: ${t.path}`);
   if (!t.template) throw new Error(`Missing template for tool: ${t.id}`);
-  
+
   toolIds.add(t.id);
   toolPaths.add(t.path);
   toolsById[t.id] = t;
@@ -43,32 +43,36 @@ tools.forEach(t => {
 
 // Group tools by category and subcategory for the sidebar
 const toolsByCategory = {};
-categories.forEach(cat => {
+categories.forEach((cat) => {
   toolsByCategory[cat.id] = {};
-  cat.subcategories.forEach(sub => {
-    toolsByCategory[cat.id][sub.id] = tools.filter(t => t.category === cat.id && t.subcategory === sub.id).sort((a,b) => a.order - b.order);
+  cat.subcategories.forEach((sub) => {
+    toolsByCategory[cat.id][sub.id] = tools
+      .filter((t) => t.category === cat.id && t.subcategory === sub.id)
+      .sort((a, b) => a.order - b.order);
   });
 });
 
 // 3. Clean Dist
-console.log('Cleaning dist directory...');
+console.log("Cleaning dist directory...");
 try {
   fs.emptyDirSync(DIST_DIR);
 } catch (e) {
-  console.warn('Warning: Could not completely empty dist directory (files may be locked by Live Server). Continuing build...');
+  console.warn(
+    "Warning: Could not completely empty dist directory (files may be locked by Live Server). Continuing build...",
+  );
 }
 
 const env = nunjucks.configure(SRC_DIR, {
   autoescape: false,
   trimBlocks: true,
-  lstripBlocks: true
+  lstripBlocks: true,
 });
 
-env.addGlobal('asset', function(assetPath) {
-  if (!assetPath) return '';
-  if (assetPath.startsWith('http')) return assetPath;
-  if (assetPath.startsWith('/')) assetPath = assetPath.substring(1);
-  return `${siteConfig.basePath ? siteConfig.basePath + '/' : ''}${assetPath}`;
+env.addGlobal("asset", function (assetPath) {
+  if (!assetPath) return "";
+  if (assetPath.startsWith("http")) return assetPath;
+  if (assetPath.startsWith("/")) assetPath = assetPath.substring(1);
+  return `${siteConfig.basePath ? siteConfig.basePath + "/" : ""}${assetPath}`;
 });
 
 // Global context
@@ -78,29 +82,39 @@ const globalContext = {
   collections,
   tools,
   toolsById,
-  toolsByCategory
+  toolsByCategory,
 };
 
 // 5. Generate Pages
-console.log('Generating pages...');
+console.log("Generating pages...");
 
 // Pre-calculate related tools and build search index
-console.log('Building search index and related tools...');
+console.log("Building search index and related tools...");
 const searchIndex = [];
-tools.forEach(tool => {
+tools.forEach((tool) => {
   // Related tools fallback logic
   if (!tool.relatedTools || tool.relatedTools.length === 0) {
     tool.relatedTools = [];
-    
+
     // Fallback 1: Same subcategory
-    const sameSub = tools.filter(t => t.id !== tool.id && t.category === tool.category && t.subcategory === tool.subcategory);
-    
+    const sameSub = tools.filter(
+      (t) =>
+        t.id !== tool.id &&
+        t.category === tool.category &&
+        t.subcategory === tool.subcategory,
+    );
+
     // Fallback 2: Same category
-    const sameCat = tools.filter(t => t.id !== tool.id && t.category === tool.category && t.subcategory !== tool.subcategory);
-    
+    const sameCat = tools.filter(
+      (t) =>
+        t.id !== tool.id &&
+        t.category === tool.category &&
+        t.subcategory !== tool.subcategory,
+    );
+
     // Combine and take top 6
     const combined = [...sameSub, ...sameCat].slice(0, 6);
-    tool.relatedTools = combined.map(t => t.id);
+    tool.relatedTools = combined.map((t) => t.id);
   }
 
   // Populate search index
@@ -114,18 +128,21 @@ tools.forEach(tool => {
     subcategory: tool.subcategory,
     description: tool.shortDescription || tool.description,
     popular: !!tool.popular,
-    featured: !!tool.featured
+    featured: !!tool.featured,
   });
 });
 
-fs.outputFileSync(path.join(DIST_DIR, 'data', 'search-index.json'), JSON.stringify(searchIndex));
+fs.outputFileSync(
+  path.join(DIST_DIR, "data", "search-index.json"),
+  JSON.stringify(searchIndex),
+);
 
 // Helper to render pages with depth-aware asset paths
 function renderPage(templatePath, context, outPathRelative) {
-  let relativeToRoot = '.';
-  const depth = outPathRelative.split('/').length - 1;
+  let relativeToRoot = ".";
+  const depth = outPathRelative.split("/").length - 1;
   if (depth > 0) {
-    relativeToRoot = new Array(depth).fill('..').join('/');
+    relativeToRoot = new Array(depth).fill("..").join("/");
   }
 
   // Always use relative paths for maximum portability (works locally and in prod)
@@ -134,142 +151,166 @@ function renderPage(templatePath, context, outPathRelative) {
   const pageContext = {
     ...globalContext,
     ...context,
-    asset: function(assetPath) {
-      if (!assetPath) return '';
-      if (assetPath.startsWith('http')) return assetPath;
-      if (assetPath.startsWith('/')) assetPath = assetPath.substring(1);
-      return `${resolvedBasePath ? resolvedBasePath + '/' : ''}${assetPath}`;
+    asset: function (assetPath) {
+      if (!assetPath) return "";
+      if (assetPath.startsWith("http")) return assetPath;
+      if (assetPath.startsWith("/")) assetPath = assetPath.substring(1);
+      return `${resolvedBasePath ? resolvedBasePath + "/" : ""}${assetPath}`;
     },
-    OT_ASSET_BASE: `${resolvedBasePath ? resolvedBasePath + '/' : ''}`
+    OT_ASSET_BASE: `${resolvedBasePath ? resolvedBasePath + "/" : ""}`,
   };
 
   const html = env.render(templatePath, pageContext);
   try {
     fs.outputFileSync(path.join(DIST_DIR, outPathRelative), html);
   } catch (e) {
-    console.warn(`Warning: Could not write to ${outPathRelative} (may be locked by another process).`);
+    console.error(`Failed to write ${outPathRelative}: ${e.message}`);
+    throw e; // Treat page write failures as critical
   }
 }
 
 // Home
-renderPage('pages/index.njk', {
-  title: 'Home',
-  id: 'index'
-}, 'index.html');
+renderPage(
+  "pages/index.njk",
+  {
+    title: "Home",
+    id: "index",
+  },
+  "index.html",
+);
 
 // Explore
-renderPage('pages/explore.njk', {
-  title: 'Explore Tools',
-  description: 'Search and filter all available online tools.',
-  id: 'explore'
-}, 'explore/index.html');
+renderPage(
+  "pages/explore.njk",
+  {
+    title: "Explore Tools",
+    description: "Search and filter all available online tools.",
+    id: "explore",
+  },
+  "explore/index.html",
+);
 
 // Compare
-renderPage('pages/compare.njk', {
-  title: 'Compare Tools',
-  description: 'Compare multiple tools side-by-side.',
-  id: 'compare'
-}, 'compare/index.html');
+renderPage(
+  "pages/compare.njk",
+  {
+    title: "Compare Tools",
+    description: "Compare multiple tools side-by-side.",
+    id: "compare",
+  },
+  "compare/index.html",
+);
 
 // 6. Generate Tools
 console.log(`Generating ${tools.length} tools...`);
-tools.forEach(tool => {
+tools.forEach((tool) => {
   const templatePath = `tools/${tool.template}.njk`;
-  
+
   try {
     // Determine output path (handle flat files vs directories)
     let outPathRelative;
-    if (tool.path.endsWith('.html')) {
+    if (tool.path.endsWith(".html")) {
       outPathRelative = tool.path;
     } else {
-      outPathRelative = path.posix.join(tool.path, 'index.html');
+      outPathRelative = path.posix.join(tool.path, "index.html");
     }
-    
+
     renderPage(templatePath, { ...tool }, outPathRelative);
   } catch (err) {
-    console.error(`Failed to render tool ${tool.id} with template ${templatePath}:`, err.message);
+    console.error(
+      `Failed to render tool ${tool.id} with template ${templatePath}:`,
+      err.message,
+    );
     throw err; // Fail build
   }
 });
 
 // 7. Generate Redirects
 console.log(`Generating ${redirects.length} redirects...`);
-redirects.forEach(r => {
-  renderPage('redirect.njk', {
-    target: r.target.replace('/online-tools/', '/') // Adjust to base relative
-  }, path.posix.join(r.relPath, 'index.html'));
+redirects.forEach((r) => {
+  renderPage(
+    "redirect.njk",
+    {
+      target: r.target.replace("/online-tools/", "/"), // Adjust to base relative
+    },
+    path.posix.join(r.relPath, "index.html"),
+  );
 });
 
 // 8. Generate Sitemap & Robots
-console.log('Generating sitemap and robots.txt...');
-const sitemapUrls = tools.map(t => `${siteConfig.domain}${siteConfig.basePath}${t.path.startsWith('/') ? '' : '/'}${t.path}`);
+console.log("Generating sitemap and robots.txt...");
+const sitemapUrls = tools.map(
+  (t) =>
+    `${siteConfig.domain}${siteConfig.basePath}${t.path.startsWith("/") ? "" : "/"}${t.path}`,
+);
 sitemapUrls.unshift(`${siteConfig.domain}${siteConfig.basePath}/`);
 sitemapUrls.unshift(`${siteConfig.domain}${siteConfig.basePath}/explore/`);
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map(url => `  <url>\n    <loc>${url}</loc>\n  </url>`).join('\n')}
+${sitemapUrls.map((url) => `  <url>\n    <loc>${url}</loc>\n  </url>`).join("\n")}
 </urlset>`;
-fs.outputFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemapXml);
+fs.outputFileSync(path.join(DIST_DIR, "sitemap.xml"), sitemapXml);
 
 const robotsTxt = `User-agent: *
 Allow: /
 Sitemap: ${siteConfig.domain}${siteConfig.basePath}/sitemap.xml
 `;
-fs.outputFileSync(path.join(DIST_DIR, 'robots.txt'), robotsTxt);
+fs.outputFileSync(path.join(DIST_DIR, "robots.txt"), robotsTxt);
 
 // 9. Copy Assets
-console.log('Copying legacy assets...');
-const legacyAssets = ['css', 'js', 'images'];
-legacyAssets.forEach(dir => {
+console.log("Copying legacy assets...");
+const legacyAssets = ["css", "js", "images"];
+legacyAssets.forEach((dir) => {
   const src = path.join(ROOT, dir);
   if (fs.existsSync(src)) {
     try {
       fs.copySync(src, path.join(DIST_DIR, dir));
     } catch (err) {
-      console.warn(`Warning: Could not completely copy legacy asset folder ${dir} (some files might be locked):`, err.message);
+      console.warn(
+        `Warning: Could not completely copy legacy asset folder ${dir} (some files might be locked):`,
+        err.message,
+      );
     }
   }
 });
 
-console.log('Copying new assets...');
-const newAssets = path.join(SRC_DIR, '..', 'assets');
+console.log("Copying new assets...");
+const newAssets = path.join(SRC_DIR, "..", "assets");
 if (fs.existsSync(newAssets)) {
   try {
     fs.copySync(newAssets, DIST_DIR);
   } catch (err) {
-    console.warn(`Warning: Could not completely copy new assets (some files might be locked):`, err.message);
+    console.warn(
+      `Warning: Could not completely copy new assets (some files might be locked):`,
+      err.message,
+    );
   }
 }
 
-console.log('====================================');
-console.log('Build Complete!');
-console.log(`- Tools: ${tools.length}`);
-console.log(`- Redirects: ${redirects.length}`);
-console.log(`- Pages: 3 (Home, Explore, Compare)`);
-console.log('Output directory: dist/');
-console.log('====================================');
+console.log("====================================");
+// NOTE: Build summary will be emitted after QA verification below
 
 // 10. QA Automation (Lightweight)
-console.log('Running QA verifications...');
+console.log("Running QA verifications...");
 const criticalAssets = [
-  'css/style.css',
-  'css/components.css',
-  'js/main.js',
-  'js/personalization.js',
-  'js/compare.js',
-  'js/search.js',
-  'images/logo.svg',
-  'data/search-index.json',
-  'index.html',
-  'explore/index.html',
-  'compare/index.html',
-  'sitemap.xml',
-  'robots.txt'
+  "css/style.css",
+  "css/components.css",
+  "js/main.js",
+  "js/personalization.js",
+  "js/compare.js",
+  "js/search.js",
+  "images/logo.svg",
+  "data/search-index.json",
+  "index.html",
+  "explore/index.html",
+  "compare/index.html",
+  "sitemap.xml",
+  "robots.txt",
 ];
 
 let qaFailed = false;
-criticalAssets.forEach(asset => {
+criticalAssets.forEach((asset) => {
   const assetPath = path.join(DIST_DIR, asset);
   if (!fs.existsSync(assetPath)) {
     console.error(`[QA FAIL] Missing critical asset: ${asset}`);
@@ -278,8 +319,10 @@ criticalAssets.forEach(asset => {
 });
 
 // Verify tools exist
-tools.forEach(tool => {
-  const toolPath = tool.path.endsWith('.html') ? path.join(DIST_DIR, tool.path) : path.join(DIST_DIR, tool.path, 'index.html');
+tools.forEach((tool) => {
+  const toolPath = tool.path.endsWith(".html")
+    ? path.join(DIST_DIR, tool.path)
+    : path.join(DIST_DIR, tool.path, "index.html");
   if (!fs.existsSync(toolPath)) {
     console.error(`[QA FAIL] Missing tool page: ${tool.path}`);
     qaFailed = true;
@@ -287,7 +330,22 @@ tools.forEach(tool => {
 });
 
 if (qaFailed) {
-  console.warn('[QA WARN] Build verification failed due to missing assets (likely EPERM).');
+  console.error(
+    "[QA FAIL] Build verification failed due to missing assets or missing pages (likely EPERM or write permission).",
+  );
+  console.error(
+    "Build did not complete successfully. Please stop any preview servers locking files and retry.",
+  );
+  process.exit(1);
 } else {
-  console.log('[QA PASS] All critical assets and tool pages verified successfully.');
+  console.log(
+    "[QA PASS] All critical assets and tool pages verified successfully.",
+  );
+  console.log("====================================");
+  console.log("Build Complete!");
+  console.log(`- Tools: ${tools.length}`);
+  console.log(`- Redirects: ${redirects.length}`);
+  console.log(`- Pages: 3 (Home, Explore, Compare)`);
+  console.log("Output directory: dist/");
+  console.log("====================================");
 }

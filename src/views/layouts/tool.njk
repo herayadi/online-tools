@@ -66,8 +66,8 @@
         {% if methodAssignment %}
         window.method = {{ methodAssignment | safe }};
         {% endif %}
-        if (typeof methodLoad !== 'undefined') methodLoad();
       }
+      if (typeof methodLoad !== 'undefined') methodLoad();
     }
   </script>
   {% for script in scripts %}

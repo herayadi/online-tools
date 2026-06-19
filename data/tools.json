@@ -38,7 +38,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-js.js"
+      "js/crypto-js.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js",
+      "js/encoding.js",
+      "js/file-loader.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -99,7 +102,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-js.js"
+      "js/crypto-js.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js",
+      "js/encoding.js",
+      "js/file-loader.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -145,7 +151,8 @@
       "single"
     ],
     "scripts": [
-      "js/base32.min.js"
+      "js/base32.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -193,7 +200,10 @@
     ],
     "scripts": [
       "js/base32.js",
-      "js/base32.min.js"
+      "js/base32.min.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -241,7 +251,8 @@
       "single"
     ],
     "scripts": [
-      "js/base32.min.js"
+      "js/base32.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -289,7 +300,10 @@
     ],
     "scripts": [
       "js/base32.js",
-      "js/base32.min.js"
+      "js/base32.min.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -336,7 +350,10 @@
     ],
     "scripts": [
       "js/base58.js",
-      "js/base-x.min.js"
+      "js/base-x.min.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -385,7 +402,8 @@
     ],
     "scripts": [
       "js/base58.js",
-      "js/base-x.min.js"
+      "js/base-x.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -433,7 +451,10 @@
     ],
     "scripts": [
       "js/base58.js",
-      "js/base-x.min.js"
+      "js/base-x.min.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -482,7 +503,8 @@
     ],
     "scripts": [
       "js/base58.js",
-      "js/base-x.min.js"
+      "js/base-x.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -528,7 +550,8 @@
     ],
     "scripts": [
       "js/base64.js",
-      "js/base64.min.js"
+      "js/base64.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -576,7 +599,10 @@
     ],
     "scripts": [
       "js/base64.js",
-      "js/base64.min.js"
+      "js/base64.min.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -629,7 +655,8 @@
     ],
     "scripts": [
       "js/base64.js",
-      "js/base64.min.js"
+      "js/base64.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -677,7 +704,10 @@
     ],
     "scripts": [
       "js/base64.js",
-      "js/base64.min.js"
+      "js/base64.min.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -723,7 +753,12 @@
     ],
     "scripts": [
       "js/hash-wasm.js",
-      "js/blake2b.umd.min.js"
+      "js/blake2b.umd.min.js",
+      "js/hmac.umd.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -774,7 +809,9 @@
     ],
     "scripts": [
       "js/hash-wasm.js",
-      "js/blake2b.umd.min.js"
+      "js/blake2b.umd.min.js",
+      "js/hmac.umd.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -822,7 +859,12 @@
     ],
     "scripts": [
       "js/hash-wasm.js",
-      "js/blake2s.umd.min.js"
+      "js/blake2s.umd.min.js",
+      "js/hmac.umd.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -873,7 +915,9 @@
     ],
     "scripts": [
       "js/hash-wasm.js",
-      "js/blake2s.umd.min.js"
+      "js/blake2s.umd.min.js",
+      "js/hmac.umd.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -921,7 +965,11 @@
     ],
     "scripts": [
       "js/blake3.js",
-      "js/blake3-js.min.js"
+      "js/blake3-js.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -972,7 +1020,8 @@
     ],
     "scripts": [
       "js/blake3.js",
-      "js/blake3-js.min.js"
+      "js/blake3-js.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -1375,7 +1424,9 @@
       "single"
     ],
     "scripts": [
-      "js/crc.js"
+      "js/crc.js",
+      "js/encoding.js",
+      "js/file-loader.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -1417,7 +1468,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -1464,7 +1521,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -1509,7 +1569,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -1556,7 +1622,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -1614,7 +1683,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-js.js"
+      "js/crypto-js.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js",
+      "js/encoding.js",
+      "js/file-loader.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -1672,7 +1744,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-js.js"
+      "js/crypto-js.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js",
+      "js/encoding.js",
+      "js/file-loader.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -1718,7 +1793,11 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.11.0/sha256.min.js",
+      "js/encoding.js",
+      "js/double-sha256.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -1822,7 +1901,8 @@
     ],
     "scripts": [
       "js/jsrsasign.js",
-      "js/jsrsasign-all-min.min.js"
+      "js/jsrsasign-all-min.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -1872,6 +1952,7 @@
     "scripts": [
       "js/jsrsasign.js",
       "js/jsrsasign-all-min.min.js",
+      "js/encoding.js",
       "js/validator.js"
     ],
     "settings": {
@@ -1921,7 +2002,8 @@
       "single"
     ],
     "scripts": [
-      "js/hex.js"
+      "js/hex.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -1970,7 +2052,11 @@
       "single"
     ],
     "scripts": [
-      "js/hex.js"
+      "js/hex.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -2020,7 +2106,8 @@
       "single"
     ],
     "scripts": [
-      "js/hex.js"
+      "js/hex.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -2069,7 +2156,11 @@
       "single"
     ],
     "scripts": [
-      "js/hex.js"
+      "js/hex.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -2343,7 +2434,8 @@
       "single"
     ],
     "scripts": [
-      "js/json.js"
+      "js/json.js",
+      "https://pfau-software.de/json-viewer/dist/iife/index.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -2393,7 +2485,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -2444,7 +2539,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -2496,7 +2597,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -2547,7 +2651,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -2599,7 +2709,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -2650,7 +2763,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -2702,7 +2821,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -2753,7 +2875,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -2801,7 +2929,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -2848,7 +2982,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -2893,7 +3030,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -2940,7 +3083,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -2987,7 +3133,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3036,7 +3185,13 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -3086,7 +3241,9 @@
       "single"
     ],
     "scripts": [
-      "js/md4.min.js"
+      "js/hmac.js",
+      "js/md4.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3135,7 +3292,12 @@
       "single"
     ],
     "scripts": [
-      "js/md4.min.js"
+      "js/hmac.js",
+      "js/md4.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -3185,7 +3347,9 @@
       "single"
     ],
     "scripts": [
-      "js/md5.min.js"
+      "js/hmac.js",
+      "js/md5.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3234,7 +3398,12 @@
       "single"
     ],
     "scripts": [
-      "js/md5.min.js"
+      "js/hmac.js",
+      "js/md5.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -3289,7 +3458,12 @@
     ],
     "scripts": [
       "js/qrcode.js",
-      "js/qr-code-styling.js"
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/qr-code-styling.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/tinyColorPicker/1.1.1/jqColorPicker.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/tinyColorPicker/1.1.1/colors.min.js",
+      "https://artf.github.io/grapick/dist/grapick.min.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -3379,7 +3553,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-js.js"
+      "js/crypto-js.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js",
+      "js/encoding.js",
+      "js/file-loader.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3430,7 +3607,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-js.js"
+      "js/crypto-js.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js",
+      "js/encoding.js",
+      "js/file-loader.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3477,7 +3657,13 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -3532,7 +3718,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3584,7 +3773,13 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -3639,7 +3834,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3691,7 +3889,13 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -3746,7 +3950,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3798,7 +4005,13 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -3853,7 +4066,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-api.js"
+      "js/hmac.js",
+      "js/crypto-api.js",
+      "https://nf404.github.io/crypto-api/crypto-api.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3913,7 +4129,8 @@
     ],
     "scripts": [
       "js/jsrsasign-rsa.js",
-      "js/jsrsasign-all-min.min.js"
+      "js/jsrsasign-all-min.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -3971,7 +4188,8 @@
     ],
     "scripts": [
       "js/jsrsasign-rsa.js",
-      "js/jsrsasign-all-min.min.js"
+      "js/jsrsasign-all-min.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -4073,7 +4291,8 @@
     ],
     "scripts": [
       "js/jsrsasign.js",
-      "js/jsrsasign-all-min.min.js"
+      "js/jsrsasign-all-min.min.js",
+      "js/encoding.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -4123,6 +4342,7 @@
     "scripts": [
       "js/jsrsasign.js",
       "js/jsrsasign-all-min.min.js",
+      "js/encoding.js",
       "js/validator.js"
     ],
     "settings": {
@@ -4171,7 +4391,11 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.7.0/sha1.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -4214,7 +4438,14 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.7.0/sha1.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -4258,7 +4489,11 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.11.0/sha256.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -4304,7 +4539,14 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.11.0/sha256.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -4351,7 +4593,11 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.11.0/sha256.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -4397,7 +4643,14 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.11.0/sha256.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -4444,7 +4697,11 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.9.0/sha512.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -4492,7 +4749,14 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.9.0/sha512.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -4542,7 +4806,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -4591,7 +4858,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -4641,7 +4914,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -4690,7 +4966,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -4740,7 +5022,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -4789,7 +5074,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -4839,7 +5130,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -4888,7 +5182,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -4937,7 +5237,11 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.9.0/sha512.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -4988,7 +5292,11 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.9.0/sha512.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -5038,7 +5346,14 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.9.0/sha512.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -5089,7 +5404,11 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.9.0/sha512.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -5139,7 +5458,14 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.9.0/sha512.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -5187,7 +5513,14 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "js/hmac.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.9.0/sha512.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -5235,7 +5568,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -5282,7 +5621,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -5327,7 +5669,13 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js",
+      "js/url-blob.js",
+      "js/droppable-file.js",
+      "js/file.js"
+    ],
     "settings": {
       "inputEncoding": false,
       "outputEncoding": true,
@@ -5374,7 +5722,10 @@
     "modes": [
       "single"
     ],
-    "scripts": [],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js",
+      "js/encoding.js"
+    ],
     "settings": {
       "inputEncoding": true,
       "outputEncoding": true,
@@ -5412,12 +5763,13 @@
     ],
     "aliases": [],
     "icon": "wrench",
-    "template": "tool-text",
+    "template": "tool-syntax-highlight",
     "modes": [
       "single"
     ],
     "scripts": [
-      "js/syntax-highlight.js"
+      "js/syntax-highlight.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"
     ],
     "settings": {
       "inputEncoding": false,
@@ -5479,7 +5831,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-js.js"
+      "js/crypto-js.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js",
+      "js/encoding.js",
+      "js/file-loader.js"
     ],
     "settings": {
       "inputEncoding": true,
@@ -5541,7 +5896,10 @@
       "single"
     ],
     "scripts": [
-      "js/crypto-js.js"
+      "js/crypto-js.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js",
+      "js/encoding.js",
+      "js/file-loader.js"
     ],
     "settings": {
       "inputEncoding": true,

@@ -1,0 +1,358 @@
+{
+  "total": 117,
+  "working": [
+    "base32-encode",
+    "base58-encode",
+    "base58-decode",
+    "base64-encode",
+    "base64-decode",
+    "blake3",
+    "case-snake",
+    "case-lower-camel",
+    "case-lower",
+    "case-kebab",
+    "case-constant",
+    "case-upper-camel",
+    "case-upper",
+    "ecdsa-verify",
+    "ecdsa-sign",
+    "ecdsa-key-generator",
+    "html-encode",
+    "html-decode",
+    "hex-encode",
+    "keccak-224",
+    "json-validator",
+    "keccak-512",
+    "keccak-384",
+    "keccak-256",
+    "md4",
+    "ripemd-160",
+    "ripemd-320",
+    "rsa-verify",
+    "rsa-key-generator",
+    "sha256",
+    "sha3-256",
+    "sha3-224",
+    "sha512",
+    "sha3-512",
+    "sha3-384",
+    "sha512-256",
+    "sha512-224",
+    "url-encode",
+    "url-decode",
+    "xml-validator"
+  ],
+  "partial": [
+    {
+      "id": "md5",
+      "error": "Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "md2",
+      "error": "Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "qr-code-generator",
+      "error": "Console: Failed to load resource: the server responded with a status of 404 (Not Found); Failed to load resource: the server responded with a status of 404 (Not Found); Failed to load resource: the server responded with a status of 404 (Not Found); Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "id": "ripemd-128",
+      "error": "Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "ripemd-256",
+      "error": "Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "sha1",
+      "error": "Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "sha384",
+      "error": "Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "sha224",
+      "error": "Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    }
+  ],
+  "broken": [
+    {
+      "id": "base32-decode-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "base32-decode",
+      "error": "Error: Invalid base32 characters"
+    },
+    {
+      "id": "aes-encrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'length')"
+    },
+    {
+      "id": "aes-decrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'create')"
+    },
+    {
+      "id": "base58-encode-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "base58-decode-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "base32-encode-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "blake2b-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "base64-encode-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "base64-decode-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "blake3-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "blake2s",
+      "error": "Error: Invalid variant! Valid values: 8, 16, ..., 256 | Console: Error: Invalid variant! Valid values: 8, 16, ..., 256; Error: Invalid variant! Valid values: 8, 16, ..., 256"
+    },
+    {
+      "id": "blake2s-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "blake2b",
+      "error": "Error: Invalid variant! Valid values: 8, 16, ..., 512 | Console: Error: Invalid variant! Valid values: 8, 16, ..., 512; Error: Invalid variant! Valid values: 8, 16, ..., 512"
+    },
+    {
+      "id": "cshake128",
+      "error": "Error: input is invalid type"
+    },
+    {
+      "id": "cshake128-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "crc",
+      "error": "TypeError: Cannot read properties of undefined (reading 'update')"
+    },
+    {
+      "id": "double-sha256",
+      "error": "Stuck on loading... | Console: ReferenceError: double_sha256 is not defined"
+    },
+    {
+      "id": "des-encrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'length')"
+    },
+    {
+      "id": "des-decrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'create')"
+    },
+    {
+      "id": "cshake256",
+      "error": "Error: input is invalid type"
+    },
+    {
+      "id": "cshake256-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "hex-decode-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "hex-decode",
+      "error": "Error: Input is not a hex string."
+    },
+    {
+      "id": "json-formatter",
+      "error": "SyntaxError: Unexpected token 'e', \"test\" is not valid JSON"
+    },
+    {
+      "id": "hex-encode-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "keccak-224-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "json-viewer",
+      "error": "Empty output"
+    },
+    {
+      "id": "json-minifier",
+      "error": "SyntaxError: Unexpected token 'e', \"test\" is not valid JSON"
+    },
+    {
+      "id": "keccak-384-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "keccak-256-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "kmac256",
+      "error": "Error: input is invalid type"
+    },
+    {
+      "id": "kmac256-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "kmac128",
+      "error": "Error: input is invalid type"
+    },
+    {
+      "id": "kmac128-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "keccak-512-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "md4-file-hash",
+      "error": "Empty output"
+    },
+    {
+      "id": "md2-file-hash",
+      "error": "Empty output | Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "rc4-encrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'length')"
+    },
+    {
+      "id": "rc4-decrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'create')"
+    },
+    {
+      "id": "qr-code",
+      "error": "No execute button and no input field found | Console: TypeError: n is not a function; Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "id": "md5-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "ripemd-256-file",
+      "error": "Empty output | Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "ripemd-160-file",
+      "error": "Empty output | Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "ripemd-128-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "rsa-encrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'curve')"
+    },
+    {
+      "id": "rsa-decrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'curve')"
+    },
+    {
+      "id": "ripemd-320-file",
+      "error": "Empty output | Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "sha1-checksum",
+      "error": "Empty output | Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "rsa-sign",
+      "error": "TypeError: Cannot read properties of undefined (reading 'curve')"
+    },
+    {
+      "id": "sha256-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "sha224-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "sha3-256-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "sha3-224-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "sha384-file-hash",
+      "error": "Empty output"
+    },
+    {
+      "id": "sha3-512-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "sha3-384-checksum",
+      "error": "Empty output"
+    },
+    {
+      "id": "sha512-file-hash",
+      "error": "Empty output | Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "sha512-256-file-hash",
+      "error": "Empty output | Console: TypeError: Cannot read properties of null (reading 'hmac')"
+    },
+    {
+      "id": "sha512-224-file-hash",
+      "error": "Empty output"
+    },
+    {
+      "id": "syntax-highlight",
+      "error": "TypeError: Cannot read properties of undefined (reading 'className')"
+    },
+    {
+      "id": "shake256",
+      "error": "Empty output"
+    },
+    {
+      "id": "shake256-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "shake128",
+      "error": "Empty output"
+    },
+    {
+      "id": "shake128-file",
+      "error": "Empty output"
+    },
+    {
+      "id": "xml-formatter",
+      "error": "Error: error on line 1 at column 1: Unexpected characters outside the root element: t"
+    },
+    {
+      "id": "triple-des-encrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'length')"
+    },
+    {
+      "id": "triple-des-decrypt",
+      "error": "TypeError: Cannot read properties of undefined (reading 'create')"
+    },
+    {
+      "id": "xml-minifier",
+      "error": "Error: error on line 1 at column 1: Unexpected characters outside the root element: t"
+    }
+  ],
+  "rootCauses": {}
+}

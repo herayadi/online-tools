@@ -1,0 +1,48 @@
+{% extends "layouts/tool.njk" %}
+{% import "macros/tool-components.njk" as components with context %}
+
+{% block tool_input %}
+  {{ components.panel({
+    title: 'Input',
+    id: 'input',
+    type: 'input',
+    placeholder: 'Enter here...',
+    copy: false,
+    fullscreen: true,
+    supportsBatch: true
+  }) }}
+{% endblock %}
+
+{% block tool_output %}
+<div class="output tool-panel">
+  <div class="block block-fill">
+    <div class="block-title">
+      Output
+      <div class="toolbar" role="toolbar" aria-label="Output Toolbar">
+        <button class="icon btn-copy" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied" aria-label="Copy Output">
+          <img src="{{ asset('images/copy.svg') }}" alt="Copy" title="Copy" />
+        </button>
+        <button class="icon btn-fullscreen" data-toggle="fullscreen" aria-label="Toggle Fullscreen">
+          <img class="fullscreen-icon" src="{{ asset('images/fullscreen.svg') }}" alt="Full Screen" title="Full Screen" />
+          <img class="fullscreen-icon-exit" src="{{ asset('images/fullscreen-exit.svg') }}" alt="Exit Full Screen" title="Exit Full Screen" style="display: none;" />
+        </button>
+      </div>
+    </div>
+    <pre class="container html" id="output"></pre>
+  </div>
+</div>
+{% endblock %}
+
+{% block tool_settings %}
+<div class="setting">
+  <label for="language">Language</label>
+  <select id="language" data-remember="language" data-share="language" data-auto-update>
+    <optgroup label="Recent"></optgroup>
+    <optgroup label="All"></optgroup>
+  </select>
+</div>
+<div class="setting">
+  <label for="style">Style</label>
+  <select id="style" data-remember="style" data-share="style" data-auto-update></select>
+</div>
+{% endblock %}

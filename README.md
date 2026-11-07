@@ -1,6 +1,8 @@
 # Online Tools
-Please go to [Online Tools](https://emn178.github.io/online-tools/)
 
-## Contact
-The project's website is located at https://github.com/emn178/online-tools  
-Author: emn178@gmail.com
+Online Tools is a comprehensive collection of browser-based utilities for hashing, encryption, encoding, formatting, compression, and mathematical conversions.
+
+Website: [https://online-tools.herirahmat.my.id/](https://online-tools.herirahmat.my.id/)
+
+## Contact & Issues
+GitHub: [https://github.com/herayadi/online-tools](https://github.com/herayadi/online-tools)

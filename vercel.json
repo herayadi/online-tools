@@ -1,0 +1,12 @@
+﻿{
+  "rewrites": [
+    {
+      "source": "/online-tools",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/online-tools/:path*",
+      "destination": "/:path*"
+    }
+  ]
+}
